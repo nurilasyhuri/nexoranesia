@@ -41,21 +41,21 @@ export const Navbar: React.FC<{
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#EDE6DD] shadow-xs py-3'
-          : 'bg-[#FAF8F5] border-b border-[#EDE6DD]/70 py-3.5'
+          ? 'bg-[#251310]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-3'
+          : 'bg-[#251310] border-b border-white/10 py-3.5'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex items-center justify-between">
-          {/* Left: Serba99ribu Style Menu Trigger & Brand Logo */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          {/* Left: Serba99ribu Style Menu Trigger (Pojok Sebelah Kiri) & Brand Logo */}
+          <div className="flex items-center gap-3 sm:gap-5">
             <button
               type="button"
               onClick={onOpenMenu}
-              className="flex items-center space-x-2 text-xs uppercase tracking-[0.16em] font-extrabold text-[#3A1E1A] hover:text-[#FF7A3D] bg-white hover:bg-[#F3ECE4] border border-[#EDE6DD] rounded-full px-3.5 py-1.5 transition-all shadow-xs cursor-pointer focus:outline-none"
+              className="flex items-center space-x-2 text-xs uppercase tracking-[0.16em] font-extrabold text-white hover:text-[#FF7A3D] bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FF7A3D]/40 rounded-full px-3.5 py-1.5 transition-all shadow-xs cursor-pointer focus:outline-none backdrop-blur-xs"
               aria-label="Buka Menu Navigasi"
             >
-              <Menu className="w-4 h-4 text-[#3A1E1A] stroke-[2.4]" />
+              <Menu className="w-4 h-4 text-white stroke-[2.4]" />
               <span className="font-extrabold">Menu</span>
             </button>
 
@@ -65,10 +65,10 @@ export const Navbar: React.FC<{
                 NX
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-none">
+                <span className="text-xl font-extrabold tracking-tight text-white group-hover:text-[#FF7A3D] transition-colors leading-none">
                   NEXORANESIA
                 </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-[#7A6A65] font-semibold mt-1">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-stone-300 font-semibold mt-1">
                   INDONESIA'S NEXT ERA OF INNOVATION
                 </span>
               </div>
@@ -76,7 +76,7 @@ export const Navbar: React.FC<{
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-3.5 text-xs font-semibold tracking-[0.14em]">
+          <nav className="hidden lg:flex items-center space-x-4 text-xs font-semibold tracking-[0.14em]">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
@@ -86,13 +86,13 @@ export const Navbar: React.FC<{
                     className={`transition-colors py-1 ${
                       isActive
                         ? 'text-[#FF7A3D] font-bold'
-                        : 'text-[#562D29] hover:text-[#FF7A3D]'
+                        : 'text-stone-300 hover:text-[#FF7A3D]'
                     }`}
                   >
                     {link.name}
                   </Link>
                   {index < navLinks.length - 1 && (
-                    <span className="text-[#D8CEC4] font-normal select-none">•</span>
+                    <span className="text-white/20 font-normal select-none">•</span>
                   )}
                 </React.Fragment>
               );
@@ -105,7 +105,7 @@ export const Navbar: React.FC<{
             <button
               onClick={openCart}
               aria-label="Keranjang Belanja"
-              className="relative p-2.5 rounded-full text-[#562D29] hover:text-[#FF7A3D] hover:bg-[#FDEEE7] transition-all"
+              className="relative p-2.5 rounded-full text-stone-200 hover:text-[#FF7A3D] hover:bg-white/10 transition-all cursor-pointer"
             >
               <ShoppingBag className="w-5 h-5" />
               {totalItems > 0 && (
@@ -127,7 +127,7 @@ export const Navbar: React.FC<{
             {/* Mobile Menu Button */}
             <button
               onClick={onOpenMenu}
-              className="lg:hidden p-2 rounded-xl text-[#562D29] hover:text-[#FF7A3D] transition-colors cursor-pointer"
+              className="lg:hidden p-2 rounded-xl text-stone-200 hover:text-[#FF7A3D] transition-colors cursor-pointer"
               aria-label="Menu"
             >
               <Menu className="w-6 h-6" />
@@ -138,7 +138,7 @@ export const Navbar: React.FC<{
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#FAF8F5] border-b border-[#EDE6DD] px-4 pt-4 pb-6 space-y-3">
+        <div className="md:hidden bg-[#251310] border-b border-white/10 px-4 pt-4 pb-6 space-y-3">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -146,15 +146,15 @@ export const Navbar: React.FC<{
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2 text-base font-medium rounded-xl ${
                 pathname === link.href
-                  ? 'text-[#FF7A3D] bg-[#FDEEE7] font-semibold'
-                  : 'text-[#562D29] hover:bg-white'
+                  ? 'text-[#FF7A3D] bg-white/10 font-semibold'
+                  : 'text-stone-300 hover:text-white hover:bg-white/10'
               }`}
             >
               {link.name}
             </Link>
           ))}
 
-          <div className="pt-2 border-t border-[#EDE6DD]">
+          <div className="pt-2 border-t border-white/10">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
