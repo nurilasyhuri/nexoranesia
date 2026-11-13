@@ -233,9 +233,6 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="max-w-3xl mb-12 sm:mb-16">
-              <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-widest px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-3.5">
-                MENGAPA MEMILIH NEXORANESIA
-              </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A1E1A] tracking-tight leading-[1.15]">
                 Bukan Sekadar Belajar Teknologi, <span className="text-[#FF7A3D]">Tetapi Menciptakan Masa Depan.</span>
               </h2>
