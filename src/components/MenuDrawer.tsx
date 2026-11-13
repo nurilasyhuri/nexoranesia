@@ -11,40 +11,34 @@ interface MenuDrawerProps {
 
 const drawerMenuItems = [
   {
-    title: 'HOME',
-    slug: '/',
-    subtitle: 'Beranda & Pusat Ekosistem Inovasi',
-    tag: 'Main',
+    title: 'NEXORANESIA ACADEMY',
+    slug: '/academy',
+    subtitle: 'Coding, Robotics, AI & STEM Curriculum',
+    tag: 'Education',
   },
   {
-    title: 'ABOUT',
-    slug: '/about',
-    subtitle: 'Visi, Misi & Mengapa Memilih Nexoranesia',
-    tag: 'Company',
+    title: 'NEXORANESIA LAB',
+    slug: '/robotics',
+    subtitle: 'Hardware Engineering & Robotics R&D',
+    tag: 'Innovation',
   },
   {
-    title: 'PROGRAMS',
-    slug: '/programs',
-    subtitle: 'Katalog Kursus Coding, Robotika, AI & STEM',
-    tag: 'Curriculum',
+    title: 'NEXORANESIA COMPETITION',
+    slug: '/competition',
+    subtitle: 'National & International Olympiad (WRO & FLL)',
+    tag: 'Championship',
   },
   {
-    title: 'ACTIVITIES',
-    slug: '/activities',
-    subtitle: 'Kompetisi WRO/FLL, Workshop & Riset Lab',
-    tag: 'Events',
+    title: 'NEXORANESIA STORE',
+    slug: '/store',
+    subtitle: 'Robot Kits, Microcontrollers & Components',
+    tag: 'Hardware',
   },
   {
-    title: 'PROJECTS',
-    slug: '/projects',
-    subtitle: 'Showcase Portofolio & Karya Inovasi Siswa',
-    tag: 'Showcase',
-  },
-  {
-    title: 'CONTACT',
-    slug: '/contact',
-    subtitle: 'Konsultasi Belajar, Kerjasama Lab & Lokasi',
-    tag: 'Connect',
+    title: 'NEXORANESIA SOLUTIONS',
+    slug: '/solutions',
+    subtitle: 'Technology Ecosystem & Institutional Solutions',
+    tag: 'Ecosystem',
   },
 ];
 
@@ -112,7 +106,7 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
                   className="drawer-link group block"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="block text-xl sm:text-2xl font-extrabold tracking-tight text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-tight">
+                    <span className="block text-lg sm:text-xl font-extrabold tracking-tight text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-tight">
                       {item.title}
                     </span>
                     <span className="text-[10px] font-mono font-bold text-[#8A7974] px-2 py-0.5 rounded bg-[#EFE8DF] group-hover:bg-[#FF7A3D] group-hover:text-white transition-colors">
