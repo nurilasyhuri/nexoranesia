@@ -364,8 +364,8 @@ export default function HomePage() {
               <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-2">
                 Pilihan Program
               </span>
-              <h2 className="font-editorial text-3xl sm:text-5xl text-[#3A1E1A]">
-                Jelajahi <span className="text-[#FF7A3D] font-editorial">Kelas Favoritmu!</span>
+              <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
+                Jelajahi <span className="text-[#FF7A3D] font-editorial font-extrabold">Kelas Favoritmu!</span>
               </h2>
               <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
                 Pilih jenjang dan minat teknologi yang paling cocok untuk putra-putri Anda.
@@ -464,8 +464,8 @@ export default function HomePage() {
                 <span className="text-xs font-bold text-[#43A574] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#E8F7F0] border border-[#CCEEDB] inline-block mb-2">
                   Aktivitas & Event
                 </span>
-                <h2 className="font-editorial text-3xl sm:text-5xl text-[#3A1E1A]">
-                  Aktivitas Eksplorasi & <span className="text-[#43A574] font-editorial">Turnamen Robotika</span>
+                <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
+                  Aktivitas Eksplorasi & <span className="text-[#43A574] font-editorial font-extrabold">Turnamen Robotika</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
                   Dari mentoring World Robot Olympiad (WRO) hingga workshop langsung merakit perangkat fisik.
@@ -587,8 +587,8 @@ export default function HomePage() {
                 <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-2">
                   Showcase Portofolio
                 </span>
-                <h2 className="font-editorial text-3xl sm:text-5xl text-[#3A1E1A]">
-                  Karya Nyata & <span className="text-[#FF7A3D] font-editorial">Proyek Riset Siswa</span>
+                <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
+                  Karya Nyata & <span className="text-[#FF7A3D] font-editorial font-extrabold">Proyek Riset Siswa</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
                   Bukti nyata kemampuan problem-solving dan inovasi teknologi generasi muda NEXORANESIA.
@@ -722,8 +722,8 @@ export default function HomePage() {
                 <span className="text-xs font-bold text-[#B45309] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FFF9E6] border border-[#FDE68A] inline-block mb-2">
                   Toko & Komponen
                 </span>
-                <h2 className="font-editorial text-3xl sm:text-5xl text-[#3A1E1A]">
-                  Kit Robotika & <span className="text-[#FF7A3D] font-editorial">Komponen Siap Rakit</span>
+                <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
+                  Kit Robotika & <span className="text-[#FF7A3D] font-editorial font-extrabold">Komponen Siap Rakit</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
                   Starter kit lengkap untuk belajar mandiri di rumah atau laboratorium sekolah.
