@@ -217,22 +217,6 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-
-          {/* Carousel Arrow Buttons (left & right) */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-[#251310]/70 hover:bg-[#251310] text-stone-300 hover:text-white border border-stone-700/50 backdrop-blur-xs transition hidden lg:block"
-            aria-label="Slide Sebelumnya"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-[#251310]/70 hover:bg-[#251310] text-stone-300 hover:text-white border border-stone-700/50 backdrop-blur-xs transition hidden lg:block"
-            aria-label="Slide Selanjutnya"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </section>
 
         {/* ======================================================== */}
