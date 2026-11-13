@@ -28,13 +28,14 @@ export const Navbar: React.FC<{
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 5 Essential Pillars matching MS Scaffolding Clean Corporate Navigation
+  // 6 Primary Navigation Links: HOME | ABOUT | PROGRAMS | ACTIVITIES | PROJECTS | CONTACT
   const navLinks = [
-    { name: 'ACADEMY', href: '/academy' },
-    { name: 'ROBOTICS LAB', href: '/robotics' },
-    { name: 'COMPETITION', href: '/competition' },
-    { name: 'STORE', href: '/store' },
-    { name: 'GLOBAL', href: '/solutions' },
+    { name: 'HOME', href: '/' },
+    { name: 'ABOUT', href: '/about' },
+    { name: 'PROGRAMS', href: '/programs' },
+    { name: 'ACTIVITIES', href: '/activities' },
+    { name: 'PROJECTS', href: '/projects' },
+    { name: 'CONTACT', href: '/contact' },
   ];
 
   return (
@@ -92,7 +93,7 @@ export const Navbar: React.FC<{
                     {link.name}
                   </Link>
                   {index < navLinks.length - 1 && (
-                    <span className="text-white/20 font-normal select-none">•</span>
+                    <span className="text-white/25 font-light select-none px-0.5">|</span>
                   )}
                 </React.Fragment>
               );

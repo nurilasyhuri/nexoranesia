@@ -132,9 +132,10 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* ======================================================== */}
-        {/* 1. HERO SHOWCASE - Model Standar MSC Scaffolding         */}
+        {/* 1. HERO SHOWCASE (HOME)                                  */}
         {/* ======================================================== */}
         <section
+          id="home"
           className="relative w-full min-h-[580px] lg:min-h-[660px] bg-[#251310] text-white overflow-hidden flex flex-col justify-between select-none"
           aria-label="NEXORANESIA Hero Showcase"
         >
@@ -182,7 +183,7 @@ export default function HomePage() {
               {/* High-Contrast Action Buttons (MS Scaffolding Style) */}
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
-                  href="#kelas"
+                  href="#programs"
                   className="inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-xl shadow-[#FF7A3D]/30 transition-all cursor-pointer"
                 >
                   Jelajahi Program
@@ -235,9 +236,9 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 2. WHY CHOOSE NEXORANESIA?                              */}
+        {/* 2. WHY CHOOSE NEXORANESIA? (ABOUT)                      */}
         {/* ======================================================== */}
-        <section className="py-16 sm:py-24 bg-white border-y border-[#EDE6DD]">
+        <section id="about" className="py-16 sm:py-24 bg-white border-y border-[#EDE6DD]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="max-w-3xl mb-12 sm:mb-16">
@@ -378,9 +379,9 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 3. JELAJAHI KELAS FAVORITMU                             */}
+        {/* 3. JELAJAHI KELAS FAVORITMU (PROGRAMS)                  */}
         {/* ======================================================== */}
-        <section id="kelas" className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="programs" className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
               <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-2">
@@ -410,10 +411,10 @@ export default function HomePage() {
                 </button>
               ))}
               <Link
-                href="/academy"
+                href="/programs"
                 className="px-3 py-1.5 text-xs font-bold text-[#FF7A3D] hover:underline"
               >
-                Lihat Semua &rarr;
+                Lihat Semua Program &rarr;
               </Link>
             </div>
           </div>
@@ -477,7 +478,265 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 4. PRODUK & KIT ROBOTIKA POPULER                         */}
+        {/* 4. AKTIVITAS & KOMPETISI DUNIA (ACTIVITIES)              */}
+        {/* ======================================================== */}
+        <section id="activities" className="py-20 bg-[#FAF8F5] border-t border-[#EDE6DD]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+              <div>
+                <span className="text-xs font-bold text-[#43A574] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#E8F7F0] border border-[#CCEEDB] inline-block mb-2">
+                  Aktivitas & Event
+                </span>
+                <h2 className="font-editorial text-3xl sm:text-5xl text-[#3A1E1A]">
+                  Aktivitas Eksplorasi & <span className="text-[#43A574] font-editorial">Turnamen Robotika</span>
+                </h2>
+                <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
+                  Dari mentoring World Robot Olympiad (WRO) hingga workshop langsung merakit perangkat fisik.
+                </p>
+              </div>
+
+              <Link
+                href="/activities"
+                className="text-xs font-bold text-[#43A574] hover:underline"
+              >
+                Jelajahi Semua Aktivitas &rarr;
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Activity Card 1: Championship */}
+              <div className="p-6 rounded-3xl bg-white border border-[#EDE6DD] hover:border-[#43A574] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#E8F7F0] text-[#43A574]">
+                      Turnamen Resmi
+                    </span>
+                    <span className="text-[10px] text-[#D97706] font-bold">WRO & FLL Track</span>
+                  </div>
+                  <h3 className="font-editorial text-2xl font-bold text-[#3A1E1A] group-hover:text-[#43A574] transition-colors leading-tight">
+                    Mentoring Olimpiade Robotika
+                  </h3>
+                  <p className="text-xs text-[#63544F] leading-relaxed">
+                    Karantina intensif dan simulasi tanding berstandar dunia untuk tim sekolah menembus podium nasional dan internasional.
+                  </p>
+                  <div className="pt-2 text-xs font-medium text-[#7A6A65] space-y-1">
+                    <div>• Analisis regelment & strategi arena</div>
+                    <div>• Rancang bangun robot modular</div>
+                  </div>
+                </div>
+                <div className="mt-5 pt-3 border-t border-[#EDE6DD]/70">
+                  <Link
+                    href="/activities"
+                    className="w-full py-2.5 rounded-full bg-[#E8F7F0] hover:bg-[#43A574] text-[#43A574] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  >
+                    <span>Pelajari Jalur Tim</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Activity Card 2: Weekend Workshop */}
+              <div className="p-6 rounded-3xl bg-white border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FDEEE7] text-[#FF7A3D]">
+                      Weekend Hands-On
+                    </span>
+                    <span className="text-[10px] text-[#2E7D32] font-bold">Tiap Akhir Pekan</span>
+                  </div>
+                  <h3 className="font-editorial text-2xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-tight">
+                    Workshop Merakit Robot Fisik
+                  </h3>
+                  <p className="text-xs text-[#63544F] leading-relaxed">
+                    Peserta merakit sendiri robot line follower atau kit sensor analog dari nol. Belajar menyolder, membaca skematik, dan robot boleh dibawa pulang.
+                  </p>
+                  <div className="pt-2 text-xs font-medium text-[#7A6A65] space-y-1">
+                    <div>• Kit komponen & sertifikat fisik</div>
+                    <div>• Pendampingan mentor 1-on-1</div>
+                  </div>
+                </div>
+                <div className="mt-5 pt-3 border-t border-[#EDE6DD]/70">
+                  <Link
+                    href="/activities"
+                    className="w-full py-2.5 rounded-full bg-[#FDEEE7] hover:bg-[#FF7A3D] text-[#FF7A3D] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  >
+                    <span>Daftar Workshop</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Activity Card 3: School STEM Day */}
+              <div className="p-6 rounded-3xl bg-white border border-[#EDE6DD] hover:border-[#2563EB] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#EFF6FF] text-[#2563EB]">
+                      Ekskursi Sekolah
+                    </span>
+                    <span className="text-[10px] text-[#63544F] font-bold">Kunjungan Mitra</span>
+                  </div>
+                  <h3 className="font-editorial text-2xl font-bold text-[#3A1E1A] group-hover:text-[#2563EB] transition-colors leading-tight">
+                    School STEM Day & Lab Roadshow
+                  </h3>
+                  <p className="text-xs text-[#63544F] leading-relaxed">
+                    Demo robotika interaktif, pameran kecerdasan buatan, dan arena uji coba robot langsung di sekolah Anda bersama tim NEXORANESIA.
+                  </p>
+                  <div className="pt-2 text-xs font-medium text-[#7A6A65] space-y-1">
+                    <div>• Demo 15+ unit robot fungsional</div>
+                    <div>• Sesi pengenalan kurikulum STEM</div>
+                  </div>
+                </div>
+                <div className="mt-5 pt-3 border-t border-[#EDE6DD]/70">
+                  <Link
+                    href="/activities"
+                    className="w-full py-2.5 rounded-full bg-[#EFF6FF] hover:bg-[#2563EB] text-[#2563EB] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  >
+                    <span>Undang Roadshow</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ======================================================== */}
+        {/* 5. SHOWCASE PROYEK & KARYA INOVASI SISWA (PROJECTS)      */}
+        {/* ======================================================== */}
+        <section id="projects" className="py-20 bg-white border-y border-[#EDE6DD]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+              <div>
+                <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-2">
+                  Showcase Portofolio
+                </span>
+                <h2 className="font-editorial text-3xl sm:text-5xl text-[#3A1E1A]">
+                  Karya Nyata & <span className="text-[#FF7A3D] font-editorial">Proyek Riset Siswa</span>
+                </h2>
+                <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
+                  Bukti nyata kemampuan problem-solving dan inovasi teknologi generasi muda NEXORANESIA.
+                </p>
+              </div>
+
+              <Link
+                href="/projects"
+                className="text-xs font-bold text-[#FF7A3D] hover:underline"
+              >
+                Lihat Semua Portofolio &rarr;
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Project 1: Agrotech */}
+              <div className="p-6 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="w-full h-44 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
+                    <img
+                      src="/images/robotics/line-follower.jpg"
+                      alt="Smart Agrotech Hydroponic Monitoring Robot"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#43A574] text-white shadow-xs">
+                      Juara 1 Youth Inovator
+                    </span>
+                  </div>
+                  <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
+                    Smart Agrotech Monitoring Robot
+                  </h3>
+                  <p className="text-xs text-[#63544F] line-clamp-3 leading-relaxed">
+                    Robot inspeksi hidroponik cerdas dengan sensor nutrisi PPM, pH air, dan kamera AI edge computing rancangan siswa binaan.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {['ESP32', 'AI Vision', 'IoT Cloud'].map((tag) => (
+                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#7A6A65] border border-[#EDE6DD]">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-5 pt-3 border-t border-[#EDE6DD]">
+                  <Link href="/projects" className="text-xs font-bold text-[#FF7A3D] hover:underline flex items-center justify-between">
+                    <span>Detail Riset Proyek</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Project 2: Delta Striker Soccer Bot */}
+              <div className="p-6 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="w-full h-44 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
+                    <img
+                      src="/images/robotics/soccer-bot.jpg"
+                      alt="Delta Striker Robot Sepak Bola Holonomik"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FF7A3D] text-white shadow-xs">
+                      Podium 2nd RoboCup
+                    </span>
+                  </div>
+                  <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
+                    Delta Striker Holonomic Robot
+                  </h3>
+                  <p className="text-xs text-[#63544F] line-clamp-3 leading-relaxed">
+                    Robot sepak bola otonom berkecepatan 2.4 m/s dengan solenoid kicker 250V yang menjuarai panggung olimpiade ASEAN.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {['STM32', 'Holonomic', 'Olympiad'].map((tag) => (
+                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#7A6A65] border border-[#EDE6DD]">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-5 pt-3 border-t border-[#EDE6DD]">
+                  <Link href="/projects" className="text-xs font-bold text-[#FF7A3D] hover:underline flex items-center justify-between">
+                    <span>Detail Riset Proyek</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Project 3: Autonomous AMR */}
+              <div className="p-6 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="w-full h-44 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
+                    <img
+                      src="/images/robotics/amr-robot.jpg"
+                      alt="Autonomous AMR Logistics Robot"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#2563EB] text-white shadow-xs">
+                      Riset Industri
+                    </span>
+                  </div>
+                  <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
+                    Autonomous Mobile Robot (AMR)
+                  </h3>
+                  <p className="text-xs text-[#63544F] line-clamp-3 leading-relaxed">
+                    Platform robot otonom indoor dengan navigasi LiDAR SLAM 2D dan sensor ultrasonik untuk pemetaan gudang mandiri.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {['LiDAR SLAM', 'ROS2', 'Industrial IoT'].map((tag) => (
+                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#7A6A65] border border-[#EDE6DD]">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-5 pt-3 border-t border-[#EDE6DD]">
+                  <Link href="/projects" className="text-xs font-bold text-[#FF7A3D] hover:underline flex items-center justify-between">
+                    <span>Detail Riset Proyek</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ======================================================== */}
+        {/* 6. PRODUK & KIT ROBOTIKA POPULER                         */}
         {/* ======================================================== */}
         <section className="py-20 bg-white border-y border-[#EDE6DD]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -674,13 +933,13 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 6. CALL TO ACTION - Grounded & Rich Mahogany             */}
+        {/* 8. CALL TO ACTION & KONTAK (CONTACT)                     */}
         {/* ======================================================== */}
-        <section className="py-20 bg-[#251310] text-white border-t border-[#3A1E1A]">
+        <section id="contact" className="py-20 bg-[#251310] text-white border-t border-[#3A1E1A]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
             <div>
               <span className="inline-block px-3.5 py-1 rounded-full bg-[#FF7A3D]/20 border border-[#FF7A3D]/40 text-xs uppercase tracking-[0.2em] text-[#FF9E6D] font-bold">
-                MULAI LANGKAH INOVASI ANDA
+                MULAI LANGKAH INOVASI ANDA (CONTACT)
               </span>
             </div>
 
@@ -695,7 +954,7 @@ export default function HomePage() {
             <div className="pt-2 flex flex-wrap justify-center gap-4">
               <button
                 onClick={() => handleEnrollClick()}
-                className="px-8 py-3.5 rounded-full bg-[#FF7A3D] text-white font-bold text-sm hover:bg-[#F06543] shadow-xl shadow-[#FF7A3D]/30 transition-all active:scale-95"
+                className="px-8 py-3.5 rounded-full bg-[#FF7A3D] text-white font-bold text-sm hover:bg-[#F06543] shadow-xl shadow-[#FF7A3D]/30 transition-all active:scale-95 cursor-pointer"
               >
                 Daftar Sekarang!
               </button>
@@ -704,10 +963,17 @@ export default function HomePage() {
                 href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Halo%20NEXORANESIA,%20saya%20ingin%20konsultasi%20kelas%20anak`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3.5 rounded-full bg-white/10 border border-white/25 text-white font-bold text-sm hover:bg-white/20 backdrop-blur-xs transition-all"
+                className="px-8 py-3.5 rounded-full bg-white/10 border border-white/25 text-white font-bold text-sm hover:bg-white/20 backdrop-blur-xs transition-all cursor-pointer"
               >
                 Konsultasi via WhatsApp
               </a>
+
+              <Link
+                href="/contact"
+                className="px-8 py-3.5 rounded-full bg-white/5 border border-white/15 text-stone-300 hover:text-white font-bold text-sm hover:bg-white/10 transition-all"
+              >
+                Halaman Kontak & Lokasi &rarr;
+              </Link>
             </div>
           </div>
         </section>
