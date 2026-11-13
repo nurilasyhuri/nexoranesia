@@ -131,12 +131,12 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
 
         {/* Drawer Footer */}
         <div className="p-6 sm:p-8 bg-[#F3ECE4]/80 border-t border-[#EDE6DD] space-y-3">
-          <div className="text-xs text-[#63544F] leading-relaxed space-y-2">
+          <div className="text-xs text-[#63544F] leading-relaxed space-y-1">
             <p className="font-bold text-[#3A1E1A] uppercase tracking-wider text-[11px]">
-              Technology Beyond Imagination
+              PT Nexoranesia Teknologi Nusantara
             </p>
-            <p className="text-[11px]">
-              Ekosistem pendidikan robotika, coding praktis, AI terapan, dan laboratorium inovasi masa depan di Indonesia.
+            <p className="text-[11px] text-[#7A6A65]">
+              Edukasi Coding, Robotika, AI, dan Solusi STEM Terapan Indonesia.
             </p>
           </div>
 

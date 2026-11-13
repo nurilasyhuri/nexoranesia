@@ -20,27 +20,21 @@ import {
 
 const heroSlides = [
   {
-    tag: 'STEM & ROBOTICS ECOSYSTEM',
     title: 'NEXORANESIA ROBOTICS',
-    subhead: 'TAKING INNOVATION TO NEW HEIGHTS',
     description:
-      'Turn Your Ideas Into Future Innovations. Membangun generasi inovator masa depan melalui Coding, Robotika, dan Kecerdasan Buatan.',
+      'Membangun generasi inovator masa depan melalui pembelajaran Coding, Robotika, dan Kecerdasan Buatan.',
     image: '/images/hero/slide-1.jpg',
     alt: 'Laboratorium Perakitan Robotika dan STEM NEXORANESIA',
   },
   {
-    tag: 'KURSUS KREATIF ANAK & REMAJA',
     title: 'KURSUS CODING & ROBOTIKA',
-    subhead: 'INTERACTIVE LEARNING FOR FUTURE INNOVATORS',
     description:
-      'Dari Scratch visual programming hingga mikrokontroler fisik. Kurikulum ramah anak yang terstruktur, menyenangkan, dan aplikatif.',
+      'Dari Scratch visual programming hingga mikrokontroler fisik yang ramah anak, terstruktur, dan aplikatif.',
     image: '/images/hero/slide-2.jpg',
     alt: 'Inovasi Robot Otonom dan AI NEXORANESIA',
   },
   {
-    tag: 'PRESTASI JUARA INTERNASIONAL',
     title: 'MENTORING KOMPETISI DUNIA',
-    subhead: 'JALUR PRESTASI JUARA WRO, FLL, & RCJ ROBOTICS',
     description:
       'Bimbingan intensif persiapan kejuaraan robotika nasional hingga tingkat internasional bersama tim mentor berpengalaman.',
     image: '/images/hero/slide-3.jpg',
@@ -182,24 +176,13 @@ export default function HomePage() {
           {/* Main Hero Content - Responsive for Mobile & Desktop */}
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center py-16 sm:py-24 lg:py-32 my-auto">
             <div className="max-w-3xl space-y-4 sm:space-y-6">
-              {/* Category Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-xs border border-white/20 text-[10px] sm:text-xs font-bold text-stone-200 tracking-widest uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A3D]" />
-                <span>{heroSlides[activeSlide].tag}</span>
-              </div>
-
               {/* Dynamic Slideshow Headline */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.08] uppercase transition-all duration-300">
                 {heroSlides[activeSlide].title}
               </h1>
 
-              {/* Subhead */}
-              <h2 className="text-xs sm:text-sm lg:text-base font-bold text-[#FF7A3D] tracking-wider uppercase leading-snug">
-                {heroSlides[activeSlide].subhead}
-              </h2>
-
               {/* Clean Supporting Copy */}
-              <p className="text-xs sm:text-sm lg:text-base text-stone-300 font-normal leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-stone-200 font-normal leading-relaxed max-w-2xl">
                 {heroSlides[activeSlide].description}
               </p>
 
@@ -214,8 +197,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Slide Indicator Dots & Navigation */}
-            <div className="flex items-center justify-between pt-8 sm:pt-12 pb-2">
+            {/* Slide Indicator Dots */}
+            <div className="flex items-center pt-8 sm:pt-12 pb-2">
               <div className="flex items-center gap-1.5 sm:gap-2" aria-label="Slideshow Controls">
                 {heroSlides.map((_, i) => (
                   <button
@@ -232,26 +215,6 @@ export default function HomePage() {
                     />
                   </button>
                 ))}
-              </div>
-
-              {/* Arrow controls for desktop/tablet */}
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={prevSlide}
-                  aria-label="Slide Sebelumnya"
-                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-stone-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  type="button"
-                  onClick={nextSlide}
-                  aria-label="Slide Selanjutnya"
-                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-stone-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
               </div>
             </div>
           </div>
@@ -559,12 +522,6 @@ export default function HomePage() {
         {/* ======================================================== */}
         <section id="contact" className="py-20 bg-[#251310] text-white border-t border-[#3A1E1A]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
-            <div>
-              <span className="inline-block px-3.5 py-1 rounded-full bg-[#FF7A3D]/20 border border-[#FF7A3D]/40 text-xs uppercase tracking-[0.2em] text-[#FF9E6D] font-bold">
-                MULAI LANGKAH INOVASI ANDA
-              </span>
-            </div>
-
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
               Siap Mengembangkan Potensi Putra-Putri Anda?
             </h2>

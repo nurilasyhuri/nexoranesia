@@ -10,7 +10,6 @@ export const Navbar: React.FC<{
   onOpenMenu?: () => void;
 }> = ({ onOpenEnrollment, onOpenMenu }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -82,38 +81,6 @@ export const Navbar: React.FC<{
           <div className="hidden lg:flex items-center justify-end min-w-[220px]" aria-hidden="true" />
         </div>
       </div>
-
-      {/* Mobile Navigation Drawer */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-[#251310] border-b border-white/10 px-4 pt-4 pb-6 space-y-3">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-3 py-2 text-base font-medium rounded-xl ${
-                pathname === link.href
-                  ? 'text-[#FF7A3D] bg-white/10 font-semibold'
-                  : 'text-stone-300 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-
-          <div className="pt-2 border-t border-white/10">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                if (onOpenEnrollment) onOpenEnrollment();
-              }}
-              className="w-full py-3 text-center text-xs font-bold uppercase tracking-wider rounded-full bg-[#FF7A3D] text-white shadow-sm"
-            >
-              Daftar Sekarang
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
