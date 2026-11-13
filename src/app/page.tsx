@@ -16,6 +16,12 @@ import {
 import {
   ChevronLeft,
   ChevronRight,
+  Cpu,
+  Bot,
+  Lightbulb,
+  Trophy,
+  Rocket,
+  Globe,
 } from 'lucide-react';
 
 const heroSlides = [
@@ -221,7 +227,150 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 2. JELAJAHI KELAS FAVORITMU (PROGRAMS) - MODEL KARTUN   */}
+        {/* 2. MENGAPA MEMILIH NEXORANESIA? (ABOUT)                  */}
+        {/* ======================================================== */}
+        <section id="about" className="py-16 sm:py-24 bg-white border-y border-[#EDE6DD]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Header */}
+            <div className="max-w-3xl mb-12 sm:mb-16">
+              <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-widest px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-3.5">
+                MENGAPA MEMILIH NEXORANESIA
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A1E1A] tracking-tight leading-[1.15]">
+                Bukan Sekadar Belajar Teknologi, <span className="text-[#FF7A3D]">Tetapi Menciptakan Masa Depan.</span>
+              </h2>
+              <p className="text-sm sm:text-base text-[#63544F] mt-4 leading-relaxed">
+                NEXORANESIA menghadirkan pengalaman belajar teknologi yang menggabungkan kreativitas, eksplorasi, praktik langsung, dan inovasi. Kami membantu generasi muda mengembangkan kemampuan untuk memahami teknologi, membangun karya, dan menghadirkan solusi nyata bagi masa depan.
+              </p>
+            </div>
+
+            {/* 6 Core Pillars Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+              {/* 1. Future-Ready Learning */}
+              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FF7A3D] text-white flex items-center justify-center shadow-md shadow-[#FF7A3D]/20">
+                      <Cpu className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-bold text-[#FF7A3D] px-2.5 py-1 rounded-full bg-[#FDEEE7]">
+                      01
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
+                    Future-Ready Learning
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
+                    Pembelajaran Coding, Robotics, AI, dan STEM yang dirancang untuk membangun keterampilan relevan dengan perkembangan teknologi masa depan.
+                  </p>
+                </div>
+              </div>
+
+              {/* 2. Hands-On Experience */}
+              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#43A574] hover:shadow-md transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#43A574] text-white flex items-center justify-center shadow-md shadow-[#43A574]/20">
+                      <Bot className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-bold text-[#43A574] px-2.5 py-1 rounded-full bg-[#E8F7F0]">
+                      02
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#43A574] transition-colors leading-snug">
+                    Hands-On Experience
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
+                    Belajar melalui praktik langsung, eksperimen, merakit robot, membuat program, dan mengembangkan proyek teknologi sendiri.
+                  </p>
+                </div>
+              </div>
+
+              {/* 3. Creativity & Innovation */}
+              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#D97706] hover:shadow-md transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F4B740] text-white flex items-center justify-center shadow-md shadow-[#F4B740]/20">
+                      <Lightbulb className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-bold text-[#D97706] px-2.5 py-1 rounded-full bg-[#FEF3C7]">
+                      03
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#D97706] transition-colors leading-snug">
+                    Creativity &amp; Innovation
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
+                    Mendorong peserta untuk berpikir kritis, memecahkan masalah, mengembangkan ide, dan menciptakan solusi inovatif.
+                  </p>
+                </div>
+              </div>
+
+              {/* 4. Competition & Achievement */}
+              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#2563EB] hover:shadow-md transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#3B82F6] text-white flex items-center justify-center shadow-md shadow-[#3B82F6]/20">
+                      <Trophy className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-bold text-[#2563EB] px-2.5 py-1 rounded-full bg-[#EFF6FF]">
+                      04
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#2563EB] transition-colors leading-snug">
+                    Competition &amp; Achievement
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
+                    Membuka kesempatan untuk mengembangkan kemampuan, mempersiapkan diri, dan mengikuti kompetisi teknologi dari tingkat lokal hingga internasional.
+                  </p>
+                </div>
+              </div>
+
+              {/* 5. Innovation & Product Development */}
+              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#7C3AED] hover:shadow-md transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#8B5CF6] text-white flex items-center justify-center shadow-md shadow-[#8B5CF6]/20">
+                      <Rocket className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-bold text-[#7C3AED] px-2.5 py-1 rounded-full bg-[#F5F3FF]">
+                      05
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#7C3AED] transition-colors leading-snug">
+                    Innovation &amp; Product Development
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
+                    Tidak berhenti pada pembelajaran. Peserta didorong untuk melakukan eksperimen, membuat prototipe, dan mengembangkan produk teknologi.
+                  </p>
+                </div>
+              </div>
+
+              {/* 6. Integrated Technology Ecosystem */}
+              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#562D29] hover:shadow-md transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#562D29] text-white flex items-center justify-center shadow-md shadow-[#562D29]/20">
+                      <Globe className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-bold text-[#562D29] px-2.5 py-1 rounded-full bg-[#EDE6DD]">
+                      06
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#562D29] transition-colors leading-snug">
+                    Integrated Technology Ecosystem
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
+                    Terhubung dengan ekosistem pendidikan, kompetisi, laboratorium inovasi, pengembangan produk, dan jaringan kolaborasi teknologi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ======================================================== */}
+        {/* 3. JELAJAHI KELAS FAVORITMU (PROGRAMS) - MODEL KARTUN   */}
         {/* ======================================================== */}
         <section id="programs" className="relative py-20 bg-gradient-to-b from-[#FFFDF9] via-[#FAF8F5] to-[#F7F2EC] border-t border-[#EDE6DD]/80 overflow-hidden">
           {/* Subtle Cartoon Dot Grid Background */}
