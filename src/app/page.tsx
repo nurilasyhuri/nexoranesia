@@ -7,55 +7,47 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { EnrollmentModal } from '@/components/EnrollmentModal';
 import { MenuDrawer } from '@/components/MenuDrawer';
-import { NexyMascot } from '@/components/CartoonMascot';
-import { useCart } from '@/context/CartContext';
 import {
   COMPANY_INFO,
   ACADEMY_COURSES,
-  STORE_ITEMS,
-  TESTIMONIALS,
   CLIENT_PARTNERS,
 } from '@/data/ecosystem';
 import {
-  GraduationCap,
-  Bot,
-  Cpu,
-  Trophy,
   ArrowRight,
   CheckCircle2,
-  Star,
-  ShoppingBag,
-  Sparkles,
   Users,
-  Award,
-  Layers,
-  HeartHandshake,
-  ShieldCheck,
+  Clock,
   ChevronLeft,
   ChevronRight,
-  MessageSquare,
-  Quote,
-  Lightbulb,
-  Rocket,
-  Globe,
-  Menu,
 } from 'lucide-react';
 
 const heroSlides = [
   {
+    tag: 'STEM & ROBOTICS ECOSYSTEM',
+    title: 'NEXORANESIA ROBOTICS',
+    subhead: 'TAKING INNOVATION TO NEW HEIGHTS',
+    description:
+      'Turn Your Ideas Into Future Innovations. Membangun generasi inovator masa depan melalui Coding, Robotika, dan Kecerdasan Buatan.',
     image: '/images/hero/slide-1.jpg',
-    alt: 'Laboratorium Perakitan Robotika & STEM NEXORANESIA',
-    tag: 'Laboratorium & Perakitan Robot Fisik',
+    alt: 'Laboratorium Perakitan Robotika dan STEM NEXORANESIA',
   },
   {
+    tag: 'KURSUS KREATIF ANAK & REMAJA',
+    title: 'KURSUS CODING & ROBOTIKA',
+    subhead: 'INTERACTIVE LEARNING FOR FUTURE INNOVATORS',
+    description:
+      'Dari Scratch visual programming hingga mikrokontroler fisik. Kurikulum ramah anak yang terstruktur, menyenangkan, dan aplikatif.',
     image: '/images/hero/slide-2.jpg',
-    alt: 'Inovasi Robot Otonom & AI NEXORANESIA',
-    tag: 'Teknologi Robotika & AI Mandiri',
+    alt: 'Inovasi Robot Otonom dan AI NEXORANESIA',
   },
   {
+    tag: 'PRESTASI JUARA INTERNASIONAL',
+    title: 'MENTORING KOMPETISI DUNIA',
+    subhead: 'JALUR PRESTASI JUARA WRO, FLL, & RCJ ROBOTICS',
+    description:
+      'Bimbingan intensif persiapan kejuaraan robotika nasional hingga tingkat internasional bersama tim mentor berpengalaman.',
     image: '/images/hero/slide-3.jpg',
-    alt: 'Siswa Aktif Belajar Coding & Problem Solving',
-    tag: 'Kelas Interaktif & Menyenangkan',
+    alt: 'Mentoring Olimpiade Robotika NEXORANESIA',
   },
 ];
 
@@ -63,17 +55,17 @@ const SLIDE_TESTIMONIALS = [
   {
     name: 'Ahnaf Zhafran Khairy',
     content:
-      'Alhamdulillah Zhafran terbantu sekali dengan belajar di sini, sejak masuk ke sekolah internasional Zhafran tidak terlalu mengalami kesulitan beradaptasi karena sudah terbiasa belajar di sini dan pembiasaan percakapan bahasa inggris',
+      'Alhamdulillah Zhafran terbantu sekali dengan belajar di sini, sejak masuk ke sekolah internasional Zhafran tidak terlalu mengalami kesulitan beradaptasi karena sudah terbiasa belajar di sini dan pembiasaan percakapan bahasa inggris.',
   },
   {
     name: 'Nadia Safira & Bpk. Hendarto',
     content:
-      'Putra kami (10 tahun) dulunya kecanduan game online berjam-jam. Setelah ikut kelas Robotics di Nexoranesia, energinya beralih merakit robot dan mengotak-atik Scratch. Sekarang dia bangga bisa pamer game buatannya sendiri ke teman-temannya.',
+      'Putra kami (10 tahun) dulunya kecanduan game online berjam-jam. Setelah ikut kelas Robotics di Nexoranesia, energinya beralih merakit robot dan mengotak-atik Scratch. Sekarang dia bangga bisa memprogram permainannya sendiri.',
   },
   {
     name: 'Dr. Ir. Bambang Sujarwo, M.T.',
     content:
-      'Kerjasama pendirian STEM & Robotics Lab bersama NEXORANESIA mengubah iklim riset di sekolah kami secara drastis. Siswa yang awalnya pasif kini mampu membuat inovasi IoT yang menjuarai kompetisi tingkat provinsi. Pendampingan guru mereka sangat tuntas!',
+      'Kerjasama pendirian STEM & Robotics Lab bersama NEXORANESIA mengubah iklim riset di sekolah kami secara drastis. Siswa yang awalnya pasif kini mampu membuat inovasi IoT yang menjuarai kompetisi tingkat provinsi. Pendampingan mentor mereka sangat tuntas!',
   },
   {
     name: 'Rifqi Pratama',
@@ -83,7 +75,7 @@ const SLIDE_TESTIMONIALS = [
   {
     name: 'Kevin Santoso',
     content:
-      'Pengiriman komponen dari NEXORANESIA Store super cepat dan barangnya dijamin original. Sangat jarang ada toko robotika di Indonesia yang memberikan datasheet jelas dan tim teknis yang ramah saat diajak diskusi troubleshooting.',
+      'Materi terstruktur rapi dari pengenalan sirkuit dasar sampai algoritma tingkat lanjut. Sangat jarang ada pusat edukasi robotika di Indonesia yang memberikan perangkat hands-on langsung dengan pendampingan mentor yang ramah dan solutif.',
   },
 ];
 
@@ -95,17 +87,41 @@ export default function HomePage() {
   const [isMenuDrawerOpen, setIsMenuDrawerOpen] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
-  const { addToCart } = useCart();
+  // Mobile Touch Swipe Handling for Hero Slideshow
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5500);
+    }, 6000);
     return () => clearInterval(timer);
   }, []);
 
   const nextSlide = () => setActiveSlide((prev) => (prev + 1) % heroSlides.length);
   const prevSlide = () => setActiveSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
 
   const nextTestimonial = () => {
     setTestimonialIndex((prev) => (prev + 1) % SLIDE_TESTIMONIALS.length);
@@ -134,12 +150,15 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* ======================================================== */}
-        {/* 1. HERO SHOWCASE (HOME)                                  */}
+        {/* 1. HERO SLIDESHOW (HOME) - FULLY MOBILE FRIENDLY         */}
         {/* ======================================================== */}
         <section
           id="home"
-          className="relative w-full min-h-[580px] lg:min-h-[660px] bg-[#251310] text-white overflow-hidden flex flex-col justify-between select-none"
-          aria-label="NEXORANESIA Hero Showcase"
+          className="relative w-full min-h-[520px] sm:min-h-[580px] lg:min-h-[660px] bg-[#251310] text-white overflow-hidden flex flex-col justify-between select-none"
+          aria-label="NEXORANESIA Hero Slideshow"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {/* Background Image Slideshow Container */}
           <div className="absolute inset-0 z-0 pointer-events-none">
@@ -153,336 +172,190 @@ export default function HomePage() {
                 <img
                   src={slide.image}
                   alt={slide.alt}
-                  className="w-full h-full object-cover object-center filter brightness-[0.42] contrast-[1.12]"
+                  className="w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.12]"
                   loading={idx === 0 ? 'eager' : 'lazy'}
                 />
-                {/* Rich Mahogany Contrast Gradients */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#251310]/95 via-[#251310]/70 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#251310]/95 via-transparent to-[#251310]/45" />
+                {/* Rich Mahogany Contrast Gradients for Readability */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#251310]/95 via-[#251310]/75 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#251310] via-transparent to-[#251310]/60" />
               </div>
             ))}
           </div>
 
-          {/* Main Hero Content - Model Standar MS Scaffolding */}
-          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center py-20 sm:py-28 lg:py-36 my-auto">
+          {/* Main Hero Content - Responsive for Mobile & Desktop */}
+          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center py-16 sm:py-24 lg:py-32 my-auto">
             <div className="max-w-3xl space-y-4 sm:space-y-6">
-              {/* Bold All-Caps Brand Headline (MS Scaffolding Standard) */}
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.06] uppercase">
-                NEXORANESIA<br />
-                <span className="text-[#FF7A3D]">ROBOTICS</span>
+              {/* Category Pill */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-xs border border-white/20 text-[10px] sm:text-xs font-bold text-stone-200 tracking-widest uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A3D]" />
+                <span>{heroSlides[activeSlide].tag}</span>
+              </div>
+
+              {/* Dynamic Slideshow Headline */}
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.08] uppercase transition-all duration-300">
+                {heroSlides[activeSlide].title}
               </h1>
 
-              {/* High-Impact Subhead */}
-              <h2 className="text-base sm:text-xl lg:text-2xl font-bold text-white tracking-wide uppercase leading-snug">
-                TAKING INNOVATION TO NEW HEIGHTS — Complete Robotics &amp; STEM Ecosystem
+              {/* Subhead */}
+              <h2 className="text-xs sm:text-sm lg:text-base font-bold text-[#FF7A3D] tracking-wider uppercase leading-snug">
+                {heroSlides[activeSlide].subhead}
               </h2>
 
               {/* Clean Supporting Copy */}
-              <p className="text-sm sm:text-base lg:text-lg text-stone-200 font-medium leading-relaxed max-w-2xl">
-                Turn Your Ideas Into Future Innovations. Membangun generasi inovator masa depan melalui Coding, Robotika, dan Kecerdasan Buatan.
+              <p className="text-xs sm:text-sm lg:text-base text-stone-300 font-normal leading-relaxed max-w-2xl">
+                {heroSlides[activeSlide].description}
               </p>
 
               {/* Single Primary Action Button */}
-              <div className="pt-4 flex items-center">
+              <div className="pt-2 sm:pt-4 flex items-center">
                 <a
                   href="#programs"
-                  className="inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-xl shadow-[#FF7A3D]/30 transition-all cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-xl shadow-[#FF7A3D]/30 transition-all cursor-pointer"
                 >
                   EXPLORE THE PROGRAM
                 </a>
               </div>
             </div>
 
-            {/* Slide Indicator Dots */}
-            <div className="flex items-center justify-center gap-2 pt-6 pb-2" aria-label="Slideshow Controls">
-              {heroSlides.map((_, i) => (
+            {/* Slide Indicator Dots & Navigation */}
+            <div className="flex items-center justify-between pt-8 sm:pt-12 pb-2">
+              <div className="flex items-center gap-1.5 sm:gap-2" aria-label="Slideshow Controls">
+                {heroSlides.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActiveSlide(i)}
+                    className="p-2 focus:outline-none cursor-pointer"
+                    aria-label={`Slide ${i + 1}`}
+                  >
+                    <span
+                      className={`h-1.5 rounded-full block transition-all duration-300 ${
+                        activeSlide === i ? 'w-8 bg-[#FF7A3D]' : 'w-2 bg-stone-600 hover:bg-stone-400'
+                      }`}
+                    />
+                  </button>
+                ))}
+              </div>
+
+              {/* Arrow controls for desktop/tablet */}
+              <div className="flex items-center gap-2">
                 <button
-                  key={i}
                   type="button"
-                  onClick={() => setActiveSlide(i)}
-                  className="p-1.5 focus:outline-none rounded-full cursor-pointer"
-                  aria-label={`Pindah ke Slide ${i + 1}`}
+                  onClick={prevSlide}
+                  aria-label="Slide Sebelumnya"
+                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-stone-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
                 >
-                  <span
-                    className={`h-1.5 rounded-full block transition-all duration-300 ${
-                      activeSlide === i ? 'w-8 bg-[#FF7A3D]' : 'w-2 bg-stone-600 hover:bg-stone-400'
-                    }`}
-                  />
+                  <ChevronLeft className="w-4 h-4" />
                 </button>
-              ))}
+                <button
+                  type="button"
+                  onClick={nextSlide}
+                  aria-label="Slide Selanjutnya"
+                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-stone-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* ======================================================== */}
-        {/* 2. WHY CHOOSE NEXORANESIA? (ABOUT)                      */}
+        {/* 2. JELAJAHI KELAS FAVORITMU (PROGRAMS) - REAL PHOTOS     */}
         {/* ======================================================== */}
-        <section id="about" className="py-16 sm:py-24 bg-white border-y border-[#EDE6DD]">
+        <section id="programs" className="py-16 sm:py-24 bg-[#FAF8F5] border-t border-[#EDE6DD]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header */}
-            <div className="max-w-3xl mb-12 sm:mb-16">
-              <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-widest px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-3.5">
-                WHY CHOOSE NEXORANESIA?
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3A1E1A] tracking-tight leading-[1.15]">
-                Bukan Sekadar Belajar Teknologi, <span className="text-[#FF7A3D]">Tetapi Menciptakan Masa Depan.</span>
-              </h2>
-              <p className="text-sm sm:text-base text-[#63544F] mt-4 leading-relaxed">
-                NEXORANESIA menghadirkan pengalaman belajar teknologi yang menggabungkan kreativitas, eksplorasi, praktik langsung, dan inovasi. Kami membantu generasi muda mengembangkan kemampuan untuk memahami teknologi, membangun karya, dan menghadirkan solusi nyata bagi masa depan.
-              </p>
-            </div>
-
-            {/* 6 Core Pillars Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-              {/* 1. Future-Ready Learning */}
-              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#FF7A3D] text-white flex items-center justify-center shadow-md shadow-[#FF7A3D]/20">
-                      <Cpu className="w-6 h-6" />
-                    </div>
-                    <span className="font-mono text-xs font-bold text-[#FF7A3D] px-2.5 py-1 rounded-full bg-[#FDEEE7]">
-                      01
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
-                    Future-Ready Learning
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
-                    Pembelajaran Coding, Robotics, AI, dan STEM yang dirancang untuk membangun keterampilan relevan dengan perkembangan teknologi masa depan.
-                  </p>
-                </div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-6">
+              <div className="max-w-2xl space-y-2">
+                <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block">
+                  PILIHAN PROGRAM KELAS
+                </span>
+                <h2 className="font-editorial font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#3A1E1A] tracking-tight">
+                  Jelajahi <span className="text-[#FF7A3D]">Kelas Favoritmu</span>
+                </h2>
+                <p className="text-xs sm:text-sm text-[#63544F] font-normal leading-relaxed pt-1">
+                  Pilih kurikulum dan minat teknologi yang paling cocok untuk putra-putri Anda.
+                </p>
               </div>
 
-              {/* 2. Hands-On Experience */}
-              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#43A574] text-white flex items-center justify-center shadow-md shadow-[#43A574]/20">
-                      <Bot className="w-6 h-6" />
-                    </div>
-                    <span className="font-mono text-xs font-bold text-[#43A574] px-2.5 py-1 rounded-full bg-[#E8F7F0]">
-                      02
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#43A574] transition-colors leading-snug">
-                    Hands-On Experience
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
-                    Belajar melalui praktik langsung, eksperimen, merakit robot, membuat program, dan mengembangkan proyek teknologi sendiri.
-                  </p>
-                </div>
-              </div>
-
-              {/* 3. Creativity & Innovation */}
-              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#F4B740] text-white flex items-center justify-center shadow-md shadow-[#F4B740]/20">
-                      <Lightbulb className="w-6 h-6" />
-                    </div>
-                    <span className="font-mono text-xs font-bold text-[#D97706] px-2.5 py-1 rounded-full bg-[#FEF3C7]">
-                      03
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#D97706] transition-colors leading-snug">
-                    Creativity &amp; Innovation
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
-                    Mendorong peserta untuk berpikir kritis, memecahkan masalah, mengembangkan ide, dan menciptakan solusi inovatif.
-                  </p>
-                </div>
-              </div>
-
-              {/* 4. Competition & Achievement */}
-              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#3B82F6] text-white flex items-center justify-center shadow-md shadow-[#3B82F6]/20">
-                      <Trophy className="w-6 h-6" />
-                    </div>
-                    <span className="font-mono text-xs font-bold text-[#2563EB] px-2.5 py-1 rounded-full bg-[#EFF6FF]">
-                      04
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#2563EB] transition-colors leading-snug">
-                    Competition &amp; Achievement
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
-                    Membuka kesempatan untuk mengembangkan kemampuan, mempersiapkan diri, dan mengikuti kompetisi teknologi dari tingkat lokal hingga internasional.
-                  </p>
-                </div>
-              </div>
-
-              {/* 5. Innovation & Product Development */}
-              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#8B5CF6] text-white flex items-center justify-center shadow-md shadow-[#8B5CF6]/20">
-                      <Rocket className="w-6 h-6" />
-                    </div>
-                    <span className="font-mono text-xs font-bold text-[#7C3AED] px-2.5 py-1 rounded-full bg-[#F5F3FF]">
-                      05
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#7C3AED] transition-colors leading-snug">
-                    Innovation &amp; Product Development
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
-                    Tidak berhenti pada pembelajaran. Peserta didorong untuk melakukan eksperimen, membuat prototipe, dan mengembangkan produk teknologi.
-                  </p>
-                </div>
-              </div>
-
-              {/* 6. Integrated Technology Ecosystem */}
-              <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] hover:shadow-md transition-all group flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#562D29] text-white flex items-center justify-center shadow-md shadow-[#562D29]/20">
-                      <Globe className="w-6 h-6" />
-                    </div>
-                    <span className="font-mono text-xs font-bold text-[#562D29] px-2.5 py-1 rounded-full bg-[#EDE6DD]">
-                      06
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#3A1E1A] group-hover:text-[#562D29] transition-colors leading-snug">
-                    Integrated Technology Ecosystem
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#63544F] mt-2.5 leading-relaxed">
-                    Terhubung dengan ekosistem pendidikan, kompetisi, laboratorium inovasi, pengembangan produk, dan jaringan kolaborasi teknologi.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ======================================================== */}
-        {/* 3. JELAJAHI KELAS FAVORITMU (PROGRAMS) - MODEL KARTUN   */}
-        {/* ======================================================== */}
-        <section id="programs" className="relative py-20 bg-gradient-to-b from-[#FFFDF9] via-[#FAF8F5] to-[#F7F2EC] border-t border-[#EDE6DD]/80 overflow-hidden">
-          {/* Subtle Cartoon Dot Grid Background */}
-          <div className="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(#FF7A3D_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
-          
-          {/* Floating Playful Cartoon Stickers */}
-          <div className="absolute top-10 left-8 text-2xl select-none animate-bounce hidden md:block">⭐</div>
-          <div className="absolute top-16 right-12 text-3xl select-none animate-pulse hidden md:block">🚀</div>
-          <div className="absolute bottom-12 left-10 text-2xl select-none opacity-70 hidden md:block">🤖</div>
-          <div className="absolute bottom-8 right-8 text-2xl select-none opacity-70 hidden md:block">✨</div>
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            {/* Playful Header Banner with Mascot Nexy */}
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-12 gap-6 bg-gradient-to-r from-orange-50 via-amber-50/70 to-white p-6 sm:p-8 rounded-[32px] border-2 border-orange-200/90 shadow-[0_8px_0_#FADCD3]">
-              <div className="flex items-center gap-4 sm:gap-6">
-                {/* Maskot Robot Kartun Nexy yang Melambai */}
-                <NexyMascot size="lg" className="shrink-0" />
-                
-                <div className="space-y-1.5">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-[#FF7A3D] text-white text-[11px] font-black uppercase tracking-wider shadow-sm">
-                    <span>🌟 KELAS SERU &amp; KREATIF</span>
-                  </div>
-                  
-                  <h2 className="font-editorial font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#3A1E1A] tracking-tight leading-tight">
-                    Jelajahi <span className="text-[#FF7A3D] relative inline-block">Kelas Favoritmu!
-                      <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#FFD25D]" viewBox="0 0 100 12" preserveAspectRatio="none" fill="none">
-                        <path d="M0,8 Q50,0 100,8" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                  </h2>
-                  
-                  <p className="text-xs sm:text-sm text-[#63544F] font-medium max-w-xl">
-                    Belajar coding &amp; rakit robot fisik impianmu dengan cara super seru, interaktif, dan ramah anak!
-                  </p>
-                </div>
-              </div>
-
-              {/* Chunky 3D Cartoon Filter Tabs */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+              {/* Clean Filter Tabs (No Emoticons) */}
+              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
                 {[
-                  { id: 'All', label: 'Semua Kelas', icon: '🎒' },
-                  { id: 'Coding', label: 'Coding & Game', icon: '💻' },
-                  { id: 'Robotics', label: 'Robotika Seru', icon: '🤖' },
-                  { id: 'AI', label: 'Smart AI', icon: '🧠' },
+                  { id: 'All', label: 'Semua Kelas' },
+                  { id: 'Coding', label: 'Coding' },
+                  { id: 'Robotics', label: 'Robotika' },
+                  { id: 'AI', label: 'AI' },
                 ].map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => setActiveCourseCategory(cat.id)}
-                    className={`px-4 py-2.5 rounded-2xl text-xs font-black transition-all cursor-pointer flex items-center gap-1.5 active:translate-y-1 ${
+                    className={`px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                       activeCourseCategory === cat.id
-                        ? 'bg-gradient-to-r from-[#FF7A3D] to-[#FF9059] text-white shadow-[0_4px_0_#D9531E] -translate-y-0.5'
-                        : 'bg-white text-[#562D29] border-2 border-[#EDE6DD] hover:border-[#FF7A3D] shadow-[0_3px_0_#EDE6DD] hover:shadow-[0_3px_0_#FF7A3D]/40'
+                        ? 'bg-[#FF7A3D] text-white shadow-sm'
+                        : 'bg-white border border-[#EDE6DD] text-[#562D29] hover:bg-[#FDEEE7]'
                     }`}
                   >
-                    <span className="text-sm">{cat.icon}</span>
-                    <span>{cat.label}</span>
+                    {cat.label}
                   </button>
                 ))}
+                <Link
+                  href="/programs"
+                  className="px-3 py-2 text-xs font-bold text-[#FF7A3D] hover:underline whitespace-nowrap"
+                >
+                  Lihat Semua Program &rarr;
+                </Link>
               </div>
             </div>
 
-            {/* Chunky 3D Cartoon Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Course Cards Grid with Real Photography */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
               {filteredCourses.map((course) => {
-                // Ilustrasi 3D kartun cerah untuk setiap kelas
-                const cartoonImg = course.id === 'acad-02' 
-                  ? '/images/academy/scratch-coding.jpg'
-                  : course.id === 'acad-03'
-                  ? '/images/academy/python-ai.jpg'
-                  : course.id === 'acad-04'
-                  ? '/images/academy/amr-rover.jpg'
-                  : '/images/academy/robotics-kids.jpg';
-
-                const cartoonTheme = course.category === 'Coding'
-                  ? { icon: '💻', badgeBg: 'bg-purple-100 text-purple-800 border-purple-200' }
-                  : course.category === 'AI'
-                  ? { icon: '🧠', badgeBg: 'bg-sky-100 text-sky-800 border-sky-200' }
-                  : { icon: '🤖', badgeBg: 'bg-orange-100 text-orange-800 border-orange-200' };
+                const photoSrc =
+                  course.id === 'acad-02'
+                    ? '/images/academy/scratch-coding.jpg'
+                    : course.id === 'acad-03'
+                    ? '/images/academy/python-ai.jpg'
+                    : course.id === 'acad-04'
+                    ? '/images/academy/arduino-c.jpg'
+                    : '/images/academy/robotics-kids.jpg';
 
                 return (
                   <div
                     key={course.id}
-                    className="rounded-[28px] bg-white border-2 border-[#EDE6DD] hover:border-[#FF7A3D] transition-all duration-300 flex flex-col justify-between group shadow-[0_6px_0_#EDE6DD,0_12px_24px_-4px_rgba(255,122,61,0.08)] hover:shadow-[0_8px_0_#FF7A3D,0_20px_32px_-4px_rgba(255,122,61,0.2)] hover:-translate-y-1.5 overflow-hidden"
+                    className="rounded-2xl bg-white border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all duration-300 flex flex-col justify-between group shadow-xs hover:shadow-md overflow-hidden"
                   >
-                    {/* Kartun 3D Banner Header */}
-                    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-amber-100 via-orange-100 to-amber-200">
+                    {/* Real Photography Header */}
+                    <div className="relative h-48 w-full overflow-hidden bg-stone-100">
                       <Image
-                        src={cartoonImg}
+                        src={photoSrc}
                         alt={course.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
-                      
-                      {/* Badge Kategori Kartun */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70" />
+
+                      {/* Category Badge */}
                       <div className="absolute top-3 left-3 z-10">
-                        <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#3A1E1A] shadow-md border border-stone-200">
-                          <span>{cartoonTheme.icon}</span>
-                          <span>{course.category}</span>
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 text-[#3A1E1A] shadow-xs border border-stone-200">
+                          {course.category}
                         </span>
                       </div>
 
-                      {/* Badge Prestasi / Populer */}
+                      {/* Badge if exists */}
                       {course.badge && (
                         <div className="absolute top-3 right-3 z-10">
-                          <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FFD25D] text-amber-950 shadow-md border border-amber-300">
-                            ⭐ {course.badge}
+                          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FFD25D] text-amber-950 shadow-xs border border-amber-300">
+                            {course.badge}
                           </span>
                         </div>
                       )}
-
-                      {/* Pill Aksen di Bawah Banner */}
-                      <div className="absolute bottom-2.5 left-3 right-3 z-10">
-                        <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-white bg-black/40 backdrop-blur-xs px-2.5 py-0.5 rounded-full">
-                          <span>🎯 Praktik Rakit Langsung</span>
-                        </div>
-                      </div>
                     </div>
 
-                    {/* Konten Kartu */}
+                    {/* Card Content */}
                     <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                       <div className="space-y-2.5">
-                        <h3 className="font-editorial font-extrabold text-xl text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors line-clamp-2 leading-tight">
+                        <h3 className="font-editorial font-bold text-lg text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors line-clamp-2 leading-snug">
                           {course.title}
                         </h3>
 
@@ -490,46 +363,39 @@ export default function HomePage() {
                           {course.shortDesc}
                         </p>
 
-                        {/* Specs Mini Chips (Usia & Durasi) */}
-                        <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
-                          <div className="flex items-center gap-2 bg-[#FAF8F5] border border-[#EDE6DD] rounded-xl px-2.5 py-2">
-                            <span className="text-base">👦</span>
-                            <div className="flex flex-col">
-                              <span className="text-[10px] text-[#8C7A75] font-semibold uppercase leading-none">Usia</span>
-                              <strong className="text-[#3A1E1A] font-extrabold text-[11px] leading-tight mt-0.5">{course.ageGroup}</strong>
-                            </div>
+                        {/* Specs with Clean Icons */}
+                        <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#EDE6DD]/70 text-xs">
+                          <div className="flex items-center gap-2 text-[#63544F]">
+                            <Users className="w-3.5 h-3.5 text-[#FF7A3D] shrink-0" />
+                            <span className="truncate">{course.ageGroup}</span>
                           </div>
-                          <div className="flex items-center gap-2 bg-[#FAF8F5] border border-[#EDE6DD] rounded-xl px-2.5 py-2">
-                            <span className="text-base">⏱️</span>
-                            <div className="flex flex-col">
-                              <span className="text-[10px] text-[#8C7A75] font-semibold uppercase leading-none">Sesi</span>
-                              <strong className="text-[#3A1E1A] font-extrabold text-[11px] leading-tight mt-0.5">{course.duration}</strong>
-                            </div>
+                          <div className="flex items-center gap-2 text-[#63544F]">
+                            <Clock className="w-3.5 h-3.5 text-[#FF7A3D] shrink-0" />
+                            <span className="truncate">{course.duration}</span>
                           </div>
                         </div>
 
-                        {/* Highlight Belajar Kartun */}
-                        <div className="bg-[#FFF9E6]/70 rounded-xl p-2.5 border border-[#FDE68A]/60 text-[11px] space-y-1">
-                          <div className="font-bold text-[#B45309] flex items-center gap-1">
-                            <span>🚀 Materi Utama:</span>
+                        {/* Feature Points */}
+                        <div className="bg-[#FAF8F5] rounded-xl p-3 border border-[#EDE6DD] text-[11px] text-[#63544F] space-y-1">
+                          <div className="flex items-center gap-1.5">
+                            <CheckCircle2 className="w-3 h-3 text-[#2E7D32] shrink-0" />
+                            <span className="line-clamp-1">{course.skillsLearned?.[0] || '1 Siswa 1 Kit Eksklusif'}</span>
                           </div>
-                          <div className="text-[#562D29] line-clamp-1 font-medium">
-                            • {course.skillsLearned?.[0] || '1 Siswa 1 Kit Eksklusif'}
-                          </div>
-                          <div className="text-[#562D29] line-clamp-1 font-medium">
-                            • {course.skillsLearned?.[1] || 'Sertifikat & Portofolio Siswa'}
+                          <div className="flex items-center gap-1.5">
+                            <CheckCircle2 className="w-3 h-3 text-[#2E7D32] shrink-0" />
+                            <span className="line-clamp-1">{course.skillsLearned?.[1] || 'Sertifikat Kelulusan Resmi'}</span>
                           </div>
                         </div>
                       </div>
 
-                      {/* Tombol 3D Kartun Chunky */}
+                      {/* Clean Action Button */}
                       <div className="pt-2">
                         <button
                           onClick={() => handleEnrollClick(course.title)}
-                          className="w-full py-3 rounded-2xl bg-gradient-to-r from-[#FF7A3D] to-[#FF9059] hover:from-[#F06543] hover:to-[#FF7A3D] text-white font-black text-xs uppercase tracking-wider shadow-[0_4px_0_#D9531E] hover:shadow-[0_2px_0_#D9531E] hover:translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
+                          className="w-full py-2.5 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 shadow-xs"
                         >
-                          <span>Daftar Kelas Seru</span>
-                          <span className="text-sm">🚀</span>
+                          <span>Daftar Kelas Ini</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
                         </button>
                       </div>
                     </div>
@@ -541,352 +407,11 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 4. AKTIVITAS & KOMPETISI DUNIA (ACTIVITIES)              */}
-        {/* ======================================================== */}
-        <section id="activities" className="py-20 bg-[#FAF8F5] border-t border-[#EDE6DD]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-              <div>
-                <span className="text-xs font-bold text-[#43A574] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#E8F7F0] border border-[#CCEEDB] inline-block mb-2">
-                  Aktivitas & Event
-                </span>
-                <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
-                  Aktivitas Eksplorasi & <span className="text-[#43A574] font-editorial font-extrabold">Turnamen Robotika</span>
-                </h2>
-                <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
-                  Dari mentoring World Robot Olympiad (WRO) hingga workshop langsung merakit perangkat fisik.
-                </p>
-              </div>
-
-              <Link
-                href="/activities"
-                className="text-xs font-bold text-[#43A574] hover:underline"
-              >
-                Jelajahi Semua Aktivitas &rarr;
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Activity Card 1: Championship */}
-              <div className="p-6 rounded-3xl bg-white border border-[#EDE6DD] hover:border-[#43A574] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#E8F7F0] text-[#43A574]">
-                      Turnamen Resmi
-                    </span>
-                    <span className="text-[10px] text-[#D97706] font-bold">WRO & FLL Track</span>
-                  </div>
-                  <h3 className="font-editorial text-2xl font-bold text-[#3A1E1A] group-hover:text-[#43A574] transition-colors leading-tight">
-                    Mentoring Olimpiade Robotika
-                  </h3>
-                  <p className="text-xs text-[#63544F] leading-relaxed">
-                    Karantina intensif dan simulasi tanding berstandar dunia untuk tim sekolah menembus podium nasional dan internasional.
-                  </p>
-                  <div className="pt-2 text-xs font-medium text-[#7A6A65] space-y-1">
-                    <div>• Analisis regelment & strategi arena</div>
-                    <div>• Rancang bangun robot modular</div>
-                  </div>
-                </div>
-                <div className="mt-5 pt-3 border-t border-[#EDE6DD]/70">
-                  <Link
-                    href="/activities"
-                    className="w-full py-2.5 rounded-full bg-[#E8F7F0] hover:bg-[#43A574] text-[#43A574] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
-                  >
-                    <span>Pelajari Jalur Tim</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Activity Card 2: Weekend Workshop */}
-              <div className="p-6 rounded-3xl bg-white border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FDEEE7] text-[#FF7A3D]">
-                      Weekend Hands-On
-                    </span>
-                    <span className="text-[10px] text-[#2E7D32] font-bold">Tiap Akhir Pekan</span>
-                  </div>
-                  <h3 className="font-editorial text-2xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-tight">
-                    Workshop Merakit Robot Fisik
-                  </h3>
-                  <p className="text-xs text-[#63544F] leading-relaxed">
-                    Peserta merakit sendiri robot line follower atau kit sensor analog dari nol. Belajar menyolder, membaca skematik, dan robot boleh dibawa pulang.
-                  </p>
-                  <div className="pt-2 text-xs font-medium text-[#7A6A65] space-y-1">
-                    <div>• Kit komponen & sertifikat fisik</div>
-                    <div>• Pendampingan mentor 1-on-1</div>
-                  </div>
-                </div>
-                <div className="mt-5 pt-3 border-t border-[#EDE6DD]/70">
-                  <Link
-                    href="/activities"
-                    className="w-full py-2.5 rounded-full bg-[#FDEEE7] hover:bg-[#FF7A3D] text-[#FF7A3D] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
-                  >
-                    <span>Daftar Workshop</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Activity Card 3: School STEM Day */}
-              <div className="p-6 rounded-3xl bg-white border border-[#EDE6DD] hover:border-[#2563EB] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#EFF6FF] text-[#2563EB]">
-                      Ekskursi Sekolah
-                    </span>
-                    <span className="text-[10px] text-[#63544F] font-bold">Kunjungan Mitra</span>
-                  </div>
-                  <h3 className="font-editorial text-2xl font-bold text-[#3A1E1A] group-hover:text-[#2563EB] transition-colors leading-tight">
-                    School STEM Day & Lab Roadshow
-                  </h3>
-                  <p className="text-xs text-[#63544F] leading-relaxed">
-                    Demo robotika interaktif, pameran kecerdasan buatan, dan arena uji coba robot langsung di sekolah Anda bersama tim NEXORANESIA.
-                  </p>
-                  <div className="pt-2 text-xs font-medium text-[#7A6A65] space-y-1">
-                    <div>• Demo 15+ unit robot fungsional</div>
-                    <div>• Sesi pengenalan kurikulum STEM</div>
-                  </div>
-                </div>
-                <div className="mt-5 pt-3 border-t border-[#EDE6DD]/70">
-                  <Link
-                    href="/activities"
-                    className="w-full py-2.5 rounded-full bg-[#EFF6FF] hover:bg-[#2563EB] text-[#2563EB] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
-                  >
-                    <span>Undang Roadshow</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ======================================================== */}
-        {/* 5. SHOWCASE PROYEK & KARYA INOVASI SISWA (PROJECTS)      */}
-        {/* ======================================================== */}
-        <section id="projects" className="py-20 bg-white border-y border-[#EDE6DD]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-              <div>
-                <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block mb-2">
-                  Showcase Portofolio
-                </span>
-                <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
-                  Karya Nyata & <span className="text-[#FF7A3D] font-editorial font-extrabold">Proyek Riset Siswa</span>
-                </h2>
-                <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
-                  Bukti nyata kemampuan problem-solving dan inovasi teknologi generasi muda NEXORANESIA.
-                </p>
-              </div>
-
-              <Link
-                href="/projects"
-                className="text-xs font-bold text-[#FF7A3D] hover:underline"
-              >
-                Lihat Semua Portofolio &rarr;
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Project 1: Agrotech */}
-              <div className="p-6 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
-                <div className="space-y-3">
-                  <div className="w-full h-44 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
-                    <img
-                      src="/images/robotics/line-follower.jpg"
-                      alt="Smart Agrotech Hydroponic Monitoring Robot"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#43A574] text-white shadow-xs">
-                      Juara 1 Youth Inovator
-                    </span>
-                  </div>
-                  <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
-                    Smart Agrotech Monitoring Robot
-                  </h3>
-                  <p className="text-xs text-[#63544F] line-clamp-3 leading-relaxed">
-                    Robot inspeksi hidroponik cerdas dengan sensor nutrisi PPM, pH air, dan kamera AI edge computing rancangan siswa binaan.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {['ESP32', 'AI Vision', 'IoT Cloud'].map((tag) => (
-                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#7A6A65] border border-[#EDE6DD]">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-5 pt-3 border-t border-[#EDE6DD]">
-                  <Link href="/projects" className="text-xs font-bold text-[#FF7A3D] hover:underline flex items-center justify-between">
-                    <span>Detail Riset Proyek</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Project 2: Delta Striker Soccer Bot */}
-              <div className="p-6 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
-                <div className="space-y-3">
-                  <div className="w-full h-44 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
-                    <img
-                      src="/images/robotics/soccer-bot.jpg"
-                      alt="Delta Striker Robot Sepak Bola Holonomik"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FF7A3D] text-white shadow-xs">
-                      Podium 2nd RoboCup
-                    </span>
-                  </div>
-                  <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
-                    Delta Striker Holonomic Robot
-                  </h3>
-                  <p className="text-xs text-[#63544F] line-clamp-3 leading-relaxed">
-                    Robot sepak bola otonom berkecepatan 2.4 m/s dengan solenoid kicker 250V yang menjuarai panggung olimpiade ASEAN.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {['STM32', 'Holonomic', 'Olympiad'].map((tag) => (
-                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#7A6A65] border border-[#EDE6DD]">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-5 pt-3 border-t border-[#EDE6DD]">
-                  <Link href="/projects" className="text-xs font-bold text-[#FF7A3D] hover:underline flex items-center justify-between">
-                    <span>Detail Riset Proyek</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Project 3: Autonomous AMR */}
-              <div className="p-6 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md">
-                <div className="space-y-3">
-                  <div className="w-full h-44 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
-                    <img
-                      src="/images/robotics/amr-robot.jpg"
-                      alt="Autonomous AMR Logistics Robot"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#2563EB] text-white shadow-xs">
-                      Riset Industri
-                    </span>
-                  </div>
-                  <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors leading-snug">
-                    Autonomous Mobile Robot (AMR)
-                  </h3>
-                  <p className="text-xs text-[#63544F] line-clamp-3 leading-relaxed">
-                    Platform robot otonom indoor dengan navigasi LiDAR SLAM 2D dan sensor ultrasonik untuk pemetaan gudang mandiri.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {['LiDAR SLAM', 'ROS2', 'Industrial IoT'].map((tag) => (
-                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-[#7A6A65] border border-[#EDE6DD]">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-5 pt-3 border-t border-[#EDE6DD]">
-                  <Link href="/projects" className="text-xs font-bold text-[#FF7A3D] hover:underline flex items-center justify-between">
-                    <span>Detail Riset Proyek</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ======================================================== */}
-        {/* 6. PRODUK & KIT ROBOTIKA POPULER                         */}
-        {/* ======================================================== */}
-        <section className="py-20 bg-white border-y border-[#EDE6DD]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-              <div>
-                <span className="text-xs font-bold text-[#B45309] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FFF9E6] border border-[#FDE68A] inline-block mb-2">
-                  Toko & Komponen
-                </span>
-                <h2 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
-                  Kit Robotika & <span className="text-[#FF7A3D] font-editorial font-extrabold">Komponen Siap Rakit</span>
-                </h2>
-                <p className="text-xs sm:text-sm text-[#63544F] mt-1.5">
-                  Starter kit lengkap untuk belajar mandiri di rumah atau laboratorium sekolah.
-                </p>
-              </div>
-
-              <Link
-                href="/store"
-                className="text-xs font-bold text-[#FF7A3D] hover:underline"
-              >
-                Lihat Semua Produk &rarr;
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {STORE_ITEMS.slice(0, 4).map((item) => (
-                <div
-                  key={item.id}
-                  className="p-5 rounded-3xl bg-[#FAF8F5] border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all flex flex-col justify-between group shadow-xs hover:shadow-md"
-                >
-                  <div className="space-y-3">
-                    <div className="w-full h-40 rounded-2xl bg-white border border-[#EDE6DD] overflow-hidden relative">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                      />
-                      {item.isBestSeller && (
-                        <span className="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FF7A3D] text-white shadow-xs">
-                          Best Seller
-                        </span>
-                      )}
-                    </div>
-
-                    <h3 className="font-editorial text-xl font-bold text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors line-clamp-2 leading-snug">
-                      {item.name}
-                    </h3>
-
-                    <p className="text-[11px] text-[#63544F] line-clamp-2">
-                      {item.shortDesc}
-                    </p>
-
-                    <div className="flex items-center gap-1.5 text-xs text-[#F4B740]">
-                      <Star className="w-3.5 h-3.5 fill-[#FFB800] text-[#FFB800]" />
-                      <span className="font-bold text-[#3A1E1A] text-[11px]">{item.rating}</span>
-                      <span className="text-[#7A6A65] text-[10px]">({item.reviewsCount} ulasan)</span>
-                    </div>
-                  </div>
-
-                  <div className="mt-5 pt-3 border-t border-[#EDE6DD] space-y-2">
-                    <div className="flex items-center justify-between text-[11px] text-[#7A6A65]">
-                      <span>Ketersediaan:</span>
-                      <span className="font-bold text-[#2E7D32] bg-[#E8F5E9] px-2 py-0.5 rounded-full border border-[#C8E6C9]">
-                        Stok {item.stock} unit
-                      </span>
-                    </div>
-
-                    <button
-                      onClick={() => addToCart(item)}
-                      className="w-full py-2.5 rounded-full bg-white hover:bg-[#FF7A3D] hover:text-white border border-[#EDE6DD] hover:border-[#FF7A3D] text-[#3A1E1A] font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer active:scale-95"
-                    >
-                      <ShoppingBag className="w-4 h-4" />
-                      <span>Tambah Keranjang</span>
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ======================================================== */}
-        {/* 5. TESTIMONI (Model Edufic Slideshow Sesuai Referensi)   */}
+        {/* 3. TESTIMONI ORANG TUA & SISWA                           */}
         {/* ======================================================== */}
         <section id="testimoni" className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Kolom Kiri: Heading, Subhead & CTA Button */}
+            {/* Kolom Kiri: Heading & CTA */}
             <div className="lg:col-span-5 space-y-4">
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-black text-[#111827] leading-[1.15] tracking-tight">
                 Bagaimana <br />
@@ -913,7 +438,7 @@ export default function HomePage() {
 
             {/* Kolom Kanan: Card Slideshow */}
             <div className="lg:col-span-7">
-              <div className="relative bg-white rounded-3xl p-8 sm:p-12 lg:p-14 shadow-xl border border-stone-100 flex flex-col items-center justify-center min-h-[380px] text-center">
+              <div className="relative bg-white rounded-3xl p-8 sm:p-12 lg:p-14 shadow-xl border border-stone-100 flex flex-col items-center justify-center min-h-[360px] text-center">
                 {/* Tombol Panah Kiri */}
                 <button
                   type="button"
@@ -996,13 +521,13 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 8. CALL TO ACTION & KONTAK (CONTACT)                     */}
+        {/* 4. CALL TO ACTION & KONTAK                               */}
         {/* ======================================================== */}
         <section id="contact" className="py-20 bg-[#251310] text-white border-t border-[#3A1E1A]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
             <div>
               <span className="inline-block px-3.5 py-1 rounded-full bg-[#FF7A3D]/20 border border-[#FF7A3D]/40 text-xs uppercase tracking-[0.2em] text-[#FF9E6D] font-bold">
-                MULAI LANGKAH INOVASI ANDA (CONTACT)
+                MULAI LANGKAH INOVASI ANDA
               </span>
             </div>
 
@@ -1044,15 +569,15 @@ export default function HomePage() {
 
       <Footer />
 
-      <MenuDrawer
-        isOpen={isMenuDrawerOpen}
-        onClose={() => setIsMenuDrawerOpen(false)}
-      />
-
       <EnrollmentModal
         isOpen={enrollModalOpen}
         onClose={() => setEnrollModalOpen(false)}
         defaultCourseSlug={selectedCourseSlug}
+      />
+
+      <MenuDrawer
+        isOpen={isMenuDrawerOpen}
+        onClose={() => setIsMenuDrawerOpen(false)}
       />
     </div>
   );
