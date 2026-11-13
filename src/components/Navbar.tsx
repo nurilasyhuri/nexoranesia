@@ -41,16 +41,16 @@ export const Navbar: React.FC<{
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex items-center justify-between">
-          {/* Left: Menu Trigger (Paling Pojok Sebelah Kiri) */}
-          <div className="flex items-center min-w-[100px]">
+          {/* Left: Single Primary Header Button (Paling Pojok Sebelah Kiri) */}
+          <div className="flex items-center min-w-[220px]">
             <button
               type="button"
               onClick={onOpenMenu}
-              className="flex items-center space-x-2 text-xs uppercase tracking-[0.16em] font-extrabold text-white hover:text-[#FF7A3D] bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FF7A3D]/40 rounded-full px-3.5 py-1.5 transition-all shadow-xs cursor-pointer focus:outline-none backdrop-blur-xs"
-              aria-label="Buka Menu Navigasi"
+              className="flex items-center space-x-2 text-xs uppercase tracking-[0.14em] font-extrabold text-white hover:text-[#FF7A3D] bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FF7A3D]/40 rounded-full px-4 py-2 transition-all shadow-xs cursor-pointer focus:outline-none backdrop-blur-xs"
+              aria-label="Buka Menu Navigasi Eksplorasi"
             >
               <Menu className="w-4 h-4 text-white stroke-[2.4]" />
-              <span className="font-extrabold">Menu</span>
+              <span className="font-extrabold tracking-wider">EXPLORE NEXORANESIA</span>
             </button>
           </div>
 
@@ -78,17 +78,8 @@ export const Navbar: React.FC<{
             })}
           </nav>
 
-          {/* Right: Balanced Spacer for desktop, Mobile Menu Button for mobile */}
-          <div className="flex items-center justify-end min-w-[100px]">
-            {/* Mobile Menu Button */}
-            <button
-              onClick={onOpenMenu}
-              className="lg:hidden p-2 rounded-xl text-stone-200 hover:text-[#FF7A3D] transition-colors cursor-pointer"
-              aria-label="Menu"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
+          {/* Right: Balanced Spacer for desktop to keep navigation perfectly centered (no extra buttons) */}
+          <div className="hidden lg:flex items-center justify-end min-w-[220px]" aria-hidden="true" />
         </div>
       </div>
 
