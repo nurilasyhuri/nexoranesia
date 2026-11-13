@@ -3,13 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useCart } from '@/context/CartContext';
-import { 
-  ShoppingBag, 
-  Menu, 
-  X, 
-  ArrowRight
-} from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 export const Navbar: React.FC<{
   onOpenEnrollment?: () => void;
@@ -18,7 +12,6 @@ export const Navbar: React.FC<{
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { totalItems, openCart } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,8 +41,8 @@ export const Navbar: React.FC<{
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex items-center justify-between">
-          {/* Left: Serba99ribu Style Menu Trigger (Pojok Sebelah Kiri) & Brand Logo */}
-          <div className="flex items-center gap-3 sm:gap-5">
+          {/* Left: Menu Trigger (Paling Pojok Sebelah Kiri) */}
+          <div className="flex items-center min-w-[100px]">
             <button
               type="button"
               onClick={onOpenMenu}
@@ -59,24 +52,9 @@ export const Navbar: React.FC<{
               <Menu className="w-4 h-4 text-white stroke-[2.4]" />
               <span className="font-extrabold">Menu</span>
             </button>
-
-            {/* Brand Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-2xl bg-[#FF7A3D] flex items-center justify-center text-white font-extrabold text-sm shadow-sm group-hover:scale-105 transition-transform">
-                NX
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-white group-hover:text-[#FF7A3D] transition-colors leading-none">
-                  NEXORANESIA
-                </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] text-stone-300 font-semibold mt-1">
-                  INDONESIA'S NEXT ERA OF INNOVATION
-                </span>
-              </div>
-            </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Center: Desktop Navigation HOME | ABOUT | PROGRAMS | ACTIVITIES | PROJECTS | CONTACT */}
           <nav className="hidden lg:flex items-center space-x-4 text-xs font-semibold tracking-[0.14em]">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
@@ -100,31 +78,8 @@ export const Navbar: React.FC<{
             })}
           </nav>
 
-          {/* Right Action: Cart + Daftar Sekarang Button */}
-          <div className="flex items-center space-x-3">
-            {/* Shopping Bag Trigger */}
-            <button
-              onClick={openCart}
-              aria-label="Keranjang Belanja"
-              className="relative p-2.5 rounded-full text-stone-200 hover:text-[#FF7A3D] hover:bg-white/10 transition-all cursor-pointer"
-            >
-              <ShoppingBag className="w-5 h-5" />
-              {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#FF7A3D] text-white text-[10px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
-                  {totalItems}
-                </span>
-              )}
-            </button>
-
-            {/* MS Scaffolding Style Solid Action Button */}
-            <button
-              onClick={onOpenEnrollment}
-              className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-extrabold uppercase tracking-wider rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] text-white shadow-md shadow-[#FF7A3D]/25 transition-all active:scale-95 cursor-pointer"
-            >
-              <span>Daftar Sekarang</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-
+          {/* Right: Balanced Spacer for desktop, Mobile Menu Button for mobile */}
+          <div className="flex items-center justify-end min-w-[100px]">
             {/* Mobile Menu Button */}
             <button
               onClick={onOpenMenu}
