@@ -7,16 +7,13 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { EnrollmentModal } from '@/components/EnrollmentModal';
 import { MenuDrawer } from '@/components/MenuDrawer';
+import { NexyMascot } from '@/components/CartoonMascot';
 import {
   COMPANY_INFO,
   ACADEMY_COURSES,
   CLIENT_PARTNERS,
 } from '@/data/ecosystem';
 import {
-  ArrowRight,
-  CheckCircle2,
-  Users,
-  Clock,
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react';
@@ -261,101 +258,131 @@ export default function HomePage() {
         </section>
 
         {/* ======================================================== */}
-        {/* 2. JELAJAHI KELAS FAVORITMU (PROGRAMS) - REAL PHOTOS     */}
+        {/* 2. JELAJAHI KELAS FAVORITMU (PROGRAMS) - MODEL KARTUN   */}
         {/* ======================================================== */}
-        <section id="programs" className="py-16 sm:py-24 bg-[#FAF8F5] border-t border-[#EDE6DD]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-6">
-              <div className="max-w-2xl space-y-2">
-                <span className="text-xs font-bold text-[#FF7A3D] uppercase tracking-wider px-3.5 py-1 rounded-full bg-[#FDEEE7] border border-[#FADCD3] inline-block">
-                  PILIHAN PROGRAM KELAS
-                </span>
-                <h2 className="font-editorial font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#3A1E1A] tracking-tight">
-                  Jelajahi <span className="text-[#FF7A3D]">Kelas Favoritmu</span>
-                </h2>
-                <p className="text-xs sm:text-sm text-[#63544F] font-normal leading-relaxed pt-1">
-                  Pilih kurikulum dan minat teknologi yang paling cocok untuk putra-putri Anda.
-                </p>
+        <section id="programs" className="relative py-20 bg-gradient-to-b from-[#FFFDF9] via-[#FAF8F5] to-[#F7F2EC] border-t border-[#EDE6DD]/80 overflow-hidden">
+          {/* Subtle Cartoon Dot Grid Background */}
+          <div className="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(#FF7A3D_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
+          
+          {/* Floating Playful Cartoon Stickers */}
+          <div className="absolute top-10 left-8 text-2xl select-none animate-bounce hidden md:block">⭐</div>
+          <div className="absolute top-16 right-12 text-3xl select-none animate-pulse hidden md:block">🚀</div>
+          <div className="absolute bottom-12 left-10 text-2xl select-none opacity-70 hidden md:block">🤖</div>
+          <div className="absolute bottom-8 right-8 text-2xl select-none opacity-70 hidden md:block">✨</div>
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Playful Header Banner with Mascot Nexy */}
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-12 gap-6 bg-gradient-to-r from-orange-50 via-amber-50/70 to-white p-6 sm:p-8 rounded-[32px] border-2 border-orange-200/90 shadow-[0_8px_0_#FADCD3]">
+              <div className="flex items-center gap-4 sm:gap-6">
+                {/* Maskot Robot Kartun Nexy yang Melambai */}
+                <NexyMascot size="lg" className="shrink-0" />
+                
+                <div className="space-y-1.5">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-[#FF7A3D] text-white text-[11px] font-black uppercase tracking-wider shadow-sm">
+                    <span>🌟 KELAS SERU &amp; KREATIF</span>
+                  </div>
+                  
+                  <h2 className="font-editorial font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#3A1E1A] tracking-tight leading-tight">
+                    Jelajahi <span className="text-[#FF7A3D] relative inline-block">Kelas Favoritmu!
+                      <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#FFD25D]" viewBox="0 0 100 12" preserveAspectRatio="none" fill="none">
+                        <path d="M0,8 Q50,0 100,8" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                  </h2>
+                  
+                  <p className="text-xs sm:text-sm text-[#63544F] font-medium max-w-xl">
+                    Belajar coding &amp; rakit robot fisik impianmu dengan cara super seru, interaktif, dan ramah anak!
+                  </p>
+                </div>
               </div>
 
-              {/* Clean Filter Tabs (No Emoticons) */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+              {/* Chunky 3D Cartoon Filter Tabs */}
+              <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
                 {[
-                  { id: 'All', label: 'Semua Kelas' },
-                  { id: 'Coding', label: 'Coding' },
-                  { id: 'Robotics', label: 'Robotika' },
-                  { id: 'AI', label: 'AI' },
+                  { id: 'All', label: 'Semua Kelas', icon: '🎒' },
+                  { id: 'Coding', label: 'Coding & Game', icon: '💻' },
+                  { id: 'Robotics', label: 'Robotika Seru', icon: '🤖' },
+                  { id: 'AI', label: 'Smart AI', icon: '🧠' },
                 ].map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => setActiveCourseCategory(cat.id)}
-                    className={`px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
+                    className={`px-4 py-2.5 rounded-2xl text-xs font-black transition-all cursor-pointer flex items-center gap-1.5 active:translate-y-1 ${
                       activeCourseCategory === cat.id
-                        ? 'bg-[#FF7A3D] text-white shadow-sm'
-                        : 'bg-white border border-[#EDE6DD] text-[#562D29] hover:bg-[#FDEEE7]'
+                        ? 'bg-gradient-to-r from-[#FF7A3D] to-[#FF9059] text-white shadow-[0_4px_0_#D9531E] -translate-y-0.5'
+                        : 'bg-white text-[#562D29] border-2 border-[#EDE6DD] hover:border-[#FF7A3D] shadow-[0_3px_0_#EDE6DD] hover:shadow-[0_3px_0_#FF7A3D]/40'
                     }`}
                   >
-                    {cat.label}
+                    <span className="text-sm">{cat.icon}</span>
+                    <span>{cat.label}</span>
                   </button>
                 ))}
-                <Link
-                  href="/programs"
-                  className="px-3 py-2 text-xs font-bold text-[#FF7A3D] hover:underline whitespace-nowrap"
-                >
-                  Lihat Semua Program &rarr;
-                </Link>
               </div>
             </div>
 
-            {/* Course Cards Grid with Real Photography */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
+            {/* Chunky 3D Cartoon Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {filteredCourses.map((course) => {
-                const photoSrc =
-                  course.id === 'acad-02'
-                    ? '/images/academy/scratch-coding.jpg'
-                    : course.id === 'acad-03'
-                    ? '/images/academy/python-ai.jpg'
-                    : course.id === 'acad-04'
-                    ? '/images/academy/arduino-c.jpg'
-                    : '/images/academy/robotics-kids.jpg';
+                // Ilustrasi 3D kartun cerah untuk setiap kelas
+                const cartoonImg = course.id === 'acad-02' 
+                  ? '/images/academy/scratch-coding.jpg'
+                  : course.id === 'acad-03'
+                  ? '/images/academy/python-ai.jpg'
+                  : course.id === 'acad-04'
+                  ? '/images/academy/amr-rover.jpg'
+                  : '/images/academy/robotics-kids.jpg';
+
+                const cartoonTheme = course.category === 'Coding'
+                  ? { icon: '💻', badgeBg: 'bg-purple-100 text-purple-800 border-purple-200' }
+                  : course.category === 'AI'
+                  ? { icon: '🧠', badgeBg: 'bg-sky-100 text-sky-800 border-sky-200' }
+                  : { icon: '🤖', badgeBg: 'bg-orange-100 text-orange-800 border-orange-200' };
 
                 return (
                   <div
                     key={course.id}
-                    className="rounded-2xl bg-white border border-[#EDE6DD] hover:border-[#FF7A3D] transition-all duration-300 flex flex-col justify-between group shadow-xs hover:shadow-md overflow-hidden"
+                    className="rounded-[28px] bg-white border-2 border-[#EDE6DD] hover:border-[#FF7A3D] transition-all duration-300 flex flex-col justify-between group shadow-[0_6px_0_#EDE6DD,0_12px_24px_-4px_rgba(255,122,61,0.08)] hover:shadow-[0_8px_0_#FF7A3D,0_20px_32px_-4px_rgba(255,122,61,0.2)] hover:-translate-y-1.5 overflow-hidden"
                   >
-                    {/* Real Photography Header */}
-                    <div className="relative h-48 w-full overflow-hidden bg-stone-100">
+                    {/* Kartun 3D Banner Header */}
+                    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-amber-100 via-orange-100 to-amber-200">
                       <Image
-                        src={photoSrc}
+                        src={cartoonImg}
                         alt={course.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70" />
-
-                      {/* Category Badge */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+                      
+                      {/* Badge Kategori Kartun */}
                       <div className="absolute top-3 left-3 z-10">
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 text-[#3A1E1A] shadow-xs border border-stone-200">
-                          {course.category}
+                        <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#3A1E1A] shadow-md border border-stone-200">
+                          <span>{cartoonTheme.icon}</span>
+                          <span>{course.category}</span>
                         </span>
                       </div>
 
-                      {/* Badge if exists */}
+                      {/* Badge Prestasi / Populer */}
                       {course.badge && (
                         <div className="absolute top-3 right-3 z-10">
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FFD25D] text-amber-950 shadow-xs border border-amber-300">
-                            {course.badge}
+                          <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FFD25D] text-amber-950 shadow-md border border-amber-300">
+                            ⭐ {course.badge}
                           </span>
                         </div>
                       )}
+
+                      {/* Pill Aksen di Bawah Banner */}
+                      <div className="absolute bottom-2.5 left-3 right-3 z-10">
+                        <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-white bg-black/40 backdrop-blur-xs px-2.5 py-0.5 rounded-full">
+                          <span>🎯 Praktik Rakit Langsung</span>
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Card Content */}
+                    {/* Konten Kartu */}
                     <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                       <div className="space-y-2.5">
-                        <h3 className="font-editorial font-bold text-lg text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors line-clamp-2 leading-snug">
+                        <h3 className="font-editorial font-extrabold text-xl text-[#3A1E1A] group-hover:text-[#FF7A3D] transition-colors line-clamp-2 leading-tight">
                           {course.title}
                         </h3>
 
@@ -363,39 +390,46 @@ export default function HomePage() {
                           {course.shortDesc}
                         </p>
 
-                        {/* Specs with Clean Icons */}
-                        <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#EDE6DD]/70 text-xs">
-                          <div className="flex items-center gap-2 text-[#63544F]">
-                            <Users className="w-3.5 h-3.5 text-[#FF7A3D] shrink-0" />
-                            <span className="truncate">{course.ageGroup}</span>
+                        {/* Specs Mini Chips (Usia & Durasi) */}
+                        <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
+                          <div className="flex items-center gap-2 bg-[#FAF8F5] border border-[#EDE6DD] rounded-xl px-2.5 py-2">
+                            <span className="text-base">👦</span>
+                            <div className="flex flex-col">
+                              <span className="text-[10px] text-[#8C7A75] font-semibold uppercase leading-none">Usia</span>
+                              <strong className="text-[#3A1E1A] font-extrabold text-[11px] leading-tight mt-0.5">{course.ageGroup}</strong>
+                            </div>
                           </div>
-                          <div className="flex items-center gap-2 text-[#63544F]">
-                            <Clock className="w-3.5 h-3.5 text-[#FF7A3D] shrink-0" />
-                            <span className="truncate">{course.duration}</span>
+                          <div className="flex items-center gap-2 bg-[#FAF8F5] border border-[#EDE6DD] rounded-xl px-2.5 py-2">
+                            <span className="text-base">⏱️</span>
+                            <div className="flex flex-col">
+                              <span className="text-[10px] text-[#8C7A75] font-semibold uppercase leading-none">Sesi</span>
+                              <strong className="text-[#3A1E1A] font-extrabold text-[11px] leading-tight mt-0.5">{course.duration}</strong>
+                            </div>
                           </div>
                         </div>
 
-                        {/* Feature Points */}
-                        <div className="bg-[#FAF8F5] rounded-xl p-3 border border-[#EDE6DD] text-[11px] text-[#63544F] space-y-1">
-                          <div className="flex items-center gap-1.5">
-                            <CheckCircle2 className="w-3 h-3 text-[#2E7D32] shrink-0" />
-                            <span className="line-clamp-1">{course.skillsLearned?.[0] || '1 Siswa 1 Kit Eksklusif'}</span>
+                        {/* Highlight Belajar Kartun */}
+                        <div className="bg-[#FFF9E6]/70 rounded-xl p-2.5 border border-[#FDE68A]/60 text-[11px] space-y-1">
+                          <div className="font-bold text-[#B45309] flex items-center gap-1">
+                            <span>🚀 Materi Utama:</span>
                           </div>
-                          <div className="flex items-center gap-1.5">
-                            <CheckCircle2 className="w-3 h-3 text-[#2E7D32] shrink-0" />
-                            <span className="line-clamp-1">{course.skillsLearned?.[1] || 'Sertifikat Kelulusan Resmi'}</span>
+                          <div className="text-[#562D29] line-clamp-1 font-medium">
+                            • {course.skillsLearned?.[0] || '1 Siswa 1 Kit Eksklusif'}
+                          </div>
+                          <div className="text-[#562D29] line-clamp-1 font-medium">
+                            • {course.skillsLearned?.[1] || 'Sertifikat & Portofolio Siswa'}
                           </div>
                         </div>
                       </div>
 
-                      {/* Clean Action Button */}
+                      {/* Tombol 3D Kartun Chunky */}
                       <div className="pt-2">
                         <button
                           onClick={() => handleEnrollClick(course.title)}
-                          className="w-full py-2.5 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 shadow-xs"
+                          className="w-full py-3 rounded-2xl bg-gradient-to-r from-[#FF7A3D] to-[#FF9059] hover:from-[#F06543] hover:to-[#FF7A3D] text-white font-black text-xs uppercase tracking-wider shadow-[0_4px_0_#D9531E] hover:shadow-[0_2px_0_#D9531E] hover:translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
                         >
-                          <span>Daftar Kelas Ini</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <span>Daftar Kelas Seru</span>
+                          <span className="text-sm">🚀</span>
                         </button>
                       </div>
                     </div>
