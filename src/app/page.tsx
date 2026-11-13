@@ -180,21 +180,14 @@ export default function HomePage() {
                 Turn Your Ideas Into Future Innovations. Membangun generasi inovator masa depan melalui Coding, Robotika, dan Kecerdasan Buatan.
               </p>
 
-              {/* High-Contrast Action Buttons (MS Scaffolding Style) */}
-              <div className="pt-4 flex flex-wrap items-center gap-4">
+              {/* Single Primary Action Button */}
+              <div className="pt-4 flex items-center">
                 <a
                   href="#programs"
                   className="inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-xl shadow-[#FF7A3D]/30 transition-all cursor-pointer"
                 >
-                  Jelajahi Program
+                  EXPLORE THE PROGRAM
                 </a>
-
-                <button
-                  onClick={() => handleEnrollClick()}
-                  className="inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl bg-transparent hover:bg-white/10 text-white font-bold text-xs sm:text-sm tracking-wider uppercase border-2 border-white/80 hover:border-white transition-all cursor-pointer"
-                >
-                  Konsultasi Sekarang
-                </button>
               </div>
             </div>
 
