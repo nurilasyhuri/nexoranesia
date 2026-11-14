@@ -1,0 +1,97 @@
+{
+  "slug": "panduan-belajar-coding-anak-scratch-sampai-python",
+  "title": "Panduan Lengkap Belajar Coding Anak dari Nol: Tahapan dari Scratch Visual Hingga Sintaks Python",
+  "seoTitle": "Panduan Belajar Coding Anak dari Scratch ke Python",
+  "description": "Panduan terstruktur mengenalkan coding pada anak usia 6-15 tahun. Alur belajar computational thinking, logika blok Scratch 3.0, hingga transisi ke Python nyata.",
+  "category": "Coding",
+  "tags": [
+    "coding anak",
+    "belajar scratch 3.0",
+    "python untuk pemula",
+    "computational thinking",
+    "kurikulum coding"
+  ],
+  "heroImage": "/images/academy/scratch-coding.jpg",
+  "readTime": "6 Menit Baca",
+  "author": "Tim Kurikulum NEXORANESIA Academy",
+  "authorRole": "Head of STEAM Curriculum",
+  "intro": "Banyak orang tua dan pendidik bertanya-tanya kapan waktu paling tepat mengenalkan pemrograman kepada anak. Di era kecerdasan buatan, belajar coding bukan sekadar menghafal sintaksis kode bahasa industri, melainkan membangun pondasi Computational Thinking: kemampuan mendekomposisi masalah rumit, mengenali pola, berpikir abstrak, dan merancang algoritma sistematis sejak dini.",
+  "section1Title": "Prinsip Bertahap: Dari Manipulatif Visual Menuju Kode Tekstual",
+  "section1Content": "Anak usia sekolah dasar (6–10 tahun) membutuhkan umpan balik visual instan. Memaksa mereka langsung menghafal tanda kurung, titik koma, dan error syntax pada bahasa tekstual seperti C++ atau Python justru memicu rasa frustrasi. Karena itu, metodologi standar NEXORANESIA membagi pembelajaran menjadi tiga jenjang: Exploratory Block Coding (Scratch), Physical Computing (Robotika Terhubung), dan Applied Text-based Scripting (Python & AI).",
+  "expertTips": [
+    "Fokus Pada Logika, Bukan Menghafal Sintaks: Biarkan anak bereksperimen dengan blok perulangan (loops) dan pengkondisian (if-else) pada animasi cerita Scratch sebelum berpindah ke baris kode.",
+    "Gunakan Siklus Debugging Positif: Ajarkan anak bahwa error atau bug bukanlah kegagalan, melainkan petunjuk logis bahwa ada asumsi logika yang perlu diuji kembali satu per satu.",
+    "Koneksikan Kode ke Dunia Nyata: Hubungkan perintah kode di layar komputer ke pergerakan motor atau sensor fisik pada kit robot agar konsep variabel menjadi konkret."
+  ],
+  "tableTitle": "Tabel Tahapan Perkembangan Belajar Coding Anak Berdasarkan Usia",
+  "tableHeaders": [
+    "Kelompok Usia",
+    "Fase Pembelajaran",
+    "Platform & Bahasa",
+    "Fokus Keterampilan Kunci",
+    "Luaran Proyek Siswa"
+  ],
+  "tableRows": [
+    [
+      "Usia 6 – 8 Tahun",
+      "Pre-Coding & Logika Spasial",
+      "Scratch Jr / Visual Block",
+      "Urutan perintah beruntun (sequencing), arah, loop sederhana",
+      "Animasi interaktif kartu ucapan & labirin cerdas"
+    ],
+    [
+      "Usia 8 – 11 Tahun",
+      "Computational Thinking Dasar",
+      "Scratch 3.0 & Robotika Blok",
+      "Variabel, koordinat X-Y, kondisi logika, event handling",
+      "Game arcade 2D, kalkulator visual, gerak robot line tracer"
+    ],
+    [
+      "Usia 11 – 14 Tahun",
+      "Physical Computing & I/O",
+      "Block-to-Text & Arduino C++",
+      "Sinyal digital/analog, PWM motor, membaca sensor ultrasonik",
+      "Robot penjinak rintangan otonom & smart home miniature"
+    ],
+    [
+      "Usia 14 – 18 Tahun",
+      "Professional Text Scripting",
+      "Python 3, OpenCV & Web",
+      "Struktur data (list, dict), fungsi, modul AI visual, telemetri",
+      "Pengenal gestur tangan webcam, IoT dashboard cloud"
+    ]
+  ],
+  "section3Title": "Langkah Praktis Memulai Kelas Coding Pertama di Rumah atau Sekolah",
+  "steps": [
+    {
+      "title": "Mulai dengan Akun Online Scratch Gratis",
+      "desc": "Buka scratch.mit.edu dan ajak anak membuat karakter (sprite) bergerak 10 langkah saat tombol spasi ditekan."
+    },
+    {
+      "title": "Tantang Anak Membuat Game Mini",
+      "desc": "Buat proyek game menangkap buah jatuh menggunakan variabel skor yang bertambah saat tersentuh keranjang."
+    },
+    {
+      "title": "Perkenalkan Konsep Perulangan Dinamis",
+      "desc": "Ajarkan blok selamanya (forever loop) untuk mendeteksi tabrakan dinding dan gravitasi buatan."
+    },
+    {
+      "title": "Ajak Anak Mempresentasikan Karyanya",
+      "desc": "Latih kemampuan komunikasi siswa dengan meminta mereka menjelaskan alur logika game kepada orang tua atau teman sekelas."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah anak harus mahir matematika terlebih dahulu untuk belajar coding?",
+      "a": "Tidak. Pembelajaran coding di jenjang awal justru membantu anak memahami konsep matematika seperti koordinat kartesius, sudut derajat, pecahan, dan probabilitas secara visual dan menyenangkan."
+    },
+    {
+      "q": "Berapa durasi ideal anak belajar coding dalam satu minggu?",
+      "a": "Satu hingga dua sesi terstruktur per minggu (masing-masing 90 menit) sudah sangat efektif untuk mengasah konsentrasi tanpa menimbulkan kejenuhan di depan layar."
+    }
+  ],
+  "ctaTitle": "Ingin Anak Anda Belajar Coding dengan Kurikulum Terarah?",
+  "ctaText": "Daftarkan putra-putri Anda dalam sesi Free Trial Class di NEXORANESIA Academy. Fasilitas lab berstandar internasional dengan mentor berpengalaman.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}

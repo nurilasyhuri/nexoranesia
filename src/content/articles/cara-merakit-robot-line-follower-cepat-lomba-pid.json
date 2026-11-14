@@ -1,0 +1,98 @@
+{
+  "slug": "cara-merakit-robot-line-follower-cepat-lomba-pid",
+  "title": "Cara Merakit Robot Line Follower Cepat untuk Lomba: Rumus Sensor PID, Motor DC, & Kalibrasi Track",
+  "seoTitle": "Merakit Robot Line Follower Lomba Cepat dengan Tuning PID",
+  "description": "Panduan teknis merakit robot line follower analog & mikro untuk kompetisi. Rumus algoritma PID, kalibrasi photodioda sensor bar, pemilihan gear ratio motor, dan baterai LiPo.",
+  "category": "Robotika",
+  "tags": [
+    "robot line follower",
+    "algoritma pid line follower",
+    "merakit robot lomba",
+    "tuning motor dc",
+    "sensor photodioda"
+  ],
+  "heroImage": "/images/academy/amr-rover.jpg",
+  "readTime": "8 Menit Baca",
+  "author": "Tim Rekayasa NEXORANESIA Robotics",
+  "authorRole": "Head of Robotics R&D",
+  "intro": "Dalam arena lomba robot line follower, selisih waktu 0,05 detik adalah penentu antara juara podium dan tereliminasi di babak penyisihan. Membuat robot yang sekadar bisa berjalan mengikuti garis hitam sangatlah mudah. Namun, membangun robot yang mampu melibas tikungan tajam 90 derajat, perempatan, tanjakan, dan garis putus-putus pada kecepatan tinggi menuntut integrasi presisi antara sasis mekanik, sirkuit daya, barisan sensor, dan kontrol algoritma PID.",
+  "section1Title": "Arsitektur Kunci: Barisan Sensor, Driver Motor, dan Kontroler",
+  "section1Content": "Line follower modern menggunakan barisan sensor photodioda atau fototransistor minimal 8 hingga 14 titik dengan multiplexer. Setiap sensor membaca perbedaan intensitas pantulan cahaya LED inframerah pada garis hitam dan lantai putih. Data posisi garis diubah menjadi nilai error offset dari titik tengah robot, yang kemudian diproses mikrokontroler (ATmega328P, STM32, atau ESP32) untuk mengkalkulasi output kecepatan motor kiri dan kanan.",
+  "expertTips": [
+    "Gunakan Algoritma Auto-Kalibrasi Awal: Jangan meng-hardcode nilai ambang (threshold) sensor di program. Buat rutin kalibrasi di mana robot memutar sensor di atas garis saat tombol start ditekan untuk merekam nilai MAX dan MIN pembacaan ADC.",
+    "Perhatikan Pusat Gravitasi (Center of Gravity): Pasang baterai LiPo di bagian paling bawah sasis mendekati sumbu roda penggerak. Titik gravitasi yang terlalu tinggi menyebabkan roda terangkat dan selip saat bermanuver di tikungan tajam.",
+    "Pilih Driver Motor MOSFET Berhambatan Rendah: Driver seperti TB6612FNG atau MOSFET discrete jauh lebih dingin dan responsif terhadap frekuensi PWM tinggi dibanding IC driver lama L298N yang menjatuhkan tegangan hingga 2 Volt."
+  ],
+  "tableTitle": "Tabel Pemilihan Komponen Kritis Robot Line Follower Kompetisi",
+  "tableHeaders": [
+    "Komponen Inti",
+    "Standar Pemula / Sekolah",
+    "Spesifikasi Khusus Juara Lomba",
+    "Alasan Keunggulan Teknis"
+  ],
+  "tableRows": [
+    [
+      "Mikrokontroler",
+      "Arduino Nano (ATmega328P 16MHz)",
+      "STM32F401 / ESP32-S3 (84–240MHz)",
+      "Loop frekuensi PID hingga 1.000 Hz menghasilkan respon koreksi motor ultra-halus"
+    ],
+    [
+      "Array Sensor Bar",
+      "4 – 6 Titik Photodioda Tunggal",
+      "8 – 14 Titik Phototransistor + ADC 12-bit",
+      "Resolusi pembacaan posisi garis hingga desimal milimeter"
+    ],
+    [
+      "Motor Penggerak",
+      "DC Gearbox Kuning 1:48 (100 RPM)",
+      "Coreless DC Motor Neodymium 10:1 (1.000–3.000 RPM)",
+      "Torsi akselerasi kilat dan bobot motor di bawah 25 gram"
+    ],
+    [
+      "Ban & Roda",
+      "Roda Karet Plastik Standar",
+      "Velg Duralumin Bubut + Karet Silikon Halus Cor",
+      "Grip traksi maksimal tanpa selip di atas karpet vinyl arena"
+    ],
+    [
+      "Sumber Daya Baterai",
+      "Baterai Kotak 9V Alkaline",
+      "LiPo 2S – 3S 850mAh Discharge Rate 45C",
+      "Tegangan stabil tanpa tegangan drop mendadak saat akselerasi penuh"
+    ]
+  ],
+  "section3Title": "Panduan Tuning Nilai PID (Kp, Ki, Kd) di Atas Karpet Lintasan",
+  "steps": [
+    {
+      "title": "Nol-kan Nilai Ki dan Kd Terlebih Dahulu",
+      "desc": "Mulai hanya dengan parameter Proportional (Kp). Naikkan nilai Kp perlahan hingga robot dapat mengikuti garis lurus dan mulai berosilasi (goyang) saat berbelok."
+    },
+    {
+      "title": "Masukkan Nilai Derivative (Kd) untuk Meredam Goyangan",
+      "desc": "Naikkan nilai Kd bertahap untuk meredam osilasi. Nilai Kd bertindak seperti rem kejut hidrolik yang mengantisipasi laju perubahan error garis."
+    },
+    {
+      "title": "Tambahkan Sedikit Nilai Integral (Ki) Jika Perlu",
+      "desc": "Nilai Ki digunakan untuk mengeliminasi steady-state error pada tikungan panjang berkelanjutan, namun gunakan secukupnya agar tidak terjadi overshoot."
+    },
+    {
+      "title": "Uji Pada Kecepatan Maksimum Berulang",
+      "desc": "Naikkan base speed motor hingga mencapai batas traksi ban pada tikungan tertajam lintasan lomba."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Mengapa robot line follower sering keluar lintasan saat melintasi garis perempatan?",
+      "a": "Robot membutuhkan algoritma pembacaan persimpangan (junction rule). Saat seluruh sensor membaca garis hitam bersamaan, robot harus mengabaikan koreksi PID sesaat dan mempertahankan arah lurus berdasarkan state sebelumnya."
+    },
+    {
+      "q": "Berapa jarak ideal sensor ke permukaan lantai?",
+      "a": "Jarak optimal array sensor photodioda ke permukaan karpet vinyl adalah 3 mm hingga 5 mm, dilengkapi tirai pelindung karet agar tidak terganggu lampu sorot panggung."
+    }
+  ],
+  "ctaTitle": "Butuh Kit Line Follower Siap Lomba & Bimbingan Teknis?",
+  "ctaText": "Dapatkan Nexoranesia Apex Line Follower Kit di NEXORANESIA Store lengkap dengan skematik PCB presisi dan source code tuning PID teruji.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}

@@ -1,0 +1,112 @@
+{
+  "slug": "perbandingan-mikrokontroler-robotika-arduino-esp32-raspberry-pi",
+  "title": "Perbandingan Mikrokontroler Robotika Edukasi: Arduino Uno vs ESP32 vs Raspberry Pi Pico",
+  "seoTitle": "Arduino Uno vs ESP32 vs Raspberry Pi Pico untuk Robotika",
+  "description": "Analisis komparasi teknis Arduino Uno, ESP32, dan Raspberry Pi Pico untuk proyek robotika pelajar. Kecepatan clock, konektivitas WiFi/BLE, jumlah pin PWM, dan efisiensi daya.",
+  "category": "Robotika",
+  "tags": [
+    "arduino vs esp32",
+    "raspberry pi pico",
+    "mikrokontroler robotika",
+    "belajar elektronika",
+    "pemrograman iot"
+  ],
+  "heroImage": "/images/academy/arduino-c.jpg",
+  "readTime": "6 Menit Baca",
+  "author": "Tim Hardware NEXORANESIA Store",
+  "authorRole": "Embedded Systems Specialist",
+  "intro": "Memilih papan mikrokontroler yang tepat adalah langkah paling fundamental dalam merancang proyek mekatronika dan robotika. Kesalahan memilih papan bisa berakibat fatal: kekurangan pin input/output analog, memori RAM habis saat memuat library sensor rumit, atau ketiadaan modul nirkabel untuk kendali jarak jauh ponsel pintar.",
+  "section1Title": "Evolusi dari 8-bit Klasik Menuju Dual-Core 32-bit Berkecepatan Tinggi",
+  "section1Content": "Arduino Uno dengan chip ATmega328P 8-bit telah menjadi standar pengajaran sejak 2005 karena ketahanan fisiknya terhadap kesalahan voltase pemula (5V tolerant). Namun, perkembangan IoT dan robot cerdas membutuhkan chip 32-bit bertenaga seperti ESP32 (Xtensa dual-core dengan WiFi/Bluetooth bawaan) atau Raspberry Pi Pico (RP2040 dual ARM Cortex-M0+ dengan clock 133MHz dan programmable I/O).",
+  "expertTips": [
+    "Gunakan Arduino Uno untuk Pelajar Pemula Usia 9–13 Tahun: Toleransi tegangan 5V membuat Arduino Uno jauh lebih tahan korsleting saat siswa salah memasang kabel jumper dibanding board 3.3V.",
+    "Pilih ESP32 untuk Proyek IoT dan Kendali Smartphone: Dengan modul WiFi dan BLE onboard di bawah harga Rp 75.000, ESP32 adalah opsi paling bernilai tinggi untuk robot remote control dan smart device.",
+    "Manfaatkan Raspberry Pi Pico untuk Robot Multi-Motor: Fitur State Machine PIO (Programmable I/O) pada RP2040 memungkinkan kontrol pulsa servo dan encoder motor berkecepatan tinggi tanpa membebani prosesor utama."
+  ],
+  "tableTitle": "Tabel Perbandingan Teknis Detail: Arduino Uno vs ESP32 vs Raspberry Pi Pico",
+  "tableHeaders": [
+    "Spesifikasi Teknis",
+    "Arduino Uno R3",
+    "ESP32 NodeMCU V1",
+    "Raspberry Pi Pico (RP2040)"
+  ],
+  "tableRows": [
+    [
+      "Arsitektur Prosesor",
+      "8-bit AVR RISC (ATmega328P)",
+      "32-bit Xtensa Dual-Core LX6",
+      "32-bit Dual ARM Cortex-M0+"
+    ],
+    [
+      "Kecepatan Clock CPU",
+      "16 MHz",
+      "240 MHz (15x Lebih Cepat)",
+      "133 MHz (Bisa di-overclock 250MHz)"
+    ],
+    [
+      "Memori SRAM",
+      "2 KB (Sangat Terbatas)",
+      "520 KB (Sangat Lapang)",
+      "264 KB"
+    ],
+    [
+      "Memori Flash Program",
+      "32 KB",
+      "4 MB (Bisa Menyimpan Web Server)",
+      "2 MB SPI Flash"
+    ],
+    [
+      "Tegangan Logika I/O",
+      "5V Tolerant (Aman Korslet)",
+      "3.3V (Hati-hati Tegangan Berlebih)",
+      "3.3V"
+    ],
+    [
+      "Konektivitas Nirkabel",
+      "Tidak Ada (Perlu Modul Tambahan)",
+      "WiFi 802.11 b/g/n + Bluetooth 4.2 BLE",
+      "Hanya di Versi Pico W (WiFi/BLE)"
+    ],
+    [
+      "Bahasa Pemrograman",
+      "C / C++ (Arduino IDE)",
+      "C/C++, MicroPython, CircuitPython",
+      "MicroPython, C/C++, CircuitPython"
+    ],
+    [
+      "Peruntukan Terbaik",
+      "Belajar dasar fisika & sensor SD/SMP",
+      "Robot IoT, robotika cerdas, telemetry",
+      "Robotik kinematika, kalkulasi matematika"
+    ]
+  ],
+  "section3Title": "Panduan Memilih Sesuai Kebutuhan Proyek Siswa",
+  "steps": [
+    {
+      "title": "Identifikasi Kebutuhan Komunikasi Data",
+      "desc": "Jika robot perlu dikendalikan lewat aplikasi smartphone atau mengirim data ke cloud, gunakan ESP32."
+    },
+    {
+      "title": "Tinjau Level Pemahaman Elektronika Siswa",
+      "desc": "Untuk siswa yang baru pertama memegang sirkuit, gunakan Arduino Uno agar chip tidak mudah rusak akibat polaritas terbalik."
+    },
+    {
+      "title": "Pertimbangkan Efisiensi Biaya Massal",
+      "desc": "Untuk pengadaan kelas dalam jumlah besar, Raspberry Pi Pico dan ESP32 menawarkan performa komputasi tertinggi pada kisaran harga paling kompetitif."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah ESP32 bisa diprogram menggunakan Arduino IDE?",
+      "a": "Bisa. ESP32 didukung penuh oleh board manager Arduino IDE dengan ratusan library komunitas yang siap pakai."
+    },
+    {
+      "q": "Bisakah Raspberry Pi Pico menjalankan sistem operasi Linux seperti Raspberry Pi 4?",
+      "a": "Tidak. Raspberry Pi Pico adalah mikrokontroler (bare-metal executor), bukan single-board computer (SBC) seperti Raspberry Pi 4/5 yang memiliki OS lengkap."
+    }
+  ],
+  "ctaTitle": "Dapatkan Board Mikrokontroler Original & Teruji",
+  "ctaText": "Kunjungi NEXORANESIA Store untuk pengadaan Arduino, ESP32, sensor modul, dan perlengkapan maker dengan garansi kualitas terpercaya.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}

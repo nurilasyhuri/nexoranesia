@@ -1,0 +1,100 @@
+{
+  "slug": "strategi-mempersiapkan-tim-sekolah-juara-olimpiade-robotika-wro-fll",
+  "title": "Strategi Mempersiapkan Tim Sekolah Juara Olimpiade Robotika (WRO & FLL): Alur Mentoring & R&D",
+  "seoTitle": "Strategi Tim Sekolah Juara Olimpiade Robotika WRO & FLL",
+  "description": "Panduan manajerial dan teknis bagi guru & sekolah menyiapkan tim juara World Robot Olympiad (WRO) dan FIRST LEGO League (FLL). Alur seleksi, roadmap R&D, dan simulasi juri.",
+  "category": "Kompetisi & Olimpiade",
+  "tags": [
+    "olimpiade robotika",
+    "wro indonesia",
+    "first lego league",
+    "mentoring tim robotika",
+    "prestasi sekolah"
+  ],
+  "heroImage": "/images/hero/slide-3.jpg",
+  "readTime": "7 Menit Baca",
+  "author": "Tim Pelatih NEXORANESIA Competition",
+  "authorRole": "National Coach & Mentor WRO",
+  "intro": "Menjuarai kompetisi robotika internasional bergengsi seperti World Robot Olympiad (WRO) atau FIRST LEGO League (FLL) bukan sekadar urusan merakit hardware paling mahal. Kemenangan di panggung dunia ditentukan oleh kedisiplinan riset, kekuatan rekayasa algoritma mandiri oleh siswa, strategi alokasi waktu pada babak kejutan (Surprise Rule), serta kemampuan presentasi ilmiah di hadapan panel juri internasional.",
+  "section1Title": "Faktor Kunci Penentu Skor Maksimal di Arena Internasional",
+  "section1Content": "Di kompetisi WRO kategori RoboMission, robot harus menyelesaikan serangkaian misi otomatis di atas arena meja berukuran 236 x 114 cm dalam waktu maksimal 2 menit. Robot yang stabil adalah robot yang memiliki mekanika kokoh dengan toleransi error mekanik minimal, didukung sensor navigasi cerdas seperti gyroscope digital dan sensor warna yang dikalibrasi terhadap pantulan cahaya lampu venue.",
+  "expertTips": [
+    "Terapkan Teknik Odometri & Kalibrasi Dinding: Jangan hanya mengandalkan putaran derajat motor (rotasi encoder). Ajarkan siswa melakukan perataan sudut robot ke dinding arena (squaring on wall) secara berkala agar akumulasi drift sudut kembali nol.",
+    "Desain Mekanika Attachment Modular: Gunakan sistem attachment lepas-pasang cepat (quick-release) tanpa sekrup rumit untuk menjalankan misi-misi berbeda dalam satu ronde pertandingan.",
+    "Latihan Dry Run dengan Gangguan Tak Terduga: Simulasikan kondisi panggung sebenarnya: matikan beberapa lampu, ubah intensitas cahaya ruangan, gunakan baterai yang sedikit drop, dan minta siswa beradaptasi tanpa bantuan pelatih."
+  ],
+  "tableTitle": "Roadmap 6 Bulan Pembinaan Tim Olimpiade Robotika Sekolah",
+  "tableHeaders": [
+    "Bulan Pembinaan",
+    "Fokus Utama",
+    "Kegiatan Kunci Siswa",
+    "Indikator Keberhasilan (Milestone)"
+  ],
+  "tableRows": [
+    [
+      "Bulan 1",
+      "Seleksi & Fondasi Teori",
+      "Uji logika logika programming, seleksi siswa, pembagian peran mekanik/koder",
+      "Terbentuk tim inti berisi 2–3 siswa dengan komitmen tinggi"
+    ],
+    [
+      "Bulan 2",
+      "Analisis Rulebook & Prototyping",
+      "Bedah buku aturan resmi, hitung efisiensi poin per detik setiap misi",
+      "Sketsa CAD & purwarupa awal sasis robot penggerak utama"
+    ],
+    [
+      "Bulan 3",
+      "Rekayasa Mekanisme Misi",
+      "Perakitan lengan gripper, mekanisme pengungkit, uji coba motorik",
+      "Robot mampu menyelesaikan 50% misi di atas matras arena resmi"
+    ],
+    [
+      "Bulan 4",
+      "Optimasi Kode & Algoritma Gyro",
+      "Implementasi PID gyro driving, penyesuaian akselerasi tikungan halus",
+      "Robot mencapai konsistensi 80% keberhasilan misi penuh dalam waktu 100 detik"
+    ],
+    [
+      "Bulan 5",
+      "Simulasi Surprise Rule & Sparring",
+      "Pemberian misi kejutan mendadak, latihan perakitan ulang robot dari nol",
+      "Siswa mampu mendesain ulang program mandiri di bawah 60 menit"
+    ],
+    [
+      "Bulan 6",
+      "Finalisasi Kompetisi & Mentalitas",
+      "Simulasi lomba resmi dengan timer dan juri tamu, latihan presentasi",
+      "Robot mencapai skor 100% konsisten pada 5 kali uji coba berturut-turut"
+    ]
+  ],
+  "section3Title": "Struktur Pembagian Peran Tim Robotika yang Efektif",
+  "steps": [
+    {
+      "title": "Lead Programmer (Software Architect)",
+      "desc": "Bertanggung jawab atas arsitektur kode, fungsi modular navigasi gyro, pembacaan sensor warna, dan perbaikan bug algoritma."
+    },
+    {
+      "title": "Lead Mechanical Engineer (Hardware Specialist)",
+      "desc": "Memastikan kekokohan sasis, keselarasan gear rasio, keausan ban, kabel manajemen, dan attachment mekanik pengambil objek."
+    },
+    {
+      "title": "Strategist & Documenter (Project Manager)",
+      "desc": "Menghitung rute urutan misi tercepat, mencatat data statistik keberhasilan setiap uji coba, dan mengelola dokumen rekayasa tim."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah pelatih boleh membantu memprogram robot saat hari perlombaan WRO?",
+      "a": "Sama sekali tidak boleh. Di kompetisi WRO, area pit steril dari pelatih dan orang tua. Siswa harus merakit robot dari bagian terpisah dan memprogram sendiri di hadapan panitia juri pengawas."
+    },
+    {
+      "q": "Kapan batas usia peserta untuk kategori WRO RoboMission?",
+      "a": "Kategori RoboMission terbagi dalam Elementary (usia 8–12), Junior (usia 11–15), dan Senior (usia 14–19 tahun)."
+    }
+  ],
+  "ctaTitle": "Ingin Sekolah Anda Memiliki Tim Robotika Juara Olimpiade?",
+  "ctaText": "Program NEXORANESIA Competition menyediakan kurikulum intensif, simulasi arena standar internasional, dan mentoring dari pelatih berpengalaman kejuaraan dunia.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}

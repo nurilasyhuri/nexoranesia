@@ -1,0 +1,98 @@
+{
+  "slug": "panduan-membangun-lab-stem-robotika-modern-sekolah",
+  "title": "Panduan Lengkap Membangun Lab STEM & Robotika Modern di Sekolah: Anggaran, Kurikulum, & Standar Alat",
+  "seoTitle": "Panduan Membangun Lab STEM & Robotika Sekolah Modern",
+  "description": "Panduan bagi yayasan dan kepala sekolah mendirikan Laboratorium STEM & Robotika berstandar industri. Analisis kebutuhan ruang, hardware, modul ajar, dan sertifikasi guru.",
+  "category": "STEM & Lab Sekolah",
+  "tags": [
+    "lab stem sekolah",
+    "laboratorium robotika",
+    "kurikulum stem",
+    "pelatihan guru robotika",
+    "fasilitas sekolah unggulan"
+  ],
+  "heroImage": "/images/hero/slide-2.jpg",
+  "readTime": "7 Menit Baca",
+  "author": "Tim Konsultan NEXORANESIA Solutions",
+  "authorRole": "Head of Institutional Partnership",
+  "intro": "Dalam persaingan institusi pendidikan modern, fasilitas laboratorium STEM (Science, Technology, Engineering, Mathematics) dan Robotika menjadi tolok ukur utama inovasi sekolah di mata orang tua murid. Namun, tidak sedikit sekolah yang telah menginvestasikan ratusan juta rupiah untuk pengadaan alat robotik, namun fasilitas tersebut berakhir berdebu di lemari karena ketiadaan kurikulum terstruktur dan minimnya pelatihan guru pendamping.",
+  "section1Title": "Tiga Pilar Utama Lab STEM yang Berkelanjutan",
+  "section1Content": "Membangun laboratorium teknologi yang sukses bertumpu pada formula segitiga seimbang: Hardware & Tools yang tepat guna, Kurikulum Terstruktur berbasis proyek (PBL) per semester, dan Training of Trainers (ToT) berkala untuk guru sains dan TIK sekolah. Tanpa modul ajar dan guru yang percaya diri, secanggih apa pun perangkat kerasnya tidak akan melahirkan karya siswa yang membanggakan.",
+  "expertTips": [
+    "Gunakan Prinsip 1 Siswa 1 Kit (atau Maksimal 2 Siswa per Tim): Efektivitas belajar robotika anjlok drastis jika 4 hingga 5 siswa harus berbagi 1 modul, karena hanya satu anak dominan yang memegang alat sementara siswa lain pasif.",
+    "Sediakan Area Uji Karpet & Meja Arena Permanen: Sediakan meja arena standar ukuran 2,4 x 1,2 meter berpagar tepi agar siswa dapat langsung menguji pergerakan robot tanpa mengganggu meja kerja laptop.",
+    "Pilih Ekosistem Hardware Terbuka (Open Source): Hindari sistem tertutup berkunci lisensi mahal per tahun. Prioritaskan kit berbasis Arduino, ESP32, dan sensor standar industri yang mudah dicari suku cadangnya di pasar lokal."
+  ],
+  "tableTitle": "Estimasi Matriks Pengadaan Lab STEM Robotika Sekolah (Kapasitas 24 Siswa)",
+  "tableHeaders": [
+    "Kategori Fasilitas",
+    "Item Kebutuhan Inti",
+    "Spesifikasi Rekomendasi",
+    "Estimasi Alokasi Anggaran"
+  ],
+  "tableRows": [
+    [
+      "Hardware Pembelajaran Siswa",
+      "12–24 Paket STEM Robotics Kit",
+      "Microcontroller Trainer, Sensor Set, Chassis, Solder Station",
+      "40% – 50% dari total anggaran"
+    ],
+    [
+      "Peralatan Rapid Prototyping",
+      "3D Printer FDM & Laser Engraver",
+      "CoreXY 3D Printer 300x300mm + Filament PLA+",
+      "15% – 20% dari total anggaran"
+    ],
+    [
+      "Meja & Arena Simulasi Lomba",
+      "Meja Arena Kayu + Karpet Vinyl WRO",
+      "Meja berpagar kayu lisensi standar olimpiade nasional",
+      "10% – 15% dari total anggaran"
+    ],
+    [
+      "Kurikulum & Buku Panduan Siswa",
+      "Modul 4 Level (Dasar hingga Mahir)",
+      "Panduan praktikum bergambar langkah-demi-langkah (1 Tahun)",
+      "10% – 15% dari total anggaran"
+    ],
+    [
+      "Pelatihan & Sertifikasi Guru (ToT)",
+      "Workshop Intensif Instruktur Guru",
+      "16 Jam pelatihan tatap muka, mentoring konsultasi mingguan",
+      "10% – 15% dari total anggaran"
+    ]
+  ],
+  "section3Title": "Tahapan Eksekusi Pendirian Lab STEM Sekolah Bersama NEXORANESIA",
+  "steps": [
+    {
+      "title": "Site Visit & Analisis Kebutuhan Ruangan",
+      "desc": "Tim arsitek lab kami meninjau luas ruangan sekolah, instalasi kelistrikan aman, ventilasi, dan pencahayaan meja praktikum."
+    },
+    {
+      "title": "Penyusunan Rencana Anggaran Biaya (RAB) Custom",
+      "desc": "Penyesuaian kebutuhan perangkat dengan jenjang sekolah (SD, SMP, SMA, atau SMK Vokasi) dan alokasi budget yayasan."
+    },
+    {
+      "title": "Instalasi Hardware & Tata Letak Interior Modern",
+      "desc": "Pengiriman unit kit, penataan meja praktikum heksagonal kolaboratif, lemari komponen transparan, dan branding visual lab."
+    },
+    {
+      "title": "Training of Trainers (ToT) Guru Sekolah",
+      "desc": "Pelatihan intensif bagi guru pendamping hingga menguasai seluruh materi praktikum dan mampu memimpin kelas dengan mandiri."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Berapa luas ruangan minimum yang dibutuhkan untuk mendirikan Lab STEM Robotika?",
+      "a": "Luas ideal untuk kapasitas 24 hingga 30 siswa adalah minimal 7 x 8 meter (56 m²), yang mencakup 6 meja kerja kelompok, 1 meja arena uji coba robot, rak penyimpanan komponen, dan area komputer."
+    },
+    {
+      "q": "Apakah NEXORANESIA bisa menyediakan instruktur eksternal jika sekolah belum memiliki guru khusus?",
+      "a": "Bisa. Kami memiliki program Kemitraan Ekstrakurikuler di mana instruktur bersertifikasi dari NEXORANESIA hadir langsung setiap minggu untuk membimbing siswa di sekolah mitra."
+    }
+  ],
+  "ctaTitle": "Konsultasikan Pendirian Lab STEM di Sekolah Anda",
+  "ctaText": "Hubungi tim NEXORANESIA Solutions untuk survey lokasi gratis, pembuatan proposal RAB resmi sekolah, dan katalog peralatan laboratorium.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}

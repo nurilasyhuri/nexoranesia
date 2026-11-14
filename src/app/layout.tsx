@@ -6,6 +6,7 @@ import { WhatsAppWidget } from '@/components/WhatsAppWidget';
 import { COMPANY_INFO } from '@/data/ecosystem';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nexoranesia.id'),
   title: `${COMPANY_INFO.name} — Indonesia's Next Era of Innovation | Coding, Robotics, AI & STEM Ecosystem`,
   description: `${COMPANY_INFO.description} Pusat pelatihan coding anak, robotika canggih, komponen elektronika ESP32, mentoring kompetisi dunia, dan pembangunan Lab STEM sekolah di Indonesia.`,
   keywords: [

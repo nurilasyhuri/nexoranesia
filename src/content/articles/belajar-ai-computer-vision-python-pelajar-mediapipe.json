@@ -1,0 +1,98 @@
+{
+  "slug": "belajar-ai-computer-vision-python-pelajar-mediapipe",
+  "title": "Belajar Artificial Intelligence (AI) & Computer Vision untuk Pelajar: Deteksi Tangan dengan Python & MediaPipe",
+  "seoTitle": "Belajar AI & Computer Vision untuk Pelajar dengan Python",
+  "description": "Panduan praktis siswa SMP-SMA belajar Artificial Intelligence. Tutorial deteksi 21 titik tangan webcam real-time menggunakan Python, OpenCV, dan Google MediaPipe.",
+  "category": "Artificial Intelligence",
+  "tags": [
+    "belajar ai pelajar",
+    "python opencv",
+    "google mediapipe",
+    "computer vision pemula",
+    "ai untuk anak"
+  ],
+  "heroImage": "/images/academy/python-ai.jpg",
+  "readTime": "7 Menit Baca",
+  "author": "Tim AI & Data Science NEXORANESIA",
+  "authorRole": "Lead Machine Learning Mentor",
+  "intro": "Kecerdasan Buatan (Artificial Intelligence) bukan lagi materi abstrak yang hanya bisa dipelajari di tingkat magister universitas. Dengan pustaka modern seperti Google MediaPipe dan OpenCV, pelajar usia 12 hingga 18 tahun kini mampu menciptakan aplikasi cerdas real-time: mulai dari robot yang dikendalikan dengan lambaian tangan, pengenal bahasa isyarat, hingga filter interaktif cerdas hanya dalam beberapa lusin baris kode Python.",
+  "section1Title": "Bagaimana Komputer Melihat Dunia: Konsep Landmark Landmark AI",
+  "section1Content": "Alih-alih memproses gambar piksel demi piksel secara lambat, model machine learning MediaPipe menggunakan arsitektur neural network yang telah dilatih pada jutaan gambar tangan. Model ini memprediksi koordinat spasial 3D dari 21 titik persendian (landmarks) pada tangan manusia: mulai dari pergelangan (wrist), ruas ibu jari, hingga ujung jari telunjuk dan kelingking secara real-time pada 30+ frame per second.",
+  "expertTips": [
+    "Gunakan Virtual Environment (venv): Selalu biasakan siswa membuat lingkungan virtual Python terisolasi untuk menghindari konflik versi antar paket pip.",
+    "Normalisasi Koordinat Layar: Ingat bahwa MediaPipe menghasilkan koordinat ternormalisasi antara 0.0 hingga 1.0. Kalikan dengan lebar (width) dan tinggi (height) frame webcam untuk mendapatkan posisi piksel absolut.",
+    "Manfaatkan Nilai Jarak Euclidean Antar Ujung Jari: Untuk mendeteksi gestur mencubit (pinch) atau kepalan tinju, cukup hitung jarak matematis antara ujung jempol (titik #4) dan ujung telunjuk (titik #8)."
+  ],
+  "tableTitle": "Tabel Pemetaan 21 Landmark Tangan pada Model MediaPipe Hands",
+  "tableHeaders": [
+    "Indeks Titik",
+    "Nama Persendian Anatomi",
+    "Fungsi Deteksi Gestur Kunci",
+    "Contoh Aplikasi Nyata"
+  ],
+  "tableRows": [
+    [
+      "Titik #0",
+      "Wrist (Pergelangan Tangan)",
+      "Titik acuan posisi tengah telapak tangan",
+      "Menentukan orientasi tangan kiri/kanan di layar"
+    ],
+    [
+      "Titik #4",
+      "Thumb Tip (Ujung Ibu Jari)",
+      "Ujung jari pengukur gestur jepit (pinch)",
+      "Trigger klik mouse virtual atau trigger gripper robot"
+    ],
+    [
+      "Titik #8",
+      "Index Finger Tip (Ujung Telunjuk)",
+      "Pointer navigasi utama kursor layar",
+      "Menggambar di kanvas udara (air canvas) virtual"
+    ],
+    [
+      "Titik #12",
+      "Middle Finger Tip (Ujung Jari Tengah)",
+      "Kombinasi gestur damai (peace sign)",
+      "Navigasi mode game atau scroll halaman web"
+    ],
+    [
+      "Titik #16 & #20",
+      "Ring Tip & Pinky Tip",
+      "Deteksi kondisi tangan terbuka vs mengepal",
+      "Kontrol kecepatan motor robot (buka = maju, kepal = rem)"
+    ]
+  ],
+  "section3Title": "4 Langkah Instalasi dan Menjalankan Proyek AI Pertama di Laptop Siswa",
+  "steps": [
+    {
+      "title": "Instal Python 3.10 atau 3.11",
+      "desc": "Unduh installer resmi dari python.org dan pastikan centang opsi \"Add Python to PATH\" saat instalasi."
+    },
+    {
+      "title": "Instal Library OpenCV dan MediaPipe",
+      "desc": "Buka terminal/command prompt dan jalankan perintah: pip install opencv-python mediapipe."
+    },
+    {
+      "title": "Inisialisasi Akses Webcam Laptop",
+      "desc": "Gunakan fungsi cv2.VideoCapture(0) untuk membuka kamera default laptop dan membaca video frame secara berkala."
+    },
+    {
+      "title": "Ekstrak dan Gambar 21 Titik Sendi",
+      "desc": "Kirim gambar ke model mp_hands.Hands() dan gambar garis rangka menggunakan mp_drawing.draw_landmarks()."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah laptop siswa harus memiliki GPU khusus untuk belajar Computer Vision?",
+      "a": "Tidak perlu. MediaPipe dioptimalkan secara cerdas untuk berjalan ringan di CPU laptop standar tanpa membutuhkan kartu grafis (GPU) diskrit."
+    },
+    {
+      "q": "Bagaimana cara menghubungkan deteksi gestur Python ke robot Arduino?",
+      "a": "Siswa dapat mengirimkan sinyal perintah karakter lewat komunikasi serial (kabel USB atau Bluetooth) menggunakan pustaka pyserial di Python ke port mikrokontroler."
+    }
+  ],
+  "ctaTitle": "Tertarik Belajar Coding Python & Machine Learning?",
+  "ctaText": "Ikuti kursus Python & AI Junior di NEXORANESIA Academy. Siswa diajak praktik membangun proyek computer vision, deteksi wajah, dan integrasi robot nyata.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}

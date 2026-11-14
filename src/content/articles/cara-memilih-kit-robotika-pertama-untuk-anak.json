@@ -1,0 +1,104 @@
+{
+  "slug": "cara-memilih-kit-robotika-pertama-untuk-anak",
+  "title": "Cara Memilih Kit Robotika Pertama untuk Anak: Perbandingan Modular, Lego, & Explorer Kit",
+  "seoTitle": "Panduan Memilih Kit Robotika Pertama untuk Anak",
+  "description": "Panduan orang tua memilih kit robot edukasi pertama bagi anak usia 6-12 tahun. Komparasi sistem snap-fit modular, Lego Education, dan open-hardware kit.",
+  "category": "Robotika",
+  "tags": [
+    "kit robotika anak",
+    "lego education",
+    "explorer kit",
+    "mainan edukasi stem",
+    "hadiah edukatif anak"
+  ],
+  "heroImage": "/images/academy/robotics-kids.jpg",
+  "readTime": "6 Menit Baca",
+  "author": "Tim Konsultan Edukasi NEXORANESIA",
+  "authorRole": "Senior STEM Education Advisor",
+  "intro": "Banyak orang tua ingin mengarahkan minat anak dari kecanduan layar gadget (gadget addiction) menjadi kreator teknologi melalui mainan robotika. Namun, pasar dipenuhi ratusan pilihan: mulai dari kit plastik murah yang cepat rusak, hingga paket robot impor bermerek dengan harga belasan juta rupiah. Memilih kit yang keliru bisa membuat anak cepat bosan atau merasa materi terlalu rumit.",
+  "section1Title": "Kriteria Utama: Kesesuaian Usia, Keamanan, dan Skalabilitas Modul",
+  "section1Content": "Kit robotika yang ideal harus memiliki tingkat hambatan awal (friction) yang rendah namun batas atas eksplorasi (ceiling) yang tinggi. Anak usia dini membutuhkan koneksi snap-fit atau magnetik tanpa melibatkan solder panas atau baut kecil berbahaya. Sementara untuk anak usia sekolah dasar menengah, kit harus dapat diprogram ulang dan dikombinasikan dengan sensor baru seiring bertambahnya wawasan logika mereka.",
+  "expertTips": [
+    "Hindari Robot Jadi yang Hanya Berfungsi Sebagai Remote Control: Mainan robot siap pakai tanpa proses perakitan dan pemrograman tidak melatih logika problem solving sama sekali.",
+    "Pastikan Tersedia Panduan Video dan Modul Bahasa Indonesia: Kit tanpa buku panduan step-by-step yang jelas akan berujung terbengkalai di lemari mainan anak.",
+    "Pilih Kit yang Kompatibel dengan Bahasa Pemrograman Standar: Prioritaskan kit yang dapat diprogram via Scratch (blok) dan nantinya bisa dikembangkan ke C++ atau Python."
+  ],
+  "tableTitle": "Tabel Perbandingan Jenis Kit Robotika untuk Pemula",
+  "tableHeaders": [
+    "Karakteristik Kunci",
+    "Kit Snap-Fit Modular Magnetik",
+    "Lego Education (Spike/Mindstorms)",
+    "Nexoranesia Explorer Starter Kit"
+  ],
+  "tableRows": [
+    [
+      "Rekomendasi Usia",
+      "4 – 7 Tahun (TK – SD Awal)",
+      "7 – 12 Tahun (SD Menengah)",
+      "8 – 15 Tahun (SD – SMP/SMA)"
+    ],
+    [
+      "Metode Perakitan",
+      "Sambungan magnetik / puzzle plastik",
+      "Balok konstruksi Lego Technic",
+      "Sasis akrilik kokoh + baut pengaman + breadboard"
+    ],
+    [
+      "Fleksibilitas Sensor",
+      "Hanya modul bawaan pabrik",
+      "Sensor proprietary Lego (mahal)",
+      "Menggunakan sensor elektronik standar terbuka (murah & variatif)"
+    ],
+    [
+      "Bahasa Pemrograman",
+      "Tombol manual / Scratch Jr",
+      "Scratch App Lego Spike",
+      "Scratch 3.0 Blok -> Arduino IDE C++"
+    ],
+    [
+      "Efisiensi Investasi",
+      "Cukup terjangkau, cepat outgrown",
+      "Sangat mahal (Rp 7–12 Juta)",
+      "Sangat ekonomis dengan skalabilitas proyek tak terbatas"
+    ],
+    [
+      "Ketahanan Modul",
+      "Plastik ringan",
+      "Plastik ABS berkualitas tinggi",
+      "Akrilik tebal + PCB tahan banting"
+    ]
+  ],
+  "section3Title": "Panduan Memperkenalkan Kit Robotika Pertama Kali kepada Anak",
+  "steps": [
+    {
+      "title": "Fasilitasi Proses Unboxing Bersama",
+      "desc": "Ajak anak mengenali setiap komponen: mana motor penggerak, mana otak mikrokontroler, dan mana sensor pendeteksi mata robot."
+    },
+    {
+      "title": "Ikuti Proyek Perakitan Pertama Sesuai Buku",
+      "desc": "Bimbing anak merakit bentuk dasar sasis beroda 2WD hingga kokoh dan kabel terpasang rapi."
+    },
+    {
+      "title": "Coba Program Sederhana: Robot Menari",
+      "desc": "Beri tantangan pertama membuat robot maju 2 detik, berputar balik, dan membunyikan buzzer gembira."
+    },
+    {
+      "title": "Tantang Anak Mengatasi Rintangan Dinding",
+      "desc": "Pasang sensor ultrasonik dan ajak anak menyusun logika: jika jarak rintangan di bawah 15 cm, belok ke kanan."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah aman bagi anak usia 8 tahun merakit kit robotika sendiri?",
+      "a": "Sangat aman jika menggunakan kit bertegangan rendah (baterai 5V–9V) dengan komponen solderless (tanpa solder panas) seperti breadboard dan kabel jumper socket."
+    },
+    {
+      "q": "Berapa lama rata-rata anak dapat menyelesaikan satu proyek robot?",
+      "a": "Untuk proyek pemula, rata-rata anak membutuhkan waktu 45 hingga 90 menit untuk merakit sasis dan memasukkan kode program pertama."
+    }
+  ],
+  "ctaTitle": "Mulai Petualangan Teknologi Anak Anda Hari Ini",
+  "ctaText": "Dapatkan Nexoranesia STEM Robotics Starter Kit lengkap dengan buku panduan visual warna dan akses kelas video tutorial interaktif.",
+  "publishDate": "14 November 2026",
+  "publishedAt": "2026-11-14T07:20:55.640Z"
+}
