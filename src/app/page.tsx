@@ -441,12 +441,6 @@ export default function HomePage() {
                   ? '/images/academy/amr-rover.jpg'
                   : '/images/academy/robotics-kids.jpg';
 
-                const cartoonTheme = course.category === 'Coding'
-                  ? { icon: '💻', badgeBg: 'bg-purple-100 text-purple-800 border-purple-200' }
-                  : course.category === 'AI'
-                  ? { icon: '🧠', badgeBg: 'bg-sky-100 text-sky-800 border-sky-200' }
-                  : { icon: '🤖', badgeBg: 'bg-orange-100 text-orange-800 border-orange-200' };
-
                 return (
                   <div
                     key={course.id}
@@ -461,31 +455,6 @@ export default function HomePage() {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
-                      
-                      {/* Badge Kategori Kartun */}
-                      <div className="absolute top-3 left-3 z-10">
-                        <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#3A1E1A] shadow-md border border-stone-200">
-                          <span>{cartoonTheme.icon}</span>
-                          <span>{course.category}</span>
-                        </span>
-                      </div>
-
-                      {/* Badge Prestasi / Populer */}
-                      {course.badge && (
-                        <div className="absolute top-3 right-3 z-10">
-                          <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FFD25D] text-amber-950 shadow-md border border-amber-300">
-                            ⭐ {course.badge}
-                          </span>
-                        </div>
-                      )}
-
-                      {/* Pill Aksen di Bawah Banner */}
-                      <div className="absolute bottom-2.5 left-3 right-3 z-10">
-                        <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-white bg-black/40 backdrop-blur-xs px-2.5 py-0.5 rounded-full">
-                          <span>🎯 Praktik Rakit Langsung</span>
-                        </div>
-                      </div>
                     </div>
 
                     {/* Konten Kartu */}
