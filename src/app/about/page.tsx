@@ -6,7 +6,6 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { COMPANY_INFO } from '@/data/ecosystem';
 import {
-  Sparkles,
   Building2,
   MapPin,
   Clock,
@@ -24,10 +23,9 @@ export default function AboutPage() {
         {/* Header Hero */}
         <section className="relative py-16 md:py-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">
-              <Sparkles className="w-4 h-4 text-amber-600" />
-              <span>Tentang NEXORANESIA — Ekosistem Teknologi & Pendidikan Masa Depan</span>
-            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF7A3D]">
+              Profil Ekosistem NEXORANESIA
+            </p>
 
             <h1 className="font-extrabold text-3xl sm:text-5xl text-slate-900 tracking-tight">
               Membangun Generasi Kreator & <br />

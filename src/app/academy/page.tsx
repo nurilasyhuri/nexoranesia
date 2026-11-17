@@ -7,7 +7,7 @@ import { EnrollmentModal } from '@/components/EnrollmentModal';
 import { ACADEMY_COURSES } from '@/data/ecosystem';
 import {
   GraduationCap,
-  Sparkles,
+  Award,
   CheckCircle2,
   ChevronDown,
   BookOpen,
@@ -274,9 +274,9 @@ export default function AcademyPage() {
                 </p>
               </div>
 
-              <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
-                <div className="p-3 rounded-2xl bg-sky-50 text-sky-600 border border-sky-100 w-fit">
-                  <Sparkles className="w-6 h-6" />
+              <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+                <div className="p-3 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 w-fit">
+                  <Award className="w-6 h-6" />
                 </div>
                 <h4 className="font-heading font-bold text-base text-slate-900">Jalur Prestasi Olimpiade</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">

@@ -13,7 +13,7 @@ import {
   CheckCircle2,
   ShieldCheck,
   Truck,
-  Sparkles,
+  BookOpen,
 } from 'lucide-react';
 
 export default function StorePage() {
@@ -75,7 +75,7 @@ export default function StorePage() {
                 <Truck className="w-4 h-4 text-amber-600" /> Pengiriman Cepat Seluruh Indonesia (JNE/SiCepat/J&T)
               </span>
               <span className="flex items-center gap-1.5 font-medium">
-                <Sparkles className="w-4 h-4 text-emerald-600" /> Free Video Tutorial Pembelajaran Tiap Kit
+                <BookOpen className="w-4 h-4 text-emerald-600" /> Free Video Tutorial Pembelajaran Tiap Kit
               </span>
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Melayani Pengadaan Sekolah & Faktur Pajak

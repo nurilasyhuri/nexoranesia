@@ -11,7 +11,6 @@ import {
   Send,
   Calendar,
   Users,
-  Sparkles,
   Bot,
   Cpu,
   ArrowRight,

@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'NEXORANESIA Digital Ecosystem' }],
   creator: 'PT Nexoranesia Teknologi Nusantara',
   openGraph: {
-    title: "NEXORANESIA — Indonesia's Next Era of Innovation",
-    description: 'Ekosistem Pendidikan, Robotika, Komponen, dan Solusi Rekayasa Masa Depan di Indonesia.',
+    title: "NEXORANESIA: Robotika & Edukasi STEAM Terpadu",
+    description: 'Ekosistem Pendidikan, Robotika, Komponen, dan Solusi Rekayasa di Indonesia.',
     url: 'https://nexoranesia.id',
     siteName: 'NEXORANESIA Ecosystem',
     locale: 'id_ID',

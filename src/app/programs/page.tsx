@@ -16,7 +16,6 @@ import {
   BookOpen,
   CheckCircle2,
   ChevronDown,
-  Sparkles,
   ShieldCheck,
   Layers,
   ArrowRight,

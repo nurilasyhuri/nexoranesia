@@ -6,7 +6,6 @@ import { Footer } from '@/components/Footer';
 import { ROBOTICS_SHOWCASE, COMPANY_INFO } from '@/data/ecosystem';
 import {
   Bot,
-  Sparkles,
   CheckCircle2,
   Send,
   Zap,
@@ -99,9 +98,9 @@ export default function RoboticsPage() {
                 );
               })}
 
-              <div className="p-5 rounded-3xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 text-xs text-slate-700 space-y-2 mt-4 shadow-xs">
+              <div className="p-5 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-slate-700 space-y-2 mt-4 shadow-xs">
                 <div className="font-bold text-slate-900 flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-amber-500" />
+                  <Cpu className="w-4 h-4 text-amber-600" />
                   <span>Butuh Desain Robot Kustom?</span>
                 </div>
                 <p className="text-[11px] text-slate-600 leading-relaxed">

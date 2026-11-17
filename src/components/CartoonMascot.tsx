@@ -168,9 +168,6 @@ export const CourseCartoonIllustration: React.FC<{
 
             <path d="M116 28 Q 124 18 132 30" stroke="#3B82F6" strokeWidth="3.5" strokeLinecap="round" fill="none" />
             <circle cx="115" cy="27" r="2" fill="#FBBF24" />
-
-            {/* Sparkles / Bintang AI */}
-            <polygon points="80,10 82,16 88,18 82,20 80,26 78,20 72,18 78,16" fill="#FBBF24" />
           </svg>
 
           {/* Badge Python AI */}

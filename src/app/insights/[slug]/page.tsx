@@ -16,7 +16,7 @@ import {
   ArrowRight,
   MessageCircle,
   HelpCircle,
-  Sparkles,
+  CheckCircle2,
   Share2,
 } from 'lucide-react';
 
@@ -37,14 +37,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!article) {
     return {
-      title: 'Artikel Tidak Ditemukan | NEXORANESIA',
+      title: 'Artikel Tidak Ditemukan - NEXORANESIA',
     };
   }
 
   const canonicalUrl = `https://nexoranesia.id/insights/${article.slug}`;
 
   return {
-    title: `${article.seoTitle || article.title} | NEXORANESIA`,
+    title: `${article.seoTitle || article.title} - NEXORANESIA`,
     description: article.description,
     keywords: article.tags,
     alternates: {
@@ -273,18 +273,18 @@ export default async function ArticleDetailPage({ params }: Props) {
 
             {/* Expert Tips / Catatan Mentor */}
             {article.expertTips && article.expertTips.length > 0 && (
-              <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-50/80 via-orange-50/60 to-white border-2 border-amber-200/80 shadow-xs space-y-4">
+              <section className="p-6 sm:p-8 rounded-xl bg-[#FAF8F5] border border-[#E3D9CC] space-y-4">
                 <div className="flex items-center gap-2 text-amber-900 font-editorial font-extrabold text-lg sm:text-xl">
-                  <Sparkles className="w-5 h-5 text-amber-600" />
-                  <h3>Catatan Mentor & Poin Kritis Lapangan</h3>
+                  <CheckCircle2 className="w-5 h-5 text-amber-700" />
+                  <h3>Catatan Mentor &amp; Poin Kritis Lapangan</h3>
                 </div>
                 <div className="space-y-3">
                   {article.expertTips.map((tip, idx) => (
                     <div
                       key={idx}
-                      className="flex items-start gap-3 bg-white/90 p-4 rounded-2xl border border-amber-200/60 text-xs sm:text-sm text-[#4A2D27] leading-relaxed"
+                      className="flex items-start gap-3 bg-white p-4 rounded-lg border border-[#E3D9CC] text-xs sm:text-sm text-[#4A2D27] leading-relaxed"
                     >
-                      <span className="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                         {idx + 1}
                       </span>
                       <span>{tip}</span>
@@ -296,11 +296,11 @@ export default async function ArticleDetailPage({ params }: Props) {
 
             {/* Section 2: Technical Table */}
             {article.tableHeaders && article.tableRows && (
-              <section className="space-y-4 bg-white p-6 sm:p-8 rounded-3xl border border-[#EDE6DD]">
+              <section className="space-y-4 bg-white p-6 sm:p-8 rounded-xl border border-[#EDE6DD]">
                 <h2 className="font-editorial font-extrabold text-xl sm:text-2xl text-[#3A1E1A] tracking-tight">
                   {article.tableTitle}
                 </h2>
-                <div className="overflow-x-auto rounded-2xl border border-stone-200">
+                <div className="overflow-x-auto rounded-lg border border-stone-200">
                   <table className="w-full text-left text-xs sm:text-sm">
                     <thead className="bg-[#FAF8F5] text-[#3A1E1A] border-b border-stone-200 font-bold uppercase tracking-wider text-[11px]">
                       <tr>
@@ -383,12 +383,12 @@ export default async function ArticleDetailPage({ params }: Props) {
 
             {/* Tags */}
             {article.tags && article.tags.length > 0 && (
-              <div className="pt-2 flex flex-wrap items-center gap-2">
-                <span className="text-xs text-stone-500 font-semibold mr-1">Kata Kunci:</span>
+              <div className="pt-2 flex flex-wrap items-baseline gap-x-2.5 text-xs text-stone-500">
+                <span className="font-semibold text-stone-700">Tag:</span>
                 {article.tags.map((t, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 rounded-full bg-white border border-stone-200 text-xs text-stone-600"
+                    className="hover:underline underline-offset-4 text-stone-600 cursor-pointer"
                   >
                     #{t}
                   </span>
@@ -397,11 +397,10 @@ export default async function ArticleDetailPage({ params }: Props) {
             )}
 
             {/* Conversion CTA Box */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#251310] via-[#331B17] to-[#251310] text-white shadow-xl space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Konsultasi Program & Hardware NEXORANESIA</span>
-              </div>
+            <div className="p-8 sm:p-10 rounded-xl bg-[#251310] text-white shadow-lg space-y-5">
+              <p className="text-xs uppercase tracking-widest text-amber-300 font-semibold">
+                Konsultasi &amp; Hardware NEXORANESIA
+              </p>
 
               <h3 className="font-editorial font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
                 {article.ctaTitle || 'Tertarik Mengembangkan Minat Teknologi Bersama Kami?'}
@@ -409,7 +408,7 @@ export default async function ArticleDetailPage({ params }: Props) {
 
               <p className="text-xs sm:text-sm text-stone-300 max-w-2xl leading-relaxed">
                 {article.ctaText ||
-                  'NEXORANESIA menghadirkan ekosistem pembelajaran coding, robotika, dan AI terlengkap dengan kurikulum terstruktur dan bimbingan mentor berpengalaman.'}
+                  'NEXORANESIA menghadirkan ekosistem pembelajaran coding, robotika, dan AI dengan kurikulum terstruktur dan bimbingan mentor berpengalaman.'}
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -417,14 +416,14 @@ export default async function ArticleDetailPage({ params }: Props) {
                   href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${waConsultText}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 rounded-xl bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[#FF7A3D]/30 transition-all cursor-pointer"
+                  className="px-6 py-3.5 rounded-lg bg-[#FF7A3D] hover:bg-[#F06543] active:scale-95 text-white font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Konsultasi Gratis via WhatsApp</span>
+                  <span>Konsultasi via WhatsApp</span>
                 </a>
                 <Link
                   href="/programs"
-                  className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all"
+                  className="px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all"
                 >
                   Lihat Pilihan Kelas
                 </Link>

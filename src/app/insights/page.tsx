@@ -7,14 +7,14 @@ import { InsightsContent } from '@/components/InsightsContent';
 import { BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Artikel, Tutorial & Panduan Teknologi | NEXORANESIA Insights',
+  title: 'Artikel & Panduan Robotika - NEXORANESIA',
   description:
     'Pusat edukasi dan panduan praktis coding anak, perakitan robotika, tuning PID, artificial intelligence, persiapan olimpiade WRO, dan pembangunan lab STEM sekolah.',
   alternates: {
     canonical: 'https://nexoranesia.id/insights',
   },
   openGraph: {
-    title: 'NEXORANESIA Insights — Edukasi & Panduan Teknologi',
+    title: 'Artikel & Panduan Robotika - NEXORANESIA',
     description:
       'Panduan mendalam tentang coding anak, tutorial merakit robot pemula, machine learning, kiat juara olimpiade, hingga strategi mendirikan Lab STEM sekolah.',
     url: 'https://nexoranesia.id/insights',
@@ -34,17 +34,16 @@ export default function InsightsPage() {
         {/* Header Hero */}
         <section className="relative py-16 md:py-24 bg-white border-b border-[#EDE6DD]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FDEEE7] text-[#FF7A3D] text-xs font-bold border border-[#FADCD3]">
-              <BookOpen className="w-4 h-4 text-[#FF7A3D]" />
-              <span>NEXORANESIA INSIGHTS — Edukasi, Tutorial & Panduan Masa Depan</span>
-            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF7A3D]">
+              Materi &amp; Panduan Teknis
+            </p>
 
             <h1 className="font-editorial font-extrabold text-3xl sm:text-5xl text-[#3A1E1A] tracking-tight">
-              Artikel & Wawasan Teknologi
+              Artikel &amp; Panduan Robotika
             </h1>
 
             <p className="text-sm sm:text-base text-[#63544F] max-w-2xl mx-auto leading-relaxed">
-              Panduan mendalam tentang coding anak, tutorial merakit robot pemula, tuning PID kompetisi, machine learning Python, kiat juara olimpiade WRO & FLL, hingga strategi mendirikan Lab STEM sekolah.
+              Panduan mendalam seputar coding anak, tutorial merakit robot pemula, tuning PID kompetisi, pemanfaatan AI, persiapan olimpiade WRO, dan perancangan Lab STEM sekolah.
             </p>
           </div>
         </section>

@@ -10,7 +10,6 @@ import {
   ArrowRight,
   Search,
   Calendar,
-  Sparkles,
 } from 'lucide-react';
 
 interface Props {
