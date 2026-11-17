@@ -6,8 +6,8 @@ import { WhatsAppWidget } from '@/components/WhatsAppWidget';
 import { COMPANY_INFO } from '@/data/ecosystem';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nexoranesia.id'),
-  title: `${COMPANY_INFO.name} — Indonesia's Next Era of Innovation | Coding, Robotics, AI & STEM Ecosystem`,
+  metadataBase: new URL('https://nexoranesia.com'),
+  title: `${COMPANY_INFO.name}: Ekosistem Edukasi Robotika, Coding & Solusi Rekayasa STEAM Indonesia`,
   description: `${COMPANY_INFO.description} Pusat pelatihan coding anak, robotika canggih, komponen elektronika ESP32, mentoring kompetisi dunia, dan pembangunan Lab STEM sekolah di Indonesia.`,
   keywords: [
     'NEXORANESIA',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NEXORANESIA: Robotika & Edukasi STEAM Terpadu",
     description: 'Ekosistem Pendidikan, Robotika, Komponen, dan Solusi Rekayasa di Indonesia.',
-    url: 'https://nexoranesia.id',
+    url: 'https://nexoranesia.com',
     siteName: 'NEXORANESIA Ecosystem',
     locale: 'id_ID',
     type: 'website',

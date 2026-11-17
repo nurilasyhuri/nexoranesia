@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const canonicalUrl = `https://nexoranesia.id/insights/${article.slug}`;
+  const canonicalUrl = `https://nexoranesia.com/insights/${article.slug}`;
 
   return {
     title: `${article.seoTitle || article.title} - NEXORANESIA`,
@@ -95,7 +95,7 @@ export default async function ArticleDetailPage({ params }: Props) {
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    image: `https://nexoranesia.id${article.heroImage || '/images/hero/slide-1.jpg'}`,
+    image: `https://nexoranesia.com${article.heroImage || '/images/hero/slide-1.jpg'}`,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     author: {
@@ -106,11 +106,11 @@ export default async function ArticleDetailPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'NEXORANESIA',
-      url: 'https://nexoranesia.id',
+      url: 'https://nexoranesia.com',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://nexoranesia.id/insights/${article.slug}`,
+      '@id': `https://nexoranesia.com/insights/${article.slug}`,
     },
   };
 
@@ -122,19 +122,19 @@ export default async function ArticleDetailPage({ params }: Props) {
         '@type': 'ListItem',
         position: 1,
         name: 'Beranda',
-        item: 'https://nexoranesia.id',
+        item: 'https://nexoranesia.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Insights',
-        item: 'https://nexoranesia.id/insights',
+        item: 'https://nexoranesia.com/insights',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: article.title,
-        item: `https://nexoranesia.id/insights/${article.slug}`,
+        item: `https://nexoranesia.com/insights/${article.slug}`,
       },
     ],
   };

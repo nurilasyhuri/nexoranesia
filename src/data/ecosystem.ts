@@ -114,7 +114,7 @@ export const COMPANY_INFO = {
   location: 'Jl. KH. Malik Dalam Buring, Kedungkandang, Malang',
   phone: '085183003060',
   whatsapp: '6285183003060',
-  email: 'halo@nexoranesia.id',
+  email: 'halo@nexoranesia.com',
   operatingHours: 'Senin - Sabtu: 08:30 - 17:30 WIB',
   stats: [
     { value: '15,000+', label: 'Peserta Didik & Maker' },

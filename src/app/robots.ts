@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://nexoranesia.id/sitemap.xml',
+    sitemap: 'https://nexoranesia.com/sitemap.xml',
   };
 }

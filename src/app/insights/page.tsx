@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     'Pusat edukasi dan panduan praktis coding anak, perakitan robotika, tuning PID, artificial intelligence, persiapan olimpiade WRO, dan pembangunan lab STEM sekolah.',
   alternates: {
-    canonical: 'https://nexoranesia.id/insights',
+    canonical: 'https://nexoranesia.com/insights',
   },
   openGraph: {
     title: 'Artikel & Panduan Robotika - NEXORANESIA',
     description:
       'Panduan mendalam tentang coding anak, tutorial merakit robot pemula, machine learning, kiat juara olimpiade, hingga strategi mendirikan Lab STEM sekolah.',
-    url: 'https://nexoranesia.id/insights',
+    url: 'https://nexoranesia.com/insights',
     siteName: 'NEXORANESIA Insights',
     type: 'website',
   },
