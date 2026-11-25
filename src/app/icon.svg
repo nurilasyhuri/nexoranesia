@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Rich Espresso Gradient -->
+    <linearGradient id="nexoraBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1512"/>
+      <stop offset="50%" stop-color="#23110E"/>
+      <stop offset="100%" stop-color="#140705"/>
+    </linearGradient>
+
+    <!-- Border Accent Gradient -->
+    <linearGradient id="nexoraBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A3D" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FFD25D" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#562D29" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Coral to Terracotta Gradient (Left & Right Pillars) -->
+    <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9E6B"/>
+      <stop offset="40%" stop-color="#FF7A3D"/>
+      <stop offset="100%" stop-color="#EB521B"/>
+    </linearGradient>
+
+    <!-- Diagonal Power Slash Gradient (With Gold Energy) -->
+    <linearGradient id="slashGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA87A"/>
+      <stop offset="30%" stop-color="#FF7A3D"/>
+      <stop offset="75%" stop-color="#FFC132"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+
+    <!-- Gold Accent Light -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEBA0"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Canvas Base -->
+  <rect x="16" y="16" width="480" height="480" rx="116" fill="url(#nexoraBg)" stroke="url(#nexoraBorder)" stroke-width="8"/>
+
+  <!-- Subtle Circuit Lattice Marks (Robotics & AI Lab DNA) -->
+  <circle cx="80" cy="80" r="4" fill="#FF7A3D" opacity="0.3"/>
+  <circle cx="432" cy="80" r="4" fill="#FF7A3D" opacity="0.3"/>
+  <circle cx="80" cy="432" r="4" fill="#FF7A3D" opacity="0.3"/>
+  <circle cx="432" cy="432" r="4" fill="#FF7A3D" opacity="0.3"/>
+  <line x1="80" y1="80" x2="116" y2="80" stroke="#FF7A3D" stroke-width="2" opacity="0.2"/>
+  <line x1="80" y1="80" x2="80" y2="116" stroke="#FF7A3D" stroke-width="2" opacity="0.2"/>
+  <line x1="432" y1="432" x2="396" y2="432" stroke="#FF7A3D" stroke-width="2" opacity="0.2"/>
+  <line x1="432" y1="432" x2="432" y2="396" stroke="#FF7A3D" stroke-width="2" opacity="0.2"/>
+
+  <!-- Central "N" Monogram Group -->
+  <g filter="url(#softShadow)">
+    <!-- Base Monolithic Tech "N" Shape -->
+    <path d="M 144 380 V 132 H 208 L 304 280 V 132 H 368 V 380 H 304 L 208 232 V 380 Z" fill="url(#pillarGrad)"/>
+
+    <!-- High-Energy Diagonal Overlay -->
+    <polygon points="208,132 304,280 304,380 208,232" fill="url(#slashGrad)"/>
+
+    <!-- Futuristic Angled Top-Right Innovation Notch -->
+    <polygon points="304,132 368,132 368,212" fill="url(#goldAccent)"/>
+
+    <!-- Dynamic Bottom-Left Tech Facet -->
+    <polygon points="144,300 208,380 144,380" fill="url(#goldAccent)"/>
+
+    <!-- Glowing Core Nexus Node (Center of Innovation) -->
+    <circle cx="256" cy="256" r="14" fill="#FFF9ED"/>
+    <circle cx="256" cy="256" r="7" fill="#FF7A3D"/>
+  </g>
+</svg>

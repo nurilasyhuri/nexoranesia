@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { X, ArrowRight, Phone, MapPin } from 'lucide-react';
+import { NexoraIcon } from '@/components/NexoraLogo';
 
 interface MenuDrawerProps {
   isOpen: boolean;
@@ -86,8 +87,8 @@ export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
         <div className="p-6 sm:p-8">
           {/* Drawer Header */}
           <div className="flex items-center justify-between pb-6 border-b border-[#EDE6DD]">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#FF7A3D]" />
+            <div className="flex items-center gap-2.5">
+              <NexoraIcon className="w-5 h-5 shrink-0" />
               <span className="text-xs uppercase tracking-[0.2em] font-extrabold text-[#7A6A65]">
                 NEXORANESIA MENU
               </span>

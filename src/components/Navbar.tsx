@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
+import { NexoraIcon } from '@/components/NexoraLogo';
 
 export const Navbar: React.FC<{
   onOpenEnrollment?: () => void;
@@ -45,10 +45,10 @@ export const Navbar: React.FC<{
             <button
               type="button"
               onClick={onOpenMenu}
-              className="flex items-center space-x-2 text-xs uppercase tracking-[0.14em] font-extrabold text-white hover:text-[#FF7A3D] bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FF7A3D]/40 rounded-full px-4 py-2 transition-all shadow-xs cursor-pointer focus:outline-none backdrop-blur-xs"
+              className="flex items-center space-x-2.5 text-xs uppercase tracking-[0.14em] font-extrabold text-white hover:text-[#FF7A3D] bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FF7A3D]/40 rounded-full pl-3 pr-4 py-1.5 transition-all shadow-xs cursor-pointer focus:outline-none backdrop-blur-xs"
               aria-label="Buka Menu Navigasi Eksplorasi"
             >
-              <Menu className="w-4 h-4 text-white stroke-[2.4]" />
+              <NexoraIcon className="w-4 h-4 shrink-0 rounded-xs" />
               <span className="font-extrabold tracking-wider">EXPLORE NEXORANESIA</span>
             </button>
           </div>

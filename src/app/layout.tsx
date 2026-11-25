@@ -22,6 +22,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'NEXORANESIA Digital Ecosystem' }],
   creator: 'PT Nexoranesia Teknologi Nusantara',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: "NEXORANESIA: Robotika & Edukasi STEAM Terpadu",
     description: 'Ekosistem Pendidikan, Robotika, Komponen, dan Solusi Rekayasa di Indonesia.',

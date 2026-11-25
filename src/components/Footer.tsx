@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { COMPANY_INFO } from '@/data/ecosystem';
+import { NexoraLogo } from '@/components/NexoraLogo';
 import { 
   MapPin, 
   Phone, 
@@ -74,19 +75,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#FF7A3D] text-white flex items-center justify-center font-extrabold text-sm shadow-sm">
-                NX
-              </div>
-              <div>
-                <span className="font-heading font-extrabold text-2xl tracking-tight text-[#3A1E1A]">
-                  NEXORANESIA
-                </span>
-                <span className="block text-[10px] text-[#FF7A3D] font-bold tracking-widest uppercase">
-                  Indonesia's Next Era of Innovation
-                </span>
-              </div>
-            </Link>
+            <NexoraLogo theme="light" iconSize="w-11 h-11" />
 
             <p className="text-sm text-[#63544F] leading-relaxed max-w-md">
               {COMPANY_INFO.description}
