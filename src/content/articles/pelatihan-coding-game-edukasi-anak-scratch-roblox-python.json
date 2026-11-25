@@ -1,0 +1,110 @@
+{
+  "slug": "pelatihan-coding-game-edukasi-anak-scratch-roblox-python",
+  "title": "Pelatihan Coding & Pembuatan Game Edukasi untuk Anak: Cara Mengubah Kebiasaan Main Game Menjadi Kreator Game Cerdas",
+  "seoTitle": "Pelatihan Coding Game Edukasi Anak: Scratch, Roblox & Python",
+  "description": "Panduan kursus dan pelatihan membuat game edukatif untuk anak SD hingga SMA. Belajar logika computational thinking melalui Scratch 3.0, Roblox Lua 3D, hingga Python Pygame.",
+  "publishDate": "25 November 2026",
+  "publishedAt": "2026-11-25T21:35:10.000Z",
+  "author": "Tim Game Development & Creative Tech NEXORANESIA",
+  "authorRole": "Senior GameDev Mentor & STEAM Educator",
+  "category": "GameDev",
+  "tags": [
+    "pelatihan game edukasi",
+    "kursus coding game anak",
+    "belajar bikin game scratch",
+    "kelas roblox studio anak",
+    "kursus game developer pemula",
+    "edukasi stem anak"
+  ],
+  "heroImage": "/images/academy/scratch-coding.jpg",
+  "readTime": "8 Menit Baca",
+  "intro": "Melarang anak bermain game sama sekali di era serba digital seringkali bukan solusi yang realistis dan justru menimbulkan konflik di rumah. Pendekatan yang terbukti jauh lebih efektif adalah mengubah peran anak dari sekadar konsumen pasif (gamer) menjadi pencipta aktif (game creator). Melalui pelatihan coding pembuatan game edukasi, anak tidak hanya bersenang-senang merancang karakter dan level permainan, melainkan secara tidak sadar mempraktikkan konsep matematika, hukum fisika gerak gravitasi, algoritma logika percabangan, serta narasi storytelling terstruktur.",
+  "section1Title": "Mengapa Pembuatan Game Adalah Metode Terbaik Mengajarkan Logika Komputer pada Anak",
+  "section1Content": "Game development adalah disiplin multidisiplin yang unik. Saat seorang anak ingin karakternya melompat, ia harus memahami koordinat sumbu Y dan percepatan gravitasi. Saat ia membuat sistem nyawa (HP) dan koin skor, ia mempraktikkan konsep variabel matematika. Dan saat ia merancang musuh yang mengejar pemain, ia menyusun logika kecerdasan buatan (AI) dasar. Setiap baris kode yang ditulis anak memberikan feedback visual langsung di layar, membuat proses belajar coding terasa seperti petualangan kreatif yang memuaskan.",
+  "expertTips": [
+    "Mulai dari Dimensi 2D Sebelum Melompat ke 3D: Biarkan anak memahami konsep koordinat Cartesian X-Y dan event listener di Scratch 3.0 terlebih dahulu sebelum terjun ke sistem kamera dan fisika 3D yang lebih kompleks di Roblox Studio.",
+    "Tanamkan Mindset Desain Game yang Edukatif: Ajarkan anak menyisipkan elemen edukasi dalam game mereka, seperti game kuis sains dengan petualangan labirin atau teka-teki logika matematika untuk membuka pintu rahasia.",
+    "Beri Apresiasi Saat Game Berhasil Dimainkan Orang Lain: Dorong anak membagikan game buatannya kepada teman sekolah atau keluarga untuk menguji coba (playtesting). Hal ini melatih empati desain (User Experience) dan rasa percaya diri yang luar biasa."
+  ],
+  "tableTitle": "Tabel Rekomendasi Platform Belajar Pembuatan Game Edukasi Berdasarkan Usia",
+  "tableHeaders": [
+    "Platform Game Engine",
+    "Rentang Usia Ideal",
+    "Tipe Bahasa Coding",
+    "Konsep Logika yang Dilatih",
+    "Contoh Genre Game yang Dibuat"
+  ],
+  "tableRows": [
+    [
+      "Scratch 3.0 (MIT)",
+      "Usia 7 – 11 Tahun (SD)",
+      "Visual Block Coding",
+      "Perulangan (loops), variabel skor, deteksi sentuhan (collision), koordinat X-Y",
+      "Game tangkap apel, labirin teka-teki, game platformer lompat rintangan 2D"
+    ],
+    [
+      "Roblox Studio & Lua",
+      "Usia 10 – 15 Tahun (SMP)",
+      "Text Scripting (Bahasa Lua 3D)",
+      "Orientasi ruang 3D (X-Y-Z Vector), server-client multiplayer, physics engine",
+      "Obby (Obstacle Course), Tycoon simulator ekonomi, game survival petualangan"
+    ],
+    [
+      "Python & Pygame Engine",
+      "Usia 13 – 18 Tahun (SMP-SMA)",
+      "Python 3 Murni Berbasis Teks",
+      "Struktur data berorientasi objek (OOP), frame rate rendering, file save/load",
+      "Game arcade retro Space Invaders, Flappy Bird clone, RPG top-down"
+    ],
+    [
+      "Godot Engine 4 (Open Source)",
+      "Usia 15+ Tahun & Remaja Lanjut",
+      "GDScript / C# Node System",
+      "State machines, shader grafik partikel, animasi skeletal, arsitektur game profesional",
+      "Game indie platformer sinematik, game puzzle strategi multi-platform"
+    ]
+  ],
+  "section3Title": "5 Tahapan Kurikulum Pelatihan Pembuatan Game di NEXORANESIA Academy",
+  "steps": [
+    {
+      "title": "Konsep Game Design Document (GDD) Sederhana",
+      "desc": "Siswa diajak menggambar sketsa karakter, aturan main (rules), cara menang/kalah, dan alur cerita game di atas kertas sebelum menyentuh komputer."
+    },
+    {
+      "title": "Perancangan Visual & Desain Level Interaktif",
+      "desc": "Membuat aset visual latar belakang (background), rintangan, dan animasi sprite gerak karakter utama (idle, lari, melompat)."
+    },
+    {
+      "title": "Coding Logika Mekanik & Fisika Permainan",
+      "desc": "Menyusun algoritma pergerakan tombol keyboard/mouse, deteksi tabrakan antar objek, gravitasi buatan, dan kalkulasi skor poin."
+    },
+    {
+      "title": "Audio Sound FX & Dynamic Game States",
+      "desc": "Menambahkan musik latar bertema, efek suara saat koin terkumpul atau game over, serta layar transisi menu awal dan jeda (pause)."
+    },
+    {
+      "title": "Playtesting, Polishing & Publikasi Karya",
+      "desc": "Uji coba game bersama teman kelas untuk menemukan glitch atau celah kesulitan, diikuti dengan ekspor game ke format web/playable yang bisa dimainkan di browser."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah anak perlu laptop gaming berspesifikasi tinggi untuk ikut pelatihan ini?",
+      "a": "Tidak perlu. Untuk tingkat Scratch 3.0 dan Python pemula, laptop atau komputer standar perkantoran (Core i3 atau setara dengan RAM 4GB) sudah sangat memadai karena platform berbasis web ringan. Roblox Studio hanya memerlukan laptop dengan koneksi internet stabil dan kartu grafis standar."
+    },
+    {
+      "q": "Apakah anak diajarkan menggambar karakter atau hanya menulis kode pemrograman?",
+      "a": "Keduanya dipadukan secara seimbang. Siswa diajarkan dasar pixel art dan animasi digital sederhana untuk karakter game mereka, sekaligus menyusun logika kode yang menggerakkan karakter tersebut di dalam dunia game."
+    },
+    {
+      "q": "Apakah materi pembuatan game di Roblox Studio aman bagi anak-anak?",
+      "a": "Sangat aman. Pelatihan di NEXORANESIA berfokus pada Roblox Studio (aplikasi software pembuatannya), bukan bermain game bebas di publik. Siswa belajar di lingkungan sandbox privat di bawah pengawasan mentor profesional untuk mempelajari kode pemrograman Lua dan logika multiplayer positif."
+    },
+    {
+      "q": "Berapa lama waktu yang dibutuhkan seorang anak sampai bisa membuat game pertama mereka?",
+      "a": "Pada metode berbasis proyek NEXORANESIA Academy, di pertemuan pertama (sesi 90 menit) anak sudah berhasil membuat dan memainkan game mini perdana mereka! Keberhasilan cepat ini membangun rasa percaya diri yang tinggi untuk mempelajari modul logika yang lebih dalam."
+    }
+  ],
+  "ctaTitle": "Ubah Waktu Layar Anak Menjadi Portofolio Kreator Masa Depan",
+  "ctaText": "Daftarkan putra-putri Anda pada kelas Pelatihan Coding & Game Edukasi NEXORANESIA Academy. Tersedia opsi kelas privat tatap muka dan kelas online interaktif seluruh Indonesia."
+}
