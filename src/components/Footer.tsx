@@ -15,7 +15,8 @@ import {
   Bot,
   Cpu,
   Trophy,
-  Building2
+  Building2,
+  Briefcase
 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -145,6 +146,12 @@ export const Footer: React.FC = () => {
                 <Link href="/solutions" className="hover:text-[#FF7A3D] flex items-center gap-2 transition-colors">
                   <Building2 className="w-3.5 h-3.5 text-[#562D29]" />
                   <span>NEXORANESIA Solutions (B2B)</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/enterprise" className="hover:text-[#FF7A3D] flex items-center gap-2 transition-colors">
+                  <Briefcase className="w-3.5 h-3.5 text-[#2563EB]" />
+                  <span>NEXORANESIA Enterprise (IT & ERP)</span>
                 </Link>
               </li>
             </ul>

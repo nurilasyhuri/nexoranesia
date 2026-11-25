@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { MenuDrawer } from '@/components/MenuDrawer';
 import { ProposalModal } from '@/components/ProposalModal';
 import { INSTITUTIONAL_SOLUTIONS } from '@/data/ecosystem';
 import {
@@ -10,9 +12,11 @@ import {
   CheckCircle2,
   ArrowRight,
   FileSpreadsheet,
+  Briefcase,
 } from 'lucide-react';
 
 export default function SolutionsPage() {
+  const [isMenuDrawerOpen, setIsMenuDrawerOpen] = useState(false);
   const [proposalModalOpen, setProposalModalOpen] = useState(false);
   const [selectedSolution, setSelectedSolution] = useState<string | undefined>(undefined);
 
@@ -23,7 +27,7 @@ export default function SolutionsPage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#3A1E1A] flex flex-col">
-      <Navbar />
+      <Navbar onOpenMenu={() => setIsMenuDrawerOpen(true)} />
 
       <main className="flex-1">
         {/* Header Hero */}
@@ -155,9 +159,39 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
+
+        {/* Enterprise Cross-Link Banner */}
+        <section className="py-12 bg-[#251310] text-white border-t border-[#3A1E1A]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-1 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF7A3D]/15 border border-[#FF7A3D]/30 text-[#FF7A3D] text-xs font-semibold">
+                <Briefcase className="w-3.5 h-3.5" />
+                <span>NEXORANESIA ENTERPRISE</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                Membutuhkan Sistem ERP & IT Konsultan untuk Korporasi / Pabrik?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-300 max-w-2xl leading-relaxed">
+                Kami juga melayani arsitektur custom ERP, WMS logistik, automasi operasional pabrik (MRP), dan integrasi sensor IoT industri.
+              </p>
+            </div>
+            <Link
+              href="/enterprise"
+              className="px-6 py-3 rounded-full bg-[#FF7A3D] hover:bg-[#F06543] text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all shrink-0 shadow-md shadow-[#FF7A3D]/25"
+            >
+              <span>Eksplorasi Solusi Enterprise</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
       </main>
 
       <Footer />
+
+      <MenuDrawer
+        isOpen={isMenuDrawerOpen}
+        onClose={() => setIsMenuDrawerOpen(false)}
+      />
 
       <ProposalModal
         isOpen={proposalModalOpen}

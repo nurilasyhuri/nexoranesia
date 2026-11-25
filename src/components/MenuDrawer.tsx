@@ -40,6 +40,12 @@ const drawerMenuItems = [
     subtitle: 'Technology Ecosystem & Institutional Solutions',
     tag: 'Ecosystem',
   },
+  {
+    title: 'NEXORANESIA ENTERPRISE',
+    slug: '/enterprise',
+    subtitle: 'IT Consulting, Custom ERP & Cloud Systems',
+    tag: 'Enterprise B2B',
+  },
 ];
 
 export function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {

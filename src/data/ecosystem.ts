@@ -80,6 +80,20 @@ export interface InstitutionalSolution {
   icon: string;
 }
 
+export interface EnterpriseSolution {
+  id: string;
+  title: string;
+  slug: string;
+  tagline: string;
+  category: 'ERP Core' | 'Supply Chain & WMS' | 'Manufacturing (MRP)' | 'HRMS & Payroll' | 'Sales & Distribution' | 'Analytics & BI';
+  icon: string;
+  description: string;
+  modules: string[];
+  businessImpact: string[];
+  targetIndustry: string;
+  implementationTime: string;
+}
+
 export interface ProjectPortfolio {
   id: string;
   title: string;
@@ -167,6 +181,15 @@ export const COMPANY_INFO = {
       href: '/solutions',
       color: '#3B82F6',
       badge: 'B2B & Sekolah',
+    },
+    {
+      id: 'enterprise',
+      name: 'NEXORANESIA ENTERPRISE',
+      tagline: 'Enterprise IT Consulting & Custom ERP Systems',
+      description: 'Layanan konsultasi arsitektur IT enterprise, sistem ERP terintegrasi, digitalisasi operasional pabrik & distributor, serta jembatan IoT industri.',
+      href: '/enterprise',
+      color: '#562D29',
+      badge: 'Enterprise B2B',
     },
   ],
 };
@@ -1010,4 +1033,145 @@ export const CLIENT_PARTNERS = [
   { name: 'Robotics Olympiad Committee', type: 'Partner Turnamen' },
   { name: 'Yayasan Bina Talenta Vokasi', type: 'Lembaga Pendidikan' },
   { name: 'Maker Fest Indonesia', type: 'Komunitas Hardware' }
+];
+
+export const ENTERPRISE_SOLUTIONS: EnterpriseSolution[] = [
+  {
+    id: 'ent-01',
+    title: 'Core Financials, Accounting & Cost Control',
+    slug: 'financials-accounting-control',
+    tagline: 'Otomasi Pembukuan Akuntansi, Cash Flow, dan Audit Finansial Real-Time',
+    category: 'ERP Core',
+    icon: 'Calculator',
+    description: 'Sistem akuntansi terintegrasi standar PSAK untuk mengelola multi-entitas cabang, general ledger, hutang/piutang (AP/AR), budgeting divisi, reconciliasi bank otomatis, hingga perhitungan pajak perusahaan.',
+    modules: [
+      'Multi-Currency & Multi-Branch General Ledger (GL)',
+      'Automated Accounts Payable (AP) & Accounts Receivable (AR)',
+      'Real-Time Balance Sheet, Profit & Loss (P&L), dan Cash Flow Statement',
+      'Manajemen Aset Tetap, Depresiasi Otomatis & Amortisasi',
+      'Audit Trail Komprehensif & Kontrol Persetujuan Bertingkat (Approval Matrix)'
+    ],
+    businessImpact: [
+      'Memangkas waktu tutup buku bulanan dari 2 minggu menjadi 1-2 hari kerja',
+      'Mencegah kebocoran anggaran operasional dengan validasi approval ketat',
+      'Kesiapan audit pajak dan akuntabilitas keuangan investor 100% transparan'
+    ],
+    targetIndustry: 'Korporasi, Holding Company, Distributor & Perusahaan Jasa',
+    implementationTime: '6 - 12 Minggu'
+  },
+  {
+    id: 'ent-02',
+    title: 'Supply Chain, Procurement & Smart WMS',
+    slug: 'supply-chain-warehouse-wms',
+    tagline: 'Visibilitas Logistik End-to-End dari Pengadaan Hingga Distribusi Multi-Gudang',
+    category: 'Supply Chain & WMS',
+    icon: 'Boxes',
+    description: 'Arsitektur manajemen rantai pasok cerdas: otomatisasi Purchase Requisition (PR) ke Purchase Order (PO), pelacakan inventaris berbasis barcode/QR di setiap rak gudang, batch tracking, dan peramalan kebutuhan stok.',
+    modules: [
+      'Automated Vendor Procurement & RFQ Evaluation Workflow',
+      'Multi-Location Warehouse Management System (WMS) dengan Serial & Batch Tracking',
+      'Aturan Reorder Point Otomatis & Safety Stock Warning',
+      'Picking, Packing, Dispatching, dan Manajemen Retur Barang',
+      'Integrasi Sensor Timbangan Digital & Barcode Scanner Industri'
+    ],
+    businessImpact: [
+      'Menekan dead stock dan pemborosan inventaris gudang hingga 35%',
+      'Akurasi pencatatan stok fisik vs sistem (Stock Opname) mencapai 99.8%',
+      'Siklus pemenuhan order pelanggan 2x lebih cepat dan terhindar dari salah kirim'
+    ],
+    targetIndustry: 'Distributor Nasional, Importir, Wholesale, E-Commerce & Retail Besar',
+    implementationTime: '8 - 14 Minggu'
+  },
+  {
+    id: 'ent-03',
+    title: 'Manufacturing Resource Planning (MRP) & Production Control',
+    slug: 'manufacturing-mrp-control',
+    tagline: 'Sinkronisasi Kapasitas Mesin, Alokasi Bahan Baku, dan Efisiensi Pabrik',
+    category: 'Manufacturing (MRP)',
+    icon: 'Factory',
+    description: 'Solusi kontrol manufaktur presisi yang menghubungkan lantai produksi dengan divisi manajemen. Mengelola Bill of Materials (BOM), penjadwalan Work Order, kalkulasi Harga Pokok Produksi (HPP), dan monitoring OEE mesin.',
+    modules: [
+      'Multi-Level Bill of Materials (BOM) & Routing Operasi Produksi',
+      'Perencanaan Kebutuhan Bahan Baku (MRP I) & Penjadwalan Mesin (MRP II)',
+      'Pencatatan Work-in-Progress (WIP) dan Scrap Rate Real-Time',
+      'Kalkulasi Harga Pokok Produksi (HPP) Akurat per Batch',
+      'Integrasi Sensor Telemetri Mesin & IoT Gateway Nexora Lab'
+    ],
+    businessImpact: [
+      'Optimalisasi utilisasi mesin pabrik (OEE) dan memangkas waktu downtime tak terencana',
+      'Kalkulasi margin keuntungan per batch produk terbukti presisi tanpa estimasi manual',
+      'Mencegah kemacetan produksi akibat kekurangan komponen baku'
+    ],
+    targetIndustry: 'Pabrik Manufaktur, Fabrikasi Logam/Plastik, Food & Beverage, dan Assembly Line',
+    implementationTime: '10 - 16 Minggu'
+  },
+  {
+    id: 'ent-04',
+    title: 'Human Resource Management (HRMS) & IoT Attendance',
+    slug: 'hrms-payroll-attendance',
+    tagline: 'Manajemen Talenta, Penggajian Otomatis PPh 21, dan Presensi Hardware Terkoneksi',
+    category: 'HRMS & Payroll',
+    icon: 'Users',
+    description: 'Platform tata kelola SDM terpadu dari rekrutmen hingga offboarding. Terintegrasi dengan mesin presensi hardware Nexora (RFID/Face Recognition), otomatisasi kalkulasi gaji, lembur, BPJS Ketenagakerjaan/Kesehatan, dan pajak PPh 21 TER.',
+    modules: [
+      'Database Karyawan Terpusat, Struktur Organisasi & Jenjang Karir',
+      'Sinkronisasi Mesin Absensi Hardware IoT & Validasi Lokasi Geofencing',
+      'Payroll Engine Otomatis Terkoneksi Tarif Efektif Rata-Rata (TER PPh 21) & BPJS',
+      'Manajemen Cuti, Izin Sakit, Reimbursement, dan Klaim Medis Digital',
+      'Employee Self-Service (ESS) Portal & Slip Gaji Terenkripsi'
+    ],
+    businessImpact: [
+      'Menghilangkan 100% human error dan kecurangan absensi titip absen',
+      'Proses kalkulasi payroll ribuan karyawan selesai dalam hitungan menit',
+      'Kepatuhan regulasi ketenagakerjaan dan transparansi pajak bagi seluruh staf'
+    ],
+    targetIndustry: 'Korporasi dengan Ratusan Staf, Pabrik Shift Kerja, Lembaga Pendidikan & Retail',
+    implementationTime: '4 - 8 Minggu'
+  },
+  {
+    id: 'ent-05',
+    title: 'B2B Sales CRM & Omni-Channel Distribution Portal',
+    slug: 'b2b-sales-crm-distribution',
+    tagline: 'Tingkatkan Konversi Penjualan Korporat dan Percepat Order Repeat Agen/Distributor',
+    category: 'Sales & Distribution',
+    icon: 'ShoppingBag',
+    description: 'Portal pemesanan khusus mitra/agen B2B yang terhubung langsung ke inventaris dan keuangan perusahaan. Dilengkapi sistem CRM untuk mengawal prospek tender, kalkulasi komisi sales, dan manajemen plafon kredit (Credit Limit).',
+    modules: [
+      'Self-Service Ordering Portal untuk Agen, Toko, dan Mitra Distribusi',
+      'Tiering Harga Grosir Khusus, Kontrak Diskon, dan Limit Piutang Konsumen',
+      'Pipeline Manajemen Prospek B2B, Quotation Generator, dan Sales Activity Log',
+      'Pelacakan Target Penjualan Tim Sales Lapangan berbasis GPS',
+      'Sinkronisasi Stok dan Order Otomatis ke Invoice & Surat Jalan (Delivery Order)'
+    ],
+    businessImpact: [
+      'Mempercepat proses order mitra B2B tanpa perlu chat WhatsApp manual yang berisiko tercecer',
+      'Mengurangi bad debt piutang berkat validasi otomatis plafon kredit sebelum order disetujui',
+      'Meningkatkan repeat order agen hingga 40% berkat transparansi status pesanan'
+    ],
+    targetIndustry: 'FMCG, Prinsipal Brand, Distributor Bahan Bangunan/Otomotif, dan B2B Wholesaler',
+    implementationTime: '6 - 10 Minggu'
+  },
+  {
+    id: 'ent-06',
+    title: 'Executive BI, Real-Time Analytics & Command Center',
+    slug: 'executive-bi-command-center',
+    tagline: 'Dashboard Pengambilan Keputusan Strategis untuk Dewan Direksi & Owner',
+    category: 'Analytics & BI',
+    icon: 'BarChart3',
+    description: 'Pusat kendali informasi bisnis eksekutif yang merangkum data penjualan, biaya produksi, perputaran stok, dan produktivitas karyawan dalam satu layar interaktif. Dilengkapi notifikasi alarm anomali instan.',
+    modules: [
+      'Executive KPI Dashboard (Financial Ratio, Revenue, EBITDA, OpEx)',
+      'Sales Velocity, Product Contribution Margin & Customer Lifetime Value (CLV)',
+      'Heatmap Logistik & Pemantauan Performa Cabang/Gudang Regional',
+      'Notifikasi Otomatis Anomali Biaya atau Penurunan Margin via Telegram/WhatsApp',
+      'Export Data Siap Audit (Excel, PDF, BI Connector Tableau/PowerBI)'
+    ],
+    businessImpact: [
+      'Pemilik bisnis dan C-Level dapat memantau detak jantung perusahaan dari mana saja secara real-time',
+      'Mendeteksi lonjakan biaya operasional atau penurunan omzet sebelum terlambat',
+      'Menggantikan laporan slide PowerPoint manual mingguan dengan visualisasi langsung'
+    ],
+    targetIndustry: 'Direksi Korporasi, Investor, Group Holding, dan Business Owner',
+    implementationTime: '4 - 8 Minggu'
+  }
 ];
