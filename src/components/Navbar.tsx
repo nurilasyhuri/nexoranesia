@@ -20,13 +20,14 @@ export const Navbar: React.FC<{
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 6 Primary Navigation Links: HOME | ABOUT | PROGRAMS | ACTIVITIES | PROJECTS | CONTACT
+  // 7 Primary Navigation Links: HOME | ABOUT | PROGRAMS | ACTIVITIES | PROJECTS | ARTIKEL | CONTACT
   const navLinks = [
     { name: 'HOME', href: '/' },
     { name: 'ABOUT', href: '/about' },
     { name: 'PROGRAMS', href: '/programs' },
     { name: 'ACTIVITIES', href: '/activities' },
     { name: 'PROJECTS', href: '/projects' },
+    { name: 'ARTIKEL', href: '/insights' },
     { name: 'CONTACT', href: '/contact' },
   ];
 

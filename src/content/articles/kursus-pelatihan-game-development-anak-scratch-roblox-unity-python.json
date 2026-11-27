@@ -1,0 +1,105 @@
+{
+  "slug": "kursus-pelatihan-game-development-anak-scratch-roblox-unity-python",
+  "title": "Kursus & Pelatihan Game Development Anak & Remaja: Belajar Bikin Game 2D & 3D dari Nol Sampai Rilis",
+  "seoTitle": "Kursus & Pelatihan Game Development Anak & Remaja Terbaik",
+  "description": "Program kursus dan pelatihan game development untuk anak dan remaja. Belajar coding membuat game 2D & 3D di Scratch, Roblox Studio Lua, Pygame, hingga Unity C# dengan bimbingan mentor private.",
+  "publishDate": "27 November 2026",
+  "publishedAt": "2026-11-27T14:12:00.000Z",
+  "author": "Tim Akademik & Pelatihan NEXORANESIA Academy",
+  "authorRole": "Lead Game Developer & Creative Coding Mentor",
+  "category": "GameDev",
+  "tags": [
+    "kursus game development",
+    "pelatihan game development",
+    "kursus pembuatan game",
+    "les private game developer",
+    "pelatihan coding game anak",
+    "kursus roblox studio",
+    "belajar bikin game unity",
+    "kursus game programming"
+  ],
+  "heroImage": "/images/academy/coding-kids.jpg",
+  "readTime": "8 Menit Baca",
+  "intro": "Apakah anak Anda gemar bermain game di ponsel atau komputer setiap hari? Jangan larang minat mereka, ubah hobi bermain game tersebut menjadi keterampilan digital bernilai tinggi melalui kursus dan pelatihan game development anak dan remaja. Di NEXORANESIA Academy, kami melatih siswa usia sekolah dasar hingga menengah atas untuk beralih dari sekadar pemain pasif menjadi pencipta (kreator) game cerdas yang memahami logika komputasi, desain level, mekanika gameplay, dan pemrograman interaktif.",
+  "section1Title": "Mengapa Mengikuti Kursus & Pelatihan Game Development Penting untuk Generasi Muda?",
+  "section1Content": "Industri game global kini bernilai ratusan miliar dolar dan menuntut kombinasi keahlian logika algoritma matematika, desain visual artistik, storytelling, serta audio engineering. Melalui program pelatihan game development, anak tidak hanya diajarkan mengetik kode, melainkan dilatih mengasah problem-solving, daya nalar logis, kesabaran dalam proses debugging, serta kebanggaan saat game ciptaannya sendiri dapat dimainkan oleh teman-teman dan keluarga di platform global seperti Roblox atau web browser.",
+  "expertTips": [
+    "Mulai dari Visual Logic Sebelum Sintaks Teks Rumit: Bagi pemula usia 7–10 tahun, platform Scratch 3.0 adalah fondasi ideal untuk memahami konsep loop (perulangan), variabel skor, koordinat X-Y, dan event collision tanpa frustrasi oleh kesalahan titik koma (syntax error).",
+    "Manfaatkan Ekosistem Roblox Studio untuk Mempelajari Dunia 3D & Bahasa Lua: Anak-anak remaja sangat menyukai Roblox. Pelatihan pembuatan game di Roblox Studio mengajarkan logika 3D space, physics engine, scripting Lua, dan sistem multiplayer game online yang sangat digemari.",
+    "Persiapkan Jalur Menuju Engine Standar Industri (Unity & Python): Untuk siswa SMP dan SMA yang ingin menekuni karier profesional, kurikulum game development dilanjutkan ke Python Pygame untuk algoritma murni serta Unity Engine (C#) untuk pembuatan game mobile Android dan PC bertaraf komersial."
+  ],
+  "tableTitle": "Jenjang Kurikulum Kursus & Pelatihan Game Development NEXORANESIA",
+  "tableHeaders": [
+    "Tingkatan Program",
+    "Usia Siswa",
+    "Tools & Bahasa Pemrograman",
+    "Target Proyek Game yang Dihasilkan",
+    "Format Kelas"
+  ],
+  "tableRows": [
+    [
+      "Game Creator Junior",
+      "Usia 7 – 10 Tahun (SD)",
+      "Scratch 3.0, MakeCode Arcade, Pixel Art Designer",
+      "Game Labirin Maze, Flappy Bird Clone, Platformer 2D, Space Shooter",
+      "Privat 1-on-1 / Semi-Privat Online/Offline"
+    ],
+    [
+      "3D Game Architect (Roblox Lua)",
+      "Usia 11 – 14 Tahun (SMP)",
+      "Roblox Studio, Lua Scripting, 3D World Modeling",
+      "Game Obby (Obstacle Course), Tycoon Simulator, Racing Arena 3D Multiplayer",
+      "Privat Intensif / Kelas Interaktif"
+    ],
+    [
+      "Pro Game Developer (Unity & Python)",
+      "Usia 15 – 18 Tahun (SMA/SMK)",
+      "Unity 3D, C# Scripting, Python Pygame, Blender 3D",
+      "Game RPG Aksi 3D, Endless Runner Mobile Android, Portofolio Game Indie",
+      "Privat Portofolio & Persiapan Kuliah IT"
+    ]
+  ],
+  "section3Title": "Keunggulan Metode Belajar di Pelatihan Game Development NEXORANESIA",
+  "steps": [
+    {
+      "title": "Kurikulum Project-Based: Setiap Pertemuan Menghasilkan Fitur Game",
+      "desc": "Siswa tidak terjebak dalam ceramah teori panjang; setiap sesi langsung fokus memprogram mekanik game seperti melompat, menembak, mendeteksi koin, atau AI musuh."
+    },
+    {
+      "title": "Bimbingan Mentor 1-on-1 Privat yang Ramah & Menyenangkan",
+      "desc": "Mentor privat mendampingi siswa mengatasi error (bug) coding dengan pendekatan diskusi interaktif sehingga anak terlatih berpikir kritis dan mandiri."
+    },
+    {
+      "title": "Pembelajaran Desain Grafis Karakter & Audio Efek Mandiri",
+      "desc": "Selain coding, siswa diajarkan mendesain sprite karakter unik, latar belakang panggung, serta efek suara agar game tampil menarik dan estetik."
+    },
+    {
+      "title": "Publikasi Game Siswa ke Publik (Publishing)",
+      "desc": "Di akhir program, proyek game final siswa dibantu untuk dipublikasikan ke galeri online, server Roblox, atau APK Android agar bisa dimainkan siapa saja."
+    },
+    {
+      "title": "Sertifikat Kelulusan & Showcase Portofolio Siswa",
+      "desc": "Siswa menerima sertifikat resmi dan portofolio digital yang membuktikan penguasaan keterampilan computational thinking dan game development."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah anak perlu memiliki laptop dengan spesifikasi tinggi untuk belajar game development?",
+      "a": "Untuk tingkat pemula (Scratch dan Python dasar), laptop standar untuk kebutuhan sekolah sudah sangat mencukupi. Untuk tingkat menengah (Roblox Studio) dan tingkat lanjut (Unity 3D), disarankan laptop dengan minimal RAM 8GB dan prosesor Intel Core i3/Ryzen 3 atau lebih tinggi."
+    },
+    {
+      "q": "Apakah kursus game development ini tersedia secara privat guru datang ke rumah?",
+      "a": "Ya, kami menyediakan layanan les privat tatap muka langsung (mentor ke rumah) untuk area kota besar tertentu, serta kelas privat online live 1-on-1 dengan sesi screen-sharing interaktif untuk seluruh wilayah Indonesia."
+    },
+    {
+      "q": "Berapa lama durasi program kursus pelatihan game development ini?",
+      "a": "Setiap jenjang level terdiri dari 8 hingga 16 sesi pertemuan intensif (1 sesi per minggu berdurasi 90 menit), dengan target menyelesaikan 3 hingga 5 proyek game interaktif per level."
+    },
+    {
+      "q": "Bagaimana cara mendaftar kelas trial kursus pembuatan game di NEXORANESIA?",
+      "a": "Orang tua dapat menghubungi konsultan pendidikan NEXORANESIA melalui WhatsApp untuk mengatur sesi konsultasi gratis dan mencoba kelas trial game development bersama instruktur kami."
+    }
+  ],
+  "ctaTitle": "Daftarkan Anak Anda di Kursus Game Development NEXORANESIA Sekarang",
+  "ctaText": "Ubah kegemaran main game putra-putri Anda menjadi keahlian masa depan. Hubungi konsultan NEXORANESIA via WhatsApp untuk konsultasi kurikulum dan jadwal les privat hari ini."
+}
